@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Phone, Menu, X } from "lucide-react";
-import logoImage from "@assets/image_1767476299687.png";
+import logoImage from "@assets/logo.svg";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ export function Navigation() {
             <img 
               src={logoImage} 
               alt="Primordial Health Services LLC" 
-              className="h-14 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 

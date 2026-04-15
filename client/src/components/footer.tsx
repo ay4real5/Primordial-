@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logoImage from "@assets/image_1767476299687.png";
+import logoImage from "@assets/logo.svg";
 
 export function Footer() {
   return (
@@ -15,7 +15,7 @@ export function Footer() {
               <img 
                 src={logoImage} 
                 alt="Primordial Health Services LLC" 
-                className="h-16 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
             <p className="text-muted-foreground mb-6 leading-relaxed">

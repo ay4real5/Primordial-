@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 310">
+  <title>Primordial Health Services LLC</title>
+
+  <!-- Teal circle ring -->
+  <circle cx="140" cy="125" r="90" fill="none" stroke="#27a59b" stroke-width="11"/>
+
+  <!-- Teal ground arch at base -->
+  <path d="M 58 208 Q 140 195 222 208 L 222 222 Q 140 218 58 222 Z" fill="#27a59b"/>
+
+  <!-- LEFT HAND -->
+  <path d="
+    M 66 220
+    C 56 192, 50 152, 56 120
+    C 60 104, 72 94, 84 90
+    Q 91 84, 97 91
+    Q 103 83, 110 91
+    Q 116 81, 122 91
+    Q 127 86, 131 97
+    C 134 110, 128 130, 121 152
+    C 115 172, 112 198, 114 220
+    Z
+  " fill="#E8A070"/>
+
+  <!-- LEFT HAND inner shadow to suggest palm depth -->
+  <path d="
+    M 114 220
+    C 112 198, 115 172, 121 152
+    C 128 130, 134 110, 131 97
+    Q 127 86, 122 91
+    C 120 106, 118 130, 118 155
+    C 117 175, 116 200, 118 220
+    Z
+  " fill="#D4855A" opacity="0.45"/>
+
+  <!-- RIGHT HAND (mirrored) -->
+  <path d="
+    M 214 220
+    C 224 192, 230 152, 224 120
+    C 220 104, 208 94, 196 90
+    Q 189 84, 183 91
+    Q 177 83, 170 91
+    Q 164 81, 158 91
+    Q 153 86, 149 97
+    C 146 110, 152 130, 159 152
+    C 165 172, 168 198, 166 220
+    Z
+  " fill="#E8A070"/>
+
+  <!-- RIGHT HAND inner shadow -->
+  <path d="
+    M 166 220
+    C 168 198, 165 172, 159 152
+    C 152 130, 146 110, 149 97
+    Q 153 86, 158 91
+    C 160 106, 162 130, 162 155
+    C 163 175, 164 200, 162 220
+    Z
+  " fill="#D4855A" opacity="0.45"/>
+
+  <!-- TEAL HEART -->
+  <path d="
+    M 140 188
+    C 140 188, 92 160, 92 130
+    C 92 108, 113 99, 127 109
+    C 134 114, 139 126, 140 138
+    C 141 126, 146 114, 153 109
+    C 167 99, 188 108, 188 130
+    C 188 160, 140 188, 140 188 Z
+  " fill="#27a59b"/>
+
+  <!-- Heart gloss highlight -->
+  <ellipse cx="120" cy="120" rx="12" ry="7" fill="rgba(255,255,255,0.35)" transform="rotate(-30 120 120)"/>
+
+  <!-- PRIMORDIAL -->
+  <text
+    x="140" y="262"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="37" font-weight="700"
+    fill="#1a2565" letter-spacing="2"
+  >PRIMORDIAL</text>
+
+  <!-- HEALTH SERVICES LLC -->
+  <text
+    x="140" y="290"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="14.5" font-weight="600"
+    fill="#1a2565" letter-spacing="4"
+  >HEALTH SERVICES LLC</text>
+</svg>
