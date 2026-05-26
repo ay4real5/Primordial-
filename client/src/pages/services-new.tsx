@@ -378,17 +378,18 @@ export default function Services() {
               Need a Custom Care Plan?
             </h2>
             <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-              Every family's needs are unique. Contact us to discuss a personalized care plan tailored specifically for your loved one.
+              Every family's needs are unique. Contact us to discuss a personalized care plan 
+              that bundles the right services for your loved one.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link href="/contact" className="w-full sm:w-auto">
-                <Button size="lg" variant="secondary" className="w-full sm:w-auto" data-testid="button-contact-services">
+                <Button size="lg" variant="secondary" className="w-full sm:w-auto">
                   Get a Free Consultation
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <a href="tel:+18303993602" className="w-full sm:w-auto">
-                <Button variant="secondary" size="lg" className="w-full sm:w-auto" data-testid="button-call-services">
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                   <Phone className="w-5 h-5 mr-2" />
                   Call (830) 399-3602
                 </Button>

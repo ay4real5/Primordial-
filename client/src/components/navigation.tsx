@@ -31,7 +31,7 @@ export function Navigation() {
             <img 
               src={logoImage} 
               alt="Primordial Health Services LLC" 
-              className="h-16 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 

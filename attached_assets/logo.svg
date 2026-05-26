@@ -1,91 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 310">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="none">
   <title>Primordial Health Services LLC</title>
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
 
-  <!-- Teal circle ring -->
-  <circle cx="140" cy="125" r="90" fill="none" stroke="#27a59b" stroke-width="11"/>
+  <!-- Icon: rounded square background -->
+  <rect x="4" y="4" width="72" height="72" rx="18" fill="url(#iconGrad)"/>
 
-  <!-- Teal ground arch at base -->
-  <path d="M 58 208 Q 140 195 222 208 L 222 222 Q 140 218 58 222 Z" fill="#27a59b"/>
+  <!-- Heart shape inside square -->
+  <path d="M40 57 C40 57 18 44 18 30 C18 22 26 17 33 22 C36 24 39 28 40 31 C41 28 44 24 47 22 C54 17 62 22 62 30 C62 44 40 57 40 57Z"
+    fill="white" opacity="0.95"/>
 
-  <!-- LEFT HAND -->
-  <path d="
-    M 66 220
-    C 56 192, 50 152, 56 120
-    C 60 104, 72 94, 84 90
-    Q 91 84, 97 91
-    Q 103 83, 110 91
-    Q 116 81, 122 91
-    Q 127 86, 131 97
-    C 134 110, 128 130, 121 152
-    C 115 172, 112 198, 114 220
-    Z
-  " fill="#E8A070"/>
+  <!-- ECG pulse line across heart -->
+  <path d="M22 35 L28 35 L31 27 L36 43 L39 32 L42 38 L45 35 L58 35"
+    fill="none" stroke="url(#heartGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- LEFT HAND inner shadow to suggest palm depth -->
-  <path d="
-    M 114 220
-    C 112 198, 115 172, 121 152
-    C 128 130, 134 110, 131 97
-    Q 127 86, 122 91
-    C 120 106, 118 130, 118 155
-    C 117 175, 116 200, 118 220
-    Z
-  " fill="#D4855A" opacity="0.45"/>
+  <!-- Brand name -->
+  <text x="90" y="35"
+    font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+    font-size="28" font-weight="800" fill="#0f172a" letter-spacing="1">Primordial</text>
 
-  <!-- RIGHT HAND (mirrored) -->
-  <path d="
-    M 214 220
-    C 224 192, 230 152, 224 120
-    C 220 104, 208 94, 196 90
-    Q 189 84, 183 91
-    Q 177 83, 170 91
-    Q 164 81, 158 91
-    Q 153 86, 149 97
-    C 146 110, 152 130, 159 152
-    C 165 172, 168 198, 166 220
-    Z
-  " fill="#E8A070"/>
+  <!-- Tagline -->
+  <text x="91" y="56"
+    font-family="'Segoe UI', system-ui, -apple-system, sans-serif"
+    font-size="13" font-weight="500" fill="#0d9488" letter-spacing="3">HEALTH SERVICES</text>
 
-  <!-- RIGHT HAND inner shadow -->
-  <path d="
-    M 166 220
-    C 168 198, 165 172, 159 152
-    C 152 130, 146 110, 149 97
-    Q 153 86, 158 91
-    C 160 106, 162 130, 162 155
-    C 163 175, 164 200, 162 220
-    Z
-  " fill="#D4855A" opacity="0.45"/>
-
-  <!-- TEAL HEART -->
-  <path d="
-    M 140 188
-    C 140 188, 92 160, 92 130
-    C 92 108, 113 99, 127 109
-    C 134 114, 139 126, 140 138
-    C 141 126, 146 114, 153 109
-    C 167 99, 188 108, 188 130
-    C 188 160, 140 188, 140 188 Z
-  " fill="#27a59b"/>
-
-  <!-- Heart gloss highlight -->
-  <ellipse cx="120" cy="120" rx="12" ry="7" fill="rgba(255,255,255,0.35)" transform="rotate(-30 120 120)"/>
-
-  <!-- PRIMORDIAL -->
-  <text
-    x="140" y="262"
+  <!-- LLC pill -->
+  <rect x="91" y="63" width="28" height="13" rx="4" fill="#0d9488" opacity="0.15"/>
+  <text x="105" y="73"
     text-anchor="middle"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="37" font-weight="700"
-    fill="#1a2565" letter-spacing="2"
-  >PRIMORDIAL</text>
-
-  <!-- HEALTH SERVICES LLC -->
-  <text
-    x="140" y="290"
-    text-anchor="middle"
-    font-family="Georgia, 'Times New Roman', serif"
-    font-size="14.5" font-weight="600"
-    fill="#1a2565" letter-spacing="4"
-  >HEALTH SERVICES LLC</text>
+    font-family="'Segoe UI', system-ui, sans-serif"
+    font-size="8" font-weight="700" fill="#0d9488" letter-spacing="1">LLC</text>
 </svg>
