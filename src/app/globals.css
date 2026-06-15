@@ -15,12 +15,12 @@
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
 
-  /* === BRIGHT HORIZON PALETTE === */
-  /* Core - Pure white background for brightness */
+  /* === CLEAN WHITE PALETTE === */
+  /* Core - Pure white everywhere */
   --background: #FFFFFF;
   --foreground: #1E293B;
 
-  /* Primary - Vibrant Royal Blue (brighter than navy) */
+  /* Primary - Vibrant Royal Blue */
   --primary: #2563EB;
   --primary-foreground: #FFFFFF;
   --primary-50: #EFF6FF;
@@ -34,32 +34,32 @@
   --primary-800: #1E40AF;
   --primary-900: #1E3A8A;
 
-  /* Secondary - Bright Sky Blue */
+  /* Secondary - Sky Blue */
   --secondary: #0EA5E9;
   --secondary-foreground: #FFFFFF;
 
-  /* Division Accents - More Vibrant */
-  /* Health - Bright Turquoise/Cyan */
+  /* Division Accents */
+  /* Health - Vibrant Teal */
   --health: #14B8A6;
   --health-foreground: #FFFFFF;
-  --health-light: #CCFBF1;
+  --health-light: #F0FDFA;
   --health-dark: #0D9488;
 
-  /* Government - Vibrant Indigo/Violet */
+  /* Government - Vibrant Violet */
   --government: #8B5CF6;
   --government-foreground: #FFFFFF;
-  --government-light: #EDE9FE;
+  --government-light: #FAF5FF;
   --government-dark: #7C3AED;
 
-  /* UI Colors - Lighter and cleaner */
-  --accent: #F8FAFC;
+  /* UI Colors - Almost pure white */
+  --accent: #FFFFFF;
   --accent-foreground: #1E293B;
-  --muted: #F1F5F9;
-  --muted-foreground: #64748B;
+  --muted: #FAFAFA;
+  --muted-foreground: #6B7280;
   --card: #FFFFFF;
   --card-foreground: #1E293B;
-  --border: #E2E8F0;
-  --input: #E2E8F0;
+  --border: #F3F4F6;
+  --input: #F3F4F6;
   --ring: #2563EB;
 
   /* Status */
@@ -71,19 +71,19 @@
   --success-foreground: #FFFFFF;
 }
 
-/* Dark mode support (optional) - Softer dark theme */
+/* Dark mode support (optional) - Light gray instead of dark */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1E293B;
-    --foreground: #F8FAFC;
-    --card: #334155;
-    --card-foreground: #F8FAFC;
-    --muted: #475569;
-    --muted-foreground: #94A3B8;
-    --accent: #475569;
-    --accent-foreground: #F8FAFC;
-    --border: #475569;
-    --input: #475569;
+    --background: #F8FAFC;
+    --foreground: #1E293B;
+    --card: #FFFFFF;
+    --card-foreground: #1E293B;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --accent: #FFFFFF;
+    --accent-foreground: #1E293B;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
   }
 }
 
