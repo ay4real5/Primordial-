@@ -135,6 +135,10 @@ export default function GovernmentPage() {
                 <div className="text-xs sm:text-sm text-white/70">Certified</div>
               </div>
               <div>
+                <div className="text-xl sm:text-3xl font-bold">UEI</div>
+                <div className="text-xs sm:text-sm text-white/70">EUDTX5ULD6B1</div>
+              </div>
+              <div>
                 <div className="text-xl sm:text-3xl font-bold">
                   <Phone className="w-5 h-5 sm:w-6 sm:h-6 inline-block -mt-1" />
                 </div>
@@ -341,7 +345,7 @@ export default function GovernmentPage() {
               adherence to regulations, standards, and contractual requirements 
               is fundamental to successful government contracting.
             </p>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
               <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
                 <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-government mx-auto mb-1 sm:mb-2" />
                 <p className="text-xs sm:text-sm font-medium">FAR Awareness</p>
@@ -357,6 +361,10 @@ export default function GovernmentPage() {
               <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
                 <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-government mx-auto mb-1 sm:mb-2" />
                 <p className="text-xs sm:text-sm font-medium">Subcontractor Oversight</p>
+              </div>
+              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
+                <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-government mx-auto mb-1 sm:mb-2" />
+                <p className="text-xs sm:text-sm font-medium">UEI: EUDTX5ULD6B1</p>
               </div>
             </div>
             <div className="mt-8">
