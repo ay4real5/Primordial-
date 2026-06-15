@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Heart, 
@@ -15,14 +15,12 @@ import {
   Mail,
   Star,
   Clock,
-  MapPin,
   TrendingUp,
   Briefcase,
   HandHeart,
   Stethoscope,
   Home,
   Car,
-  Play,
   ChevronRight,
   Quote
 } from "lucide-react";
