@@ -367,8 +367,8 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto text-center text-white">
             <Quote className="w-16 h-16 mx-auto mb-8 text-white/30" />
             <blockquote className="text-2xl md:text-3xl font-heading font-medium mb-8 leading-relaxed">
-              "Primodial Health gave our family peace of mind. Their caregivers treated 
-              my mother with such dignity and compassion. We couldn't ask for better care."
+              &ldquo;Primodial Health gave our family peace of mind. Their caregivers treated 
+              my mother with such dignity and compassion. We couldn&apos;t ask for better care.&rdquo;
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
@@ -429,8 +429,8 @@ export default function HomePage() {
               <CardContent className="p-8">
                 <h3 className="font-heading text-2xl font-bold mb-3">Need Care Now?</h3>
                 <p className="text-muted-foreground mb-6">
-                  Speak with our care coordinators today. We're available 24/7 to 
-                  discuss your family's needs.
+                  Speak with our care coordinators today. We&apos;re available 24/7 to
+                  discuss your family&apos;s needs.
                 </p>
                 <a href="tel:+18303993602" className="block">
                   <Button className="w-full btn-health h-12 text-lg">
