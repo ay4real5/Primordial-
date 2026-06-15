@@ -39,10 +39,10 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1920&q=85"
-            alt="Confident professional team ready to serve"
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=90"
+            alt="Diverse professional team collaborating with confidence"
             fill
-            className="object-cover object-top"
+            className="object-cover object-center"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent" />
