@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { DivisionSwitcher } from "@/components/division-switcher";
 import { Menu, X, Phone } from "lucide-react";
+import { Logo } from "@/components/logo";
 
 interface NavItem {
   label: string;
@@ -71,18 +72,9 @@ export function Navigation() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href={division === "parent" ? "/" : `/${division}`} className="flex items-center gap-2">
-            <div className={cn(
-              "w-8 h-8 rounded-md flex items-center justify-center font-bold text-white",
-              accentColor === "health" && "bg-health",
-              accentColor === "government" && "bg-government",
-              accentColor === "primary" && "bg-primary"
-            )}>
-              P
-            </div>
-            <span className="font-heading font-bold text-lg hidden sm:block">
-              {logoText}
-            </span>
+          <Link href={division === "parent" ? "/" : `/${division}`} className="flex items-center">
+            <Logo division={division} size="sm" showWordmark={true} className="hidden sm:flex" />
+            <Logo division={division} size="sm" showWordmark={false} className="sm:hidden" />
           </Link>
 
           {/* Desktop Navigation */}
