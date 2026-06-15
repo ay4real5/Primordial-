@@ -157,18 +157,18 @@ export default function GovernmentPage() {
                 We offer a wide range of contracting capabilities to support government 
                 agencies in achieving their mission objectives.
               </p>
-              <div className="flex gap-4">
-                <div className="text-center p-4 rounded-xl bg-government/5">
-                  <div className="text-2xl font-bold text-government">Prime</div>
-                  <div className="text-xs text-muted-foreground">Contractor</div>
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                <div className="text-center p-3 sm:p-4 rounded-xl bg-government/5">
+                  <div className="text-xl sm:text-2xl font-bold text-government">Prime</div>
+                  <div className="text-[10px] sm:text-xs text-muted-foreground">Contractor</div>
                 </div>
-                <div className="text-center p-4 rounded-xl bg-government/5">
-                  <div className="text-2xl font-bold text-government">Sub</div>
-                  <div className="text-xs text-muted-foreground">Contractor</div>
+                <div className="text-center p-3 sm:p-4 rounded-xl bg-government/5">
+                  <div className="text-xl sm:text-2xl font-bold text-government">Sub</div>
+                  <div className="text-[10px] sm:text-xs text-muted-foreground">Contractor</div>
                 </div>
-                <div className="text-center p-4 rounded-xl bg-government/5">
-                  <div className="text-2xl font-bold text-government">BPA</div>
-                  <div className="text-xs text-muted-foreground">Support</div>
+                <div className="text-center p-3 sm:p-4 rounded-xl bg-government/5">
+                  <div className="text-xl sm:text-2xl font-bold text-government">BPA</div>
+                  <div className="text-[10px] sm:text-xs text-muted-foreground">Support</div>
                 </div>
               </div>
             </div>
@@ -251,11 +251,11 @@ export default function GovernmentPage() {
               { title: "Quality Focus", description: "We deliver outcomes that meet or exceed expectations, with quality assurance processes that ensure consistent performance.", icon: Award }
             ].map((diff) => (
               <Card key={diff.title} className="bg-white/10 backdrop-blur-sm border-white/20 text-center">
-                <CardContent className="p-8">
-                  <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-6">
-                    <diff.icon className="w-7 h-7 text-white" />
+                <CardContent className="p-5 sm:p-8">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                    <diff.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
-                  <h3 className="font-heading font-semibold text-lg mb-3 text-white">{diff.title}</h3>
+                  <h3 className="font-heading font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-white">{diff.title}</h3>
                   <p className="text-white/80 text-sm leading-relaxed">{diff.description}</p>
                 </CardContent>
               </Card>
@@ -383,20 +383,20 @@ export default function GovernmentPage() {
             how we can support your mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+15715757174">
-              <Button size="lg" className="bg-government hover:bg-government-dark text-white">
+            <a href="tel:+15715757174" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto h-11 sm:h-12 bg-government hover:bg-government-dark text-white">
                 <Phone className="w-5 h-5 mr-2" />
                 (571) 575-7174
               </Button>
             </a>
-            <Link href="/government/capabilities">
-              <Button size="lg" variant="government">
+            <Link href="/government/capabilities" className="w-full sm:w-auto">
+              <Button size="lg" variant="government" className="w-full sm:w-auto h-11 sm:h-12">
                 Request Capability Statement
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <Link href="/government/partners">
-              <Button size="lg" variant="outline">
+            <Link href="/government/partners" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto h-11 sm:h-12">
                 Schedule Vendor Introduction
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

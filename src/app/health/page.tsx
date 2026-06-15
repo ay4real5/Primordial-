@@ -249,7 +249,7 @@ export default function HealthPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {howItWorks.map((step) => (
               <Card key={step.step} className="text-center">
                 <CardContent className="p-6">
@@ -268,7 +268,7 @@ export default function HealthPage() {
       {/* Trust Indicators */}
       <section className="py-12 sm:py-20 bg-gradient-health">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto mb-4 shadow-sm">
                 <Shield className="w-6 h-6 text-health" />

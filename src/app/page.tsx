@@ -302,11 +302,11 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-health/10 flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-8 h-8 text-health" />
+              <CardContent className="p-5 sm:p-8">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-health/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-health" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold mb-3">Compassionate</h3>
+                <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Compassionate</h3>
                 <p className="text-muted-foreground">
                   Treating every client like family with genuine care and empathy.
                 </p>
@@ -314,11 +314,11 @@ export default function HomePage() {
             </Card>
 
             <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-primary" />
+              <CardContent className="p-5 sm:p-8">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold mb-3">Trusted</h3>
+                <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Trusted</h3>
                 <p className="text-muted-foreground">
                   Fully licensed, bonded, and insured for your complete peace of mind.
                 </p>
@@ -326,11 +326,11 @@ export default function HomePage() {
             </Card>
 
             <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-government/10 flex items-center justify-center mx-auto mb-6">
-                  <Award className="w-8 h-8 text-government" />
+              <CardContent className="p-5 sm:p-8">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-government/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Award className="w-6 h-6 sm:w-8 sm:h-8 text-government" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold mb-3">Quality Focused</h3>
+                <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Quality Focused</h3>
                 <p className="text-muted-foreground">
                   Rigorous standards and continuous improvement in all we do.
                 </p>
@@ -338,11 +338,11 @@ export default function HomePage() {
             </Card>
 
             <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-6">
-                  <Clock className="w-8 h-8 text-secondary" />
+              <CardContent className="p-5 sm:p-8">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                  <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-secondary" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold mb-3">Always Available</h3>
+                <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Always Available</h3>
                 <p className="text-muted-foreground">
                   24/7 support for healthcare needs and responsive contracting.
                 </p>
@@ -434,9 +434,9 @@ export default function HomePage() {
                   <Phone className="w-12 h-12 text-white/60" />
                 </div>
               </div>
-              <CardContent className="p-8">
-                <h3 className="font-heading text-2xl font-bold mb-3">Need Care Now?</h3>
-                <p className="text-muted-foreground mb-6">
+              <CardContent className="p-5 sm:p-8">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-3">Need Care Now?</h3>
+                <p className="text-muted-foreground mb-5 sm:mb-6">
                   Speak with our care coordinators today. We&apos;re available 24/7 to
                   discuss your family&apos;s needs.
                 </p>
@@ -463,9 +463,9 @@ export default function HomePage() {
                   <Briefcase className="w-12 h-12 text-white/60" />
                 </div>
               </div>
-              <CardContent className="p-8">
-                <h3 className="font-heading text-2xl font-bold mb-3">Explore Partnership?</h3>
-                <p className="text-muted-foreground mb-6">
+              <CardContent className="p-5 sm:p-8">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-3">Explore Partnership?</h3>
+                <p className="text-muted-foreground mb-5 sm:mb-6">
                   Discuss capabilities, teaming opportunities, or agency requirements 
                   with our government team.
                 </p>
