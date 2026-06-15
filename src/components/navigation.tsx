@@ -113,11 +113,23 @@ export function Navigation() {
 
             {/* Government CTA */}
             {division === "government" && (
-              <Link href="/government/partners">
-                <Button variant="government" size="sm" className="hidden sm:flex">
-                  Partner With Us
-                </Button>
-              </Link>
+              <>
+                <a
+                  href="tel:+15715757174"
+                  className={cn(
+                    "hidden sm:flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors",
+                    "bg-government text-white hover:bg-government-dark"
+                  )}
+                >
+                  <Phone className="h-4 w-4" />
+                  (571) 575-7174
+                </a>
+                <Link href="/government/partners" className="hidden md:flex">
+                  <Button variant="government" size="sm">
+                    Partner With Us
+                  </Button>
+                </Link>
+              </>
             )}
 
             {/* Parent CTA */}
@@ -178,11 +190,20 @@ export function Navigation() {
               </a>
             )}
             {division === "government" && (
-              <Link href="/government/partners" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="health" className="w-full mt-2">
-                  Partner With Us
-                </Button>
-              </Link>
+              <>
+                <a
+                  href="tel:+15715757174"
+                  className="flex items-center justify-center gap-2 px-4 py-2 mt-2 rounded-md text-sm font-medium bg-government text-white"
+                >
+                  <Phone className="h-4 w-4" />
+                  Call (571) 575-7174
+                </a>
+                <Link href="/government/partners" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="government" className="w-full mt-2">
+                    Partner With Us
+                  </Button>
+                </Link>
+              </>
             )}
             {division === "parent" && (
               <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>

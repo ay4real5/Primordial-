@@ -7,6 +7,7 @@ import {
   Building2,
   ArrowRight,
   Mail,
+  Phone,
   CheckCircle,
   Target,
   Shield,
@@ -120,7 +121,7 @@ export default function GovernmentPage() {
                 </Button>
               </Link>
             </div>
-            <div className="flex gap-6 sm:gap-8 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/20">
+            <div className="flex flex-wrap gap-6 sm:gap-8 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/20">
               <div>
                 <div className="text-xl sm:text-3xl font-bold">Federal</div>
                 <div className="text-xs sm:text-sm text-white/70">& State Agencies</div>
@@ -132,6 +133,12 @@ export default function GovernmentPage() {
               <div>
                 <div className="text-xl sm:text-3xl font-bold">SB</div>
                 <div className="text-xs sm:text-sm text-white/70">Certified</div>
+              </div>
+              <div>
+                <div className="text-xl sm:text-3xl font-bold">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6 inline-block -mt-1" />
+                </div>
+                <div className="text-xs sm:text-sm text-white/70">(571) 575-7174</div>
               </div>
             </div>
           </div>
@@ -376,8 +383,14 @@ export default function GovernmentPage() {
             how we can support your mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+15715757174">
+              <Button size="lg" className="bg-government hover:bg-government-dark text-white">
+                <Phone className="w-5 h-5 mr-2" />
+                (571) 575-7174
+              </Button>
+            </a>
             <Link href="/government/capabilities">
-              <Button size="lg" className="btn-government">
+              <Button size="lg" variant="government">
                 Request Capability Statement
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
