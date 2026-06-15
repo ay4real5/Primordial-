@@ -27,8 +27,8 @@ import {
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Primodial | Healthcare & Government Contracting Excellence",
-  description: "Primodial delivers excellence across healthcare services and government contracting solutions. Two divisions, one commitment to quality.",
+  title: "Velune Holdings LLC | Healthcare & Government Contracting Excellence",
+  description: "Velune Holdings LLC delivers excellence across healthcare services and government contracting solutions. Two divisions, one commitment to quality.",
 };
 
 export default function HomePage() {
@@ -168,7 +168,7 @@ export default function HomePage() {
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-3">
                   <Building2 className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-2">Primodial Government</h3>
+                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-2">Velune</h3>
                 <p className="text-white/90 mb-4">
                   Professional contracting for federal, state, and local agencies. 
                   Compliance-focused solutions.
@@ -294,7 +294,7 @@ export default function HomePage() {
       <section className="py-14 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
-            <Badge className="mb-4">Why Primodial</Badge>
+            <Badge className="mb-4">Why Velune</Badge>
             <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
               Excellence in Everything
             </h2>

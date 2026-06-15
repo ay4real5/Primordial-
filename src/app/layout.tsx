@@ -6,24 +6,24 @@ import { Analytics } from "@/components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "Primodial | Healthcare & Government Contracting",
-    template: "%s | Primodial",
+    default: "Velune Holdings LLC | Healthcare & Government Contracting",
+    template: "%s | Velune Holdings LLC",
   },
-  description: "Primodial delivers excellence across healthcare services and government contracting solutions. Trusted partner for families and agencies.",
+  description: "Velune Holdings LLC delivers excellence across healthcare services and government contracting solutions. Trusted partner for families and agencies.",
   keywords: ["healthcare", "home health", "government contracting", "federal contracts", "caregiver services"],
-  authors: [{ name: "Primodial" }],
+  authors: [{ name: "Velune Holdings LLC" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.primodial.org",
-    siteName: "Primodial",
-    title: "Primodial | Healthcare & Government Contracting",
-    description: "Primodial delivers excellence across healthcare services and government contracting solutions.",
+    siteName: "Velune Holdings LLC",
+    title: "Velune Holdings LLC | Healthcare & Government Contracting",
+    description: "Velune Holdings LLC delivers excellence across healthcare services and government contracting solutions.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Primodial | Healthcare & Government Contracting",
-    description: "Primodial delivers excellence across healthcare services and government contracting solutions.",
+    title: "Velune Holdings LLC | Healthcare & Government Contracting",
+    description: "Velune Holdings LLC delivers excellence across healthcare services and government contracting solutions.",
   },
   robots: {
     index: true,

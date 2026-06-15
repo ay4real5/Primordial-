@@ -22,7 +22,7 @@ interface DivisionInfo {
 const divisions: DivisionInfo[] = [
   {
     id: "parent",
-    name: "Primodial",
+    name: "Velune Holdings LLC",
     shortName: "Parent",
     icon: Building2,
     color: "primary",
@@ -40,7 +40,7 @@ const divisions: DivisionInfo[] = [
   },
   {
     id: "government",
-    name: "Primodial Government",
+    name: "Velune",
     shortName: "Government",
     icon: Building2,
     color: "government",

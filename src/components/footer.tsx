@@ -61,7 +61,7 @@ export function Footer() {
                 P
               </div>
               <span className="font-heading font-bold text-xl">
-                {division === "health" ? "Primodial Health" : division === "government" ? "Primodial Government" : "Primodial"}
+                {division === "health" ? "Primodial Health" : division === "government" ? "Velune" : "Velune Holdings LLC"}
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-sm mb-6">
@@ -138,7 +138,7 @@ export function Footer() {
                   )}
                 >
                   <div className="w-2 h-2 rounded-full bg-government" />
-                  Primodial Government
+                  Velune
                 </Link>
               </div>
             </div>
@@ -148,7 +148,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Primodial. All rights reserved.
+            © {currentYear} Velune Holdings LLC. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

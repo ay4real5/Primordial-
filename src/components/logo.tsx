@@ -160,7 +160,7 @@ export function Logo({
               division === "parent" && "text-primary-800"
             )}
           >
-            Primodial
+            {division === "health" ? "Primodial" : "Velune"}
           </span>
           {divisionLabel && (
             <span

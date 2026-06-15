@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Primodial Government | Professional Contracting Solutions",
+  title: "Velune | Professional Contracting Solutions",
   description: "Professional contracting services for federal, state, and local agencies. Prime and subcontractor capabilities with compliance focus.",
 };
 
