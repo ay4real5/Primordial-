@@ -259,25 +259,25 @@ export default function GovernmentPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-government">
+      <section className="py-20 bg-white border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Ready to Explore Partnership?
           </h2>
-          <p className="text-government-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Whether you&apos;re a government agency seeking capabilities or a prime 
-            contractor looking for a reliable partner, we&apos;re ready to discuss 
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
+            Whether you&apos;re a government agency seeking capabilities or a prime
+            contractor looking for a reliable partner, we&apos;re ready to discuss
             how we can support your mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/government/capabilities">
-              <Button size="lg" variant="secondary">
+              <Button size="lg" className="btn-government">
                 Request Capability Statement
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
             <Link href="/government/partners">
-              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+              <Button size="lg" variant="outline">
                 Schedule Vendor Introduction
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

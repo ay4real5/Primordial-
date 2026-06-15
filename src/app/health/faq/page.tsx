@@ -178,24 +178,24 @@ export default function HealthFAQPage() {
 
           {/* Still Have Questions */}
           <div className="max-w-2xl mx-auto mt-16 text-center">
-            <Card className="bg-health text-white">
+            <Card className="bg-white border border-border">
               <CardContent className="p-8">
-                <h2 className="font-heading text-2xl font-bold mb-4">
+                <h2 className="font-heading text-2xl font-bold mb-4 text-foreground">
                   Still Have Questions?
                 </h2>
-                <p className="text-health-foreground/90 mb-6">
-                  We&apos;re here to help. Contact us directly for personalized answers 
+                <p className="text-muted-foreground mb-6">
+                  We&apos;re here to help. Contact us directly for personalized answers
                   to your specific situation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a href="tel:+18303993602">
-                    <Button variant="secondary" size="lg">
+                    <Button size="lg" className="btn-health">
                       <Phone className="w-5 h-5 mr-2" />
                       Call (830) 399-3602
                     </Button>
                   </a>
                   <Link href="/contact">
-                    <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10">
+                    <Button size="lg" variant="outline">
                       Send a Message
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>

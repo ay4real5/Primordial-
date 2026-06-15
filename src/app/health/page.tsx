@@ -326,24 +326,24 @@ export default function HealthPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-health">
+      <section className="py-20 bg-white border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Ready to Get Started?
           </h2>
-          <p className="text-health-foreground/80 max-w-2xl mx-auto mb-8 text-lg">
-            Contact us today for a free, no-obligation consultation. 
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
+            Contact us today for a free, no-obligation consultation.
             We&apos;re here to help you find the right care solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+18303993602">
-              <Button size="lg" variant="secondary">
+              <Button size="lg" className="btn-health">
                 <Phone className="w-5 h-5 mr-2" />
                 Call (830) 399-3602
               </Button>
             </a>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+              <Button size="lg" variant="outline">
                 Send a Message
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>

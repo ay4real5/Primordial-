@@ -275,24 +275,24 @@ export default function CompliancePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-government">
+      <section className="py-20 bg-white border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading text-3xl font-bold text-white mb-4">
+          <h2 className="font-heading text-3xl font-bold text-foreground mb-4">
             Questions About Our Compliance Posture?
           </h2>
-          <p className="text-government-foreground/80 max-w-2xl mx-auto mb-8">
-            We welcome inquiries about our approach to compliance, security, and 
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+            We welcome inquiries about our approach to compliance, security, and
             quality assurance. Contact us to discuss specific requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/government/partners">
-              <Button size="lg" variant="secondary">
+              <Button size="lg" className="btn-government">
                 Discuss Requirements
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+              <Button size="lg" variant="outline">
                 Contact Us
               </Button>
             </Link>

@@ -222,24 +222,24 @@ export default function PastPerformancePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-government">
+      <section className="py-20 bg-white border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading text-3xl font-bold text-white mb-4">
+          <h2 className="font-heading text-3xl font-bold text-foreground mb-4">
             Let&apos;s Build Our Track Record Together
           </h2>
-          <p className="text-government-foreground/80 max-w-2xl mx-auto mb-8">
-            We invite agencies and prime contractors to consider us for upcoming 
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+            We invite agencies and prime contractors to consider us for upcoming
             opportunities. Let us demonstrate our capabilities firsthand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/government/partners">
-              <Button size="lg" variant="secondary">
+              <Button size="lg" className="btn-government">
                 Discuss Opportunities
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
             <Link href="/government/capabilities">
-              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+              <Button size="lg" variant="outline">
                 View Capabilities
               </Button>
             </Link>

@@ -271,24 +271,24 @@ export default function CapabilitiesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-government">
+      <section className="py-20 bg-white border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading text-3xl font-bold text-white mb-4">
+            <h2 className="font-heading text-3xl font-bold text-foreground mb-4">
               Request More Information
             </h2>
-            <p className="text-government-foreground/80 mb-8">
+            <p className="text-muted-foreground mb-8">
               Contact us to discuss how we can support your agency or teaming needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/government/partners">
-                <Button size="lg" variant="secondary">
+                <Button size="lg" className="btn-government">
                   Schedule a Discussion
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                <Button size="lg" variant="outline">
                   Contact Us
                 </Button>
               </Link>
