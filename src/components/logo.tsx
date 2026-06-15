@@ -26,9 +26,11 @@ export function Logo({
       ? "GOVERNMENT"
       : null;
 
+  const uid = division + size; // unique gradient IDs per instance
+
   return (
     <div className={cn("flex items-center gap-2.5", className)}>
-      {/* SVG Mark */}
+      {/* SVG Mark — Custom geometric P lettermark */}
       <svg
         width={iconSize}
         height={iconSize}
@@ -38,68 +40,87 @@ export function Logo({
         aria-hidden="true"
       >
         <defs>
-          <linearGradient id={`grad-health-${division}`} x1="0" y1="0" x2="1" y2="1">
+          {/* Left stem gradient (teal side) */}
+          <linearGradient id={`stem-${uid}`} x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="#2DD4BF" />
             <stop offset="100%" stopColor="#3B82F6" />
           </linearGradient>
-          <linearGradient id={`grad-gov-${division}`} x1="0" y1="1" x2="1" y2="0">
+          {/* Right bowl gradient (violet side) */}
+          <linearGradient id={`bowl-${uid}`} x1="0" y1="1" x2="1" y2="0">
             <stop offset="0%" stopColor="#A78BFA" />
             <stop offset="100%" stopColor="#3B82F6" />
           </linearGradient>
-          <linearGradient id={`grad-parent-${division}`} x1="0" y1="0" x2="1" y2="1">
+          {/* Parent uses a flowing tri-gradient on the whole shape */}
+          <linearGradient id={`full-${uid}`} x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="#2DD4BF" />
             <stop offset="50%" stopColor="#3B82F6" />
             <stop offset="100%" stopColor="#A78BFA" />
           </linearGradient>
-          <clipPath id="shield-clip">
-            <path d="M24 2 L44 10 L44 28 C44 38 34 44 24 46 C14 44 4 38 4 28 L4 10 Z" />
+
+          <clipPath id={`mark-clip-${uid}`}>
+            <path d="M12 6 h16 a14 14 0 0 1 0 28 h-6 v12 h-10 v-12 h-16 a6 6 0 0 1 -6 -6 v-16 a6 6 0 0 1 6 -6 Z" />
           </clipPath>
+
+          <filter id={`glow-${uid}`} x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="1" stdDeviation="2" floodColor="rgba(0,0,0,0.15)" />
+          </filter>
         </defs>
 
-        {/* Shield background */}
-        <path
-          d="M24 2 L44 10 L44 28 C44 38 34 44 24 46 C14 44 4 38 4 28 L4 10 Z"
-          fill={
-            division === "health"
-              ? `url(#grad-health-${division})`
-              : division === "government"
-              ? `url(#grad-gov-${division})`
-              : `url(#grad-parent-${division})`
-          }
-        />
-
-        {/* Diagonal split line — subtle lighter shade */}
-        <line
-          x1="4"
-          y1="28"
-          x2="44"
-          y2="10"
-          stroke="rgba(255,255,255,0.18)"
-          strokeWidth="1"
-          clipPath="url(#shield-clip)"
-        />
-
-        {/* Letter P — white, bold, centred */}
-        <text
-          x="24"
-          y="31"
-          textAnchor="middle"
+        {/* Outer rounded-square container with soft shadow */}
+        <rect
+          x="2"
+          y="2"
+          width="44"
+          height="44"
+          rx="12"
           fill="white"
-          fontSize="22"
-          fontWeight="800"
-          fontFamily="DM Sans, system-ui, sans-serif"
-          letterSpacing="-0.5"
-        >
-          P
-        </text>
+          filter={`url(#glow-${uid})`}
+        />
 
-        {/* Small dot accent bottom-right of shield */}
-        <circle
-          cx="34"
-          cy="38"
-          r="2.5"
-          fill="rgba(255,255,255,0.55)"
-          clipPath="url(#shield-clip)"
+        {/* Main mark container clip */}
+        <g clipPath={`url(#mark-clip-${uid})`}>
+          {/* Full fill for parent, or split for divisions */}
+          {division === "parent" ? (
+            <rect x="0" y="0" width="48" height="48" fill={`url(#full-${uid})`} />
+          ) : (
+            <>
+              {/* Left teal side */}
+              <rect x="0" y="0" width="24" height="48" fill={`url(#stem-${uid})`} />
+              {/* Right violet side */}
+              <rect x="24" y="0" width="24" height="48" fill={`url(#bowl-${uid})`} />
+            </>
+          )}
+        </g>
+
+        {/* Thin white divider line between halves */}
+        <line
+          x1="24"
+          y1="6"
+          x2="24"
+          y2="34"
+          stroke="rgba(255,255,255,0.35)"
+          strokeWidth="1.2"
+        />
+
+        {/* Inner "P" negative space — white */}
+        <g fill="white">
+          {/* Vertical stem of the P */}
+          <rect x="14" y="12" width="5" height="24" rx="2.5" />
+          {/* Circular bowl of the P */}
+          <path
+            d="M19 12 h6 a7 7 0 0 1 0 14 h-6 Z"
+          />
+          {/* Rounding the inside corner of the bowl */}
+          <circle cx="19" cy="19" r="2.5" fill={`url(#${division === "parent" ? `full-${uid}` : division === "health" ? `stem-${uid}` : `bowl-${uid}`})`} />
+        </g>
+
+        {/* Bottom-right micro detail — small arc accent */}
+        <path
+          d="M34 38 a4 4 0 0 1 4 4"
+          stroke="rgba(255,255,255,0.5)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          fill="none"
         />
       </svg>
 
