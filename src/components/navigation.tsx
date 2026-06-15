@@ -68,7 +68,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href={division === "parent" ? "/" : `/${division}`} className="flex items-center">
             <Logo division={division} size="sm" showWordmark={true} className="hidden sm:flex" />
-            <Logo division={division} size="sm" showWordmark={false} className="sm:hidden" />
+            <Logo division={division} size="sm" showWordmark={true} className="sm:hidden" />
           </Link>
 
           {/* Desktop Navigation */}
