@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Clock, Building2, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Past Performance | Primodial Government",
+  title: "Past Performance | Velune",
   description: "Our track record of successful contract delivery and client satisfaction in government contracting.",
 };
 

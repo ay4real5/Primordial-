@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Compliance & Security | Primodial Government",
+  title: "Compliance & Security | Velune",
   description: "Our compliance posture, quality assurance approach, and security commitments for government contracting.",
 };
 

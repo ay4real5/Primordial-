@@ -10,7 +10,7 @@ import { Phone, Mail, MapPin, Clock, Heart, Building2, ArrowRight } from "lucide
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Primodial. Contact our Health division for care inquiries or our Government division for partnership opportunities.",
+  description: "Get in touch with Velune Holdings LLC. Contact our Health division for care inquiries or our Government division for partnership opportunities.",
 };
 
 export default function ContactPage() {
@@ -162,7 +162,7 @@ export default function ContactPage() {
                     required
                   />
                   <Label htmlFor="consent" className="text-sm font-normal">
-                    I consent to Primodial contacting me regarding my inquiry. *
+                    I consent to Velune Holdings LLC contacting me regarding my inquiry. *
                   </Label>
                 </div>
 

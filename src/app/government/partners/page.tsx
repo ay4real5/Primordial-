@@ -19,8 +19,8 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Partners & Teaming | Primodial Government",
-  description: "Partner with Primodial Government for teaming opportunities, subcontracting arrangements, and joint capabilities.",
+  title: "Partners & Teaming | Velune",
+  description: "Partner with Velune for teaming opportunities, subcontracting arrangements, and joint capabilities.",
 };
 
 export default function PartnersPage() {
@@ -47,7 +47,7 @@ export default function PartnersPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-heading text-3xl font-bold text-primary mb-8 text-center">
-              Why Partner With Primodial?
+              Why Partner With Velune?
             </h2>
             
             <div className="grid sm:grid-cols-2 gap-6">
@@ -300,7 +300,7 @@ export default function PartnersPage() {
                       required
                     />
                     <Label htmlFor="consent" className="text-sm font-normal">
-                      I authorize Primodial to contact me regarding partnership opportunities. *
+                      I authorize Velune Holdings LLC to contact me regarding partnership opportunities. *
                     </Label>
                   </div>
 
@@ -350,7 +350,7 @@ export default function PartnersPage() {
             Let&apos;s Build Something Together
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            We&apos;re eager to explore how a partnership with Primodial can help
+            We&apos;re eager to explore how a partnership with Velune can help
             achieve mission success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

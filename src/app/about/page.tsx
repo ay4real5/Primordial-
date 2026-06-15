@@ -4,7 +4,7 @@ import { Heart, Building2, Target, Eye, Compass } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about Primodial's mission, values, and commitment to excellence in healthcare and government contracting.",
+  description: "Learn about Velune Holdings LLC's mission, values, and commitment to excellence in healthcare and government contracting.",
 };
 
 export default function AboutPage() {
@@ -38,7 +38,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary mb-6">
-              About Primodial
+              About Velune Holdings LLC
             </h1>
             <p className="text-lg text-muted-foreground">
               We are a US-registered company committed to delivering excellence 
@@ -161,11 +161,11 @@ export default function AboutPage() {
                 <div className="w-14 h-14 rounded-xl bg-government-light flex items-center justify-center mb-4">
                   <Building2 className="w-7 h-7 text-government" />
                 </div>
-                <CardTitle className="font-heading text-xl">Primodial Government</CardTitle>
+                <CardTitle className="font-heading text-xl">Velune</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Our Government division delivers professional contracting services 
+                  Velune delivers professional contracting services 
                   for federal, state, and local agencies. We serve as a capable 
                   partner for a wide range of contracting needs, with a focus on 
                   quality, compliance, and timely delivery.

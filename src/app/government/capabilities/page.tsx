@@ -14,8 +14,8 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Capabilities Statement | Primodial Government",
-  description: "Comprehensive capabilities statement for Primodial Government Contracting. Core competencies, qualifications, and company information.",
+  title: "Capabilities Statement | Velune",
+  description: "Comprehensive capabilities statement for Velune Government Contracting. Core competencies, qualifications, and company information.",
 };
 
 export default function CapabilitiesPage() {
@@ -31,10 +31,10 @@ export default function CapabilitiesPage() {
   ];
 
   const companyData = {
-    legalName: "Primodial",
-    dba: "Primodial Government",
+    legalName: "Velune Holdings LLC",
+    dba: "Velune",
     status: "US-registered company",
-    uei: "TBD - Pending Registration",
+    uei: "EUDTX5ULD6B1",
     cage: "TBD - Pending Assignment",
     website: "www.primodial.org"
   };
@@ -139,8 +139,8 @@ export default function CapabilitiesPage() {
                 <div>
                   <h3 className="font-semibold text-amber-900 mb-2">Registration In Progress</h3>
                   <p className="text-amber-800 text-sm">
-                    We are currently completing SAM.gov registration and obtaining our UEI and CAGE codes. 
-                    This page will be updated once registration is complete. Contact us for current 
+                    UEI obtained (EUDTX5ULD6B1). SAM.gov registration and CAGE code assignment in progress. 
+                    This page will be updated once all registration steps are complete. Contact us for current 
                     status and preliminary discussions.
                   </p>
                 </div>
