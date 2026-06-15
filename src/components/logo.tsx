@@ -26,11 +26,11 @@ export function Logo({
       ? "GOVERNMENT"
       : null;
 
-  const uid = division + size; // unique gradient IDs per instance
+  const uid = division + size;
 
   return (
     <div className={cn("flex items-center gap-2.5", className)}>
-      {/* SVG Mark — Custom geometric P lettermark */}
+      {/* SVG Mark — Abstract interlocking dual-segment */}
       <svg
         width={iconSize}
         height={iconSize}
@@ -40,33 +40,29 @@ export function Logo({
         aria-hidden="true"
       >
         <defs>
-          {/* Left stem gradient (teal side) */}
-          <linearGradient id={`stem-${uid}`} x1="0" y1="0" x2="1" y2="1">
+          {/* Teal → Blue gradient */}
+          <linearGradient id={`g-teal-${uid}`} x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="#2DD4BF" />
             <stop offset="100%" stopColor="#3B82F6" />
           </linearGradient>
-          {/* Right bowl gradient (violet side) */}
-          <linearGradient id={`bowl-${uid}`} x1="0" y1="1" x2="1" y2="0">
+          {/* Violet → Blue gradient */}
+          <linearGradient id={`g-violet-${uid}`} x1="1" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="#A78BFA" />
             <stop offset="100%" stopColor="#3B82F6" />
           </linearGradient>
-          {/* Parent uses a flowing tri-gradient on the whole shape */}
-          <linearGradient id={`full-${uid}`} x1="0" y1="0" x2="1" y2="1">
+          {/* Parent tri-gradient */}
+          <linearGradient id={`g-full-${uid}`} x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="#2DD4BF" />
             <stop offset="50%" stopColor="#3B82F6" />
             <stop offset="100%" stopColor="#A78BFA" />
           </linearGradient>
 
-          <clipPath id={`mark-clip-${uid}`}>
-            <path d="M12 6 h16 a14 14 0 0 1 0 28 h-6 v12 h-10 v-12 h-16 a6 6 0 0 1 -6 -6 v-16 a6 6 0 0 1 6 -6 Z" />
-          </clipPath>
-
-          <filter id={`glow-${uid}`} x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="1" stdDeviation="2" floodColor="rgba(0,0,0,0.15)" />
+          <filter id={`drop-${uid}`} x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="1" stdDeviation="2" floodColor="rgba(0,0,0,0.12)" />
           </filter>
         </defs>
 
-        {/* Outer rounded-square container with soft shadow */}
+        {/* Outer rounded-square frame with subtle shadow */}
         <rect
           x="2"
           y="2"
@@ -74,51 +70,79 @@ export function Logo({
           height="44"
           rx="12"
           fill="white"
-          filter={`url(#glow-${uid})`}
+          filter={`url(#drop-${uid})`}
         />
 
-        {/* Main mark container clip */}
-        <g clipPath={`url(#mark-clip-${uid})`}>
-          {/* Full fill for parent, or split for divisions */}
-          {division === "parent" ? (
-            <rect x="0" y="0" width="48" height="48" fill={`url(#full-${uid})`} />
-          ) : (
-            <>
-              {/* Left teal side */}
-              <rect x="0" y="0" width="24" height="48" fill={`url(#stem-${uid})`} />
-              {/* Right violet side */}
-              <rect x="24" y="0" width="24" height="48" fill={`url(#bowl-${uid})`} />
-            </>
-          )}
-        </g>
+        {/*
+          Abstract interlocking mark — two curved segments that form a unified "pill" shape.
+          The overall silhouette reads as a single entity, but the split reveals two divisions.
+          Inspired by Mastercard's Venn principle + Audi's interlocking rings.
+        */}
 
-        {/* Thin white divider line between halves */}
-        <line
-          x1="24"
-          y1="6"
-          x2="24"
-          y2="34"
-          stroke="rgba(255,255,255,0.35)"
-          strokeWidth="1.2"
-        />
-
-        {/* Inner "P" negative space — white */}
-        <g fill="white">
-          {/* Vertical stem of the P */}
-          <rect x="14" y="12" width="5" height="24" rx="2.5" />
-          {/* Circular bowl of the P */}
-          <path
-            d="M19 12 h6 a7 7 0 0 1 0 14 h-6 Z"
-          />
-          {/* Rounding the inside corner of the bowl */}
-          <circle cx="19" cy="19" r="2.5" fill={`url(#${division === "parent" ? `full-${uid}` : division === "health" ? `stem-${uid}` : `bowl-${uid}`})`} />
-        </g>
-
-        {/* Bottom-right micro detail — small arc accent */}
+        {/* LEFT SEGMENT (teal) — curved vertical band with rounded top/bottom */}
         <path
-          d="M34 38 a4 4 0 0 1 4 4"
-          stroke="rgba(255,255,255,0.5)"
-          strokeWidth="2"
+          d="M14 10
+             C14 10, 10 10, 10 14
+             L10 34
+             C10 38, 14 38, 14 38
+             C18 38, 22 38, 22 34
+             L22 28
+             C22 24, 18 24, 18 24
+             C14 24, 14 20, 14 20
+             L14 10Z"
+          fill={`url(#g-teal-${uid})`}
+        />
+
+        {/* RIGHT SEGMENT (violet) — curved horizontal bowl that interlocks with the stem */}
+        <path
+          d="M34 10
+             C34 10, 38 10, 38 14
+             L38 20
+             C38 24, 34 24, 34 24
+             C30 24, 26 24, 26 20
+             L26 14
+             C26 10, 30 10, 30 10
+             L34 10Z"
+          fill={`url(#g-violet-${uid})`}
+        />
+
+        {/* RIGHT SEGMENT lower arc — completes the bowl */}
+        <path
+          d="M34 24
+             C38 24, 38 28, 38 28
+             L38 34
+             C38 38, 34 38, 34 38
+             L30 38
+             C26 38, 26 34, 26 34
+             L26 28
+             C26 24, 30 24, 30 24
+             L34 24Z"
+          fill={`url(#g-violet-${uid})`}
+        />
+
+        {/* Interlock bridge — small connector piece where the two halves meet */}
+        <rect
+          x="18"
+          y="22"
+          width="8"
+          height="4"
+          rx="2"
+          fill={division === "parent"
+            ? `url(#g-full-${uid})`
+            : division === "health"
+            ? `url(#g-teal-${uid})`
+            : `url(#g-violet-${uid})`
+          }
+        />
+
+        {/* Inner negative-space dot — white, creates a focal point */}
+        <circle cx="22" cy="28" r="3" fill="white" opacity="0.9" />
+
+        {/* Thin white highlight line along the top curve */}
+        <path
+          d="M14 12 C14 12, 10 12, 10 14"
+          stroke="rgba(255,255,255,0.4)"
+          strokeWidth="1"
           strokeLinecap="round"
           fill="none"
         />
