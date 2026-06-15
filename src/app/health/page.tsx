@@ -66,8 +66,8 @@ export default function HealthPage() {
       <section className="relative min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=85"
-            alt="Compassionate caregiver with elderly patient at home"
+            src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1920&q=85"
+            alt="Caring nurse holding hands with elderly patient in home setting"
             fill
             className="object-cover object-center"
             priority

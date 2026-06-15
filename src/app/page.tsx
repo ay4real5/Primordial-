@@ -39,8 +39,8 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1920&q=85"
-            alt="Diverse team of professionals united in service"
+            src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1920&q=85"
+            alt="Confident professional team ready to serve"
             fill
             className="object-cover object-top"
             priority
