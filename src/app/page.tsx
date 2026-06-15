@@ -51,7 +51,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl text-white">
             <Badge className="mb-6 bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
-              Trusted Across Texas
+              Trusted Nationwide
             </Badge>
             <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Caring for
@@ -88,8 +88,8 @@ export default function HomePage() {
                 <div className="text-sm text-white/70">Care Available</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">TX</div>
-                <div className="text-sm text-white/70">Statewide</div>
+                <div className="text-3xl font-bold">US</div>
+                <div className="text-sm text-white/70">Nationwide</div>
               </div>
               <div>
                 <div className="text-3xl font-bold">100%</div>
