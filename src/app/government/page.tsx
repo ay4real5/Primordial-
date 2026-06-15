@@ -77,7 +77,7 @@ export default function GovernmentPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[100svh] sm:min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=1920&q=85"
@@ -94,43 +94,43 @@ export default function GovernmentPage() {
               <Building2 className="w-4 h-4" />
               Government Contracting
             </span>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Capable Partner
               <br />
               for Government
               <br />
               <span className="text-white/80">Agencies</span>
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 max-w-xl mb-10 leading-relaxed">
+            <p className="text-sm sm:text-xl text-white/90 max-w-xl mb-6 sm:mb-10 leading-relaxed">
               Professional contracting for federal, state, and local agencies. 
               Operational excellence, compliance focus, and proven management.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/government/capabilities">
-                <Button size="lg" className="bg-white text-government hover:bg-white/90 h-14 px-8 text-lg shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/government/capabilities" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-white text-government hover:bg-white/90 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg shadow-xl">
                   View Capabilities
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <Link href="/government/partners">
-                <Button size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/40 hover:bg-white/30 h-14 px-8 text-lg">
+              <Link href="/government/partners" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white border border-white/40 hover:bg-white/30 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg">
                   <Mail className="w-5 h-5 mr-2" />
                   Partner With Us
                 </Button>
               </Link>
             </div>
-            <div className="flex gap-8 mt-10 pt-8 border-t border-white/20">
+            <div className="flex gap-6 sm:gap-8 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/20">
               <div>
-                <div className="text-3xl font-bold">Federal</div>
-                <div className="text-sm text-white/70">& State Agencies</div>
+                <div className="text-xl sm:text-3xl font-bold">Federal</div>
+                <div className="text-xs sm:text-sm text-white/70">& State Agencies</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">FAR</div>
-                <div className="text-sm text-white/70">Compliant</div>
+                <div className="text-xl sm:text-3xl font-bold">FAR</div>
+                <div className="text-xs sm:text-sm text-white/70">Compliant</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">SB</div>
-                <div className="text-sm text-white/70">Certified</div>
+                <div className="text-xl sm:text-3xl font-bold">SB</div>
+                <div className="text-xs sm:text-sm text-white/70">Certified</div>
               </div>
             </div>
           </div>
@@ -138,9 +138,9 @@ export default function GovernmentPage() {
       </section>
 
       {/* Capabilities Overview */}
-      <section className="py-20 bg-background">
+      <section className="py-12 sm:py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center mb-10 sm:mb-16">
             <div>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
                 Capabilities Overview
@@ -216,7 +216,7 @@ export default function GovernmentPage() {
       </section>
 
       {/* Differentiators */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-14 sm:py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?w=1920&q=85"
@@ -227,8 +227,8 @@ export default function GovernmentPage() {
           <div className="absolute inset-0 bg-government/95" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-white mb-4">
               Our Differentiators
             </h2>
             <p className="text-white/80">
@@ -236,7 +236,7 @@ export default function GovernmentPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
             {[
               { title: "Speed & Responsiveness", description: "We understand the importance of timely delivery in government contracting. Our streamlined processes enable rapid response to requirements.", icon: Zap },
               { title: "Compliance Mindset", description: "Compliance isn't an afterthought — it's built into every process. Rigorous adherence to regulations and reporting requirements.", icon: Shield },
@@ -257,9 +257,9 @@ export default function GovernmentPage() {
       </section>
 
       {/* Engagement Models */}
-      <section className="py-20 bg-background">
+      <section className="py-12 sm:py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
             <div>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
                 Engagement Models
@@ -280,7 +280,7 @@ export default function GovernmentPage() {
                 ))}
               </div>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 hidden lg:block">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="aspect-[16/9] relative">
                   <Image
@@ -322,7 +322,7 @@ export default function GovernmentPage() {
       </section>
 
       {/* Compliance Commitment */}
-      <section className="py-20 bg-gradient-government">
+      <section className="py-12 sm:py-20 bg-gradient-government">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
@@ -333,7 +333,7 @@ export default function GovernmentPage() {
               adherence to regulations, standards, and contractual requirements 
               is fundamental to successful government contracting.
             </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-white rounded-lg p-4 shadow-sm">
                 <CheckCircle className="w-6 h-6 text-government mx-auto mb-2" />
                 <p className="text-sm font-medium">FAR Awareness</p>
@@ -364,7 +364,7 @@ export default function GovernmentPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white border-t border-border">
+      <section className="py-12 sm:py-20 bg-white border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Ready to Explore Partnership?

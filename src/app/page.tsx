@@ -35,7 +35,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* HERO - Full width with image background */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[100svh] sm:min-h-[90vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -53,7 +53,7 @@ export default function HomePage() {
             <Badge className="mb-6 bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
               Trusted Nationwide
             </Badge>
-            <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
               Caring for
               <br />
               <span className="text-health-light">People.</span>
@@ -62,19 +62,19 @@ export default function HomePage() {
               <br />
               <span className="text-government-light">Government.</span>
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-lg leading-relaxed">
+            <p className="text-base sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-lg leading-relaxed">
               Two divisions united by one mission: delivering exceptional service 
               with compassion, precision, and unwavering commitment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/health">
-                <Button size="lg" className="bg-health hover:bg-health-dark text-white shadow-lg shadow-health/30 h-14 px-8 text-lg">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/health" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-health hover:bg-health-dark text-white shadow-lg shadow-health/30 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg">
                   <Heart className="w-5 h-5 mr-2" />
                   Healthcare Services
                 </Button>
               </Link>
-              <Link href="/government">
-                <Button size="lg" className="bg-government hover:bg-government-dark text-white shadow-lg shadow-government/30 h-14 px-8 text-lg">
+              <Link href="/government" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-government hover:bg-government-dark text-white shadow-lg shadow-government/30 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg">
                   <Building2 className="w-5 h-5 mr-2" />
                   Government Solutions
                 </Button>
@@ -82,17 +82,17 @@ export default function HomePage() {
             </div>
             
             {/* Quick stats row */}
-            <div className="flex gap-8 mt-12 pt-8 border-t border-white/20">
+            <div className="flex gap-6 sm:gap-8 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/20">
               <div>
-                <div className="text-3xl font-bold">24/7</div>
+                <div className="text-2xl sm:text-3xl font-bold">24/7</div>
                 <div className="text-sm text-white/70">Care Available</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">US</div>
+                <div className="text-2xl sm:text-3xl font-bold">US</div>
                 <div className="text-sm text-white/70">Nationwide</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">100%</div>
+                <div className="text-2xl sm:text-3xl font-bold">100%</div>
                 <div className="text-sm text-white/70">Licensed</div>
               </div>
             </div>
@@ -106,11 +106,11 @@ export default function HomePage() {
       </section>
 
       {/* DIVISIONS - Image cards with overlay */}
-      <section className="py-24 bg-white">
+      <section className="py-14 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
             <Badge className="mb-4">Our Divisions</Badge>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
               Two Ways We Serve
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -130,11 +130,11 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-health/95 via-health/60 to-health/20" />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4">
-                  <Heart className="w-7 h-7" />
+              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 text-white">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-3">
+                  <Heart className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold mb-2">Primodial Health</h3>
+                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-2">Primodial Health</h3>
                 <p className="text-white/90 mb-4">
                   Compassionate home health care for your loved ones. Personal care, 
                   companionship, and household support.
@@ -163,11 +163,11 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-government/95 via-government/60 to-government/20" />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4">
-                  <Building2 className="w-7 h-7" />
+              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 text-white">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-3">
+                  <Building2 className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
-                <h3 className="font-heading text-2xl font-bold mb-2">Primodial Government</h3>
+                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-2">Primodial Government</h3>
                 <p className="text-white/90 mb-4">
                   Professional contracting for federal, state, and local agencies. 
                   Compliance-focused solutions.
@@ -189,11 +189,11 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES PREVIEW - Icon grid with images */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-14 sm:py-24 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
             <Badge className="mb-4" variant="secondary">What We Offer</Badge>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
               Comprehensive Solutions
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -290,11 +290,11 @@ export default function HomePage() {
       </section>
 
       {/* WHY CHOOSE US - Features with icons */}
-      <section className="py-24 bg-white">
+      <section className="py-14 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
             <Badge className="mb-4">Why Primodial</Badge>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
               Excellence in Everything
             </h2>
           </div>
@@ -352,7 +352,7 @@ export default function HomePage() {
       </section>
 
       {/* TESTIMONIAL - Quote section with background */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 sm:py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1920&q=85"
@@ -366,7 +366,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white">
             <Quote className="w-16 h-16 mx-auto mb-8 text-white/30" />
-            <blockquote className="text-2xl md:text-3xl font-heading font-medium mb-8 leading-relaxed">
+            <blockquote className="text-lg sm:text-2xl md:text-3xl font-heading font-medium mb-8 leading-relaxed">
               &ldquo;Primodial Health gave our family peace of mind. Their caregivers treated 
               my mother with such dignity and compassion. We couldn&apos;t ask for better care.&rdquo;
             </blockquote>
@@ -386,7 +386,7 @@ export default function HomePage() {
       {/* TRUST BADGES */}
       <section className="py-16 bg-muted/30 border-y border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-12 items-center">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-6 sm:gap-12 items-center">
             <div className="flex items-center gap-3 text-muted-foreground">
               <div className="w-12 h-12 rounded-full bg-health/10 flex items-center justify-center">
                 <Shield className="w-6 h-6 text-health" />
@@ -416,7 +416,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA CARDS */}
-      <section className="py-24 bg-white">
+      <section className="py-14 sm:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Health CTA */}

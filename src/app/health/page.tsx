@@ -63,7 +63,7 @@ export default function HealthPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[100svh] sm:min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1920&q=85"
@@ -80,41 +80,41 @@ export default function HealthPage() {
               <Heart className="w-4 h-4" />
               Compassionate Home Health Care
             </span>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Care That Feels
               <br />
               Like Family
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 max-w-xl mb-10 leading-relaxed">
+            <p className="text-sm sm:text-xl text-white/90 max-w-xl mb-6 sm:mb-10 leading-relaxed">
               Professional, compassionate care services that help your loved ones 
               maintain independence and quality of life in the comfort of home.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+18303993602">
-                <Button size="lg" className="bg-white text-health hover:bg-white/90 h-14 px-8 text-lg shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a href="tel:+18303993602" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-white text-health hover:bg-white/90 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg shadow-xl">
                   <Phone className="w-5 h-5 mr-2" />
                   Call (830) 399-3602
                 </Button>
               </a>
-              <Link href="/health/services">
-                <Button size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/40 hover:bg-white/30 h-14 px-8 text-lg">
+              <Link href="/health/services" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white border border-white/40 hover:bg-white/30 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg">
                   View Our Services
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
             </div>
-            <div className="flex gap-8 mt-10 pt-8 border-t border-white/20">
+            <div className="flex gap-6 sm:gap-8 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/20">
               <div>
-                <div className="text-3xl font-bold">24/7</div>
-                <div className="text-sm text-white/70">Care Available</div>
+                <div className="text-2xl sm:text-3xl font-bold">24/7</div>
+                <div className="text-xs sm:text-sm text-white/70">Care Available</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">100%</div>
-                <div className="text-sm text-white/70">Background Checked</div>
+                <div className="text-2xl sm:text-3xl font-bold">100%</div>
+                <div className="text-xs sm:text-sm text-white/70">Background Checked</div>
               </div>
               <div>
-                <div className="text-3xl font-bold">TX</div>
-                <div className="text-sm text-white/70">Statewide</div>
+                <div className="text-2xl sm:text-3xl font-bold">US</div>
+                <div className="text-xs sm:text-sm text-white/70">Nationwide</div>
               </div>
             </div>
           </div>
@@ -122,9 +122,9 @@ export default function HealthPage() {
       </section>
 
       {/* Who We Help */}
-      <section className="py-20 bg-background">
+      <section className="py-12 sm:py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <div className="aspect-[4/3] relative">
                 <Image
@@ -140,7 +140,7 @@ export default function HealthPage() {
                     <Heart className="w-5 h-5 text-health" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm">Serving families across Texas</p>
+                    <p className="font-semibold text-sm">Serving families nationwide</p>
                     <p className="text-xs text-muted-foreground">Personalized care for every situation</p>
                   </div>
                 </div>
@@ -177,10 +177,10 @@ export default function HealthPage() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-12 sm:py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-primary mb-4">
               Our Services
             </h2>
             <p className="text-muted-foreground">
@@ -237,10 +237,10 @@ export default function HealthPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-background">
+      <section className="py-12 sm:py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-primary mb-4">
               How It Works
             </h2>
             <p className="text-muted-foreground">
@@ -265,7 +265,7 @@ export default function HealthPage() {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-20 bg-gradient-health">
+      <section className="py-12 sm:py-20 bg-gradient-health">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
@@ -301,7 +301,7 @@ export default function HealthPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-14 sm:py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=1920&q=85"
@@ -312,8 +312,8 @@ export default function HealthPage() {
           <div className="absolute inset-0 bg-health/95" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-white mb-4">
               What Families Say
             </h2>
             <p className="text-white/80">
@@ -321,7 +321,7 @@ export default function HealthPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {[
               { quote: "The caregiver assigned to my mother was incredible. She treated her with such dignity and patience. Our whole family feels so relieved.", name: "Sarah T.", location: "San Antonio, TX" },
               { quote: "After my surgery, Primodial Health sent someone who genuinely cared. They helped me recover with confidence and kept me on track.", name: "Marcus R.", location: "Austin, TX" },
@@ -354,10 +354,10 @@ export default function HealthPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-hero">
+      <section className="py-12 sm:py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-primary mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-muted-foreground">
@@ -390,7 +390,7 @@ export default function HealthPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white border-t border-border">
+      <section className="py-12 sm:py-20 bg-white border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Ready to Get Started?
