@@ -23,29 +23,6 @@ export const metadata: Metadata = {
 };
 
 export default function HealthPage() {
-  const services = [
-    {
-      icon: Home,
-      title: "Daily Living Support",
-      description: "Personal care, household support, and meal preparation bundled for comprehensive care."
-    },
-    {
-      icon: HandHeart,
-      title: "Companionship",
-      description: "Meaningful social interaction, activities, and emotional support."
-    },
-    {
-      icon: Stethoscope,
-      title: "Health Management",
-      description: "Health monitoring and medication management for better outcomes."
-    },
-    {
-      icon: Car,
-      title: "Transportation",
-      description: "Safe, reliable rides for appointments, errands, and social activities."
-    }
-  ];
-
   const howItWorks = [
     {
       step: "1",

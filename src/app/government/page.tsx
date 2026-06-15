@@ -55,21 +55,6 @@ export default function GovernmentPage() {
     }
   ];
 
-  const differentiators = [
-    {
-      title: "Speed & Responsiveness",
-      description: "We understand the importance of timely delivery in government contracting. Our streamlined processes enable rapid response to requirements."
-    },
-    {
-      title: "Compliance Mindset",
-      description: "Compliance isn't an afterthought—it's built into every process. We maintain rigorous adherence to regulations and reporting requirements."
-    },
-    {
-      title: "Quality Focus",
-      description: "We deliver outcomes that meet or exceed expectations, with quality assurance processes that ensure consistent performance."
-    }
-  ];
-
   const engagementModels = [
     {
       title: "Prime Contractor",
