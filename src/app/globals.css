@@ -1,27 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* HORIZON DESIGN SYSTEM - Primodial Brand */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Typography */
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-dm-sans: "DM Sans", system-ui, sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  /* === HORIZON PALETTE (Option C) === */
+  /* Core */
+  --background: #F0F9FF;
+  --foreground: #1E293B;
+
+  /* Primary - Deep Navy */
+  --primary: #1E3A5F;
+  --primary-foreground: #FFFFFF;
+  --primary-50: #F0F9FF;
+  --primary-100: #E0F2FE;
+  --primary-200: #BAE6FD;
+  --primary-300: #7DD3FC;
+  --primary-400: #38BDF8;
+  --primary-500: #0EA5E9;
+  --primary-600: #0284C7;
+  --primary-700: #0369A1;
+  --primary-800: #075985;
+  --primary-900: #0C4A6E;
+
+  /* Secondary - Steel Blue */
+  --secondary: #4F7CAC;
+  --secondary-foreground: #FFFFFF;
+
+  /* Division Accents */
+  /* Health - Cyan/Teal */
+  --health: #06B6D4;
+  --health-foreground: #FFFFFF;
+  --health-light: #CFFAFE;
+  --health-dark: #0891B2;
+
+  /* Government - Indigo */
+  --government: #6366F1;
+  --government-foreground: #FFFFFF;
+  --government-light: #E0E7FF;
+  --government-dark: #4F46E5;
+
+  /* UI Colors */
+  --accent: #F1F5F9;
+  --accent-foreground: #1E293B;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  --card: #FFFFFF;
+  --card-foreground: #1E293B;
+  --border: #CBD5E1;
+  --input: #CBD5E1;
+  --ring: #1E3A5F;
+
+  /* Status */
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --warning: #F59E0B;
+  --warning-foreground: #1E293B;
+  --success: #10B981;
+  --success-foreground: #FFFFFF;
 }
 
+/* Dark mode support (optional) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0F172A;
+    --foreground: #F8FAFC;
+    --card: #1E293B;
+    --card-foreground: #F8FAFC;
+    --muted: #334155;
+    --muted-foreground: #94A3B8;
+    --accent: #334155;
+    --accent-foreground: #F8FAFC;
+    --border: #334155;
+    --input: #334155;
   }
+}
+
+/* Base styles */
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography utilities */
+.font-heading {
+  font-family: var(--font-dm-sans);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--primary-200);
+  color: var(--primary-900);
+}
+
+/* Division accent utilities */
+.accent-health {
+  --accent-color: var(--health);
+  --accent-color-light: var(--health-light);
+  --accent-color-dark: var(--health-dark);
+}
+
+.accent-government {
+  --accent-color: var(--government);
+  --accent-color-light: var(--government-light);
+  --accent-color-dark: var(--government-dark);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, var(--background) 0%, var(--primary-50) 100%);
+  }
+
+  .bg-gradient-health {
+    background: linear-gradient(135deg, var(--health-light) 0%, var(--background) 100%);
+  }
+
+  .bg-gradient-government {
+    background: linear-gradient(135deg, var(--government-light) 0%, var(--background) 100%);
+  }
+
+  /* Division-specific button styles */
+  .btn-health {
+    background-color: var(--health);
+    color: var(--health-foreground);
+  }
+
+  .btn-health:hover {
+    background-color: var(--health-dark);
+  }
+
+  .btn-government {
+    background-color: var(--government);
+    color: var(--government-foreground);
+  }
+
+  .btn-government:hover {
+    background-color: var(--government-dark);
   }
 }
