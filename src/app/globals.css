@@ -15,13 +15,13 @@
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
 
-  /* === CLEAN WHITE PALETTE === */
-  /* Core - Pure white everywhere */
-  --background: #FFFFFF;
-  --foreground: #1E293B;
+  /* === SOFT WHITE PALETTE - Reduced Contrast === */
+  /* Core - Soft off-white */
+  --background: #FAFAFA;
+  --foreground: #374151;
 
-  /* Primary - Vibrant Royal Blue */
-  --primary: #2563EB;
+  /* Primary - Softer Blue */
+  --primary: #3B82F6;
   --primary-foreground: #FFFFFF;
   --primary-50: #EFF6FF;
   --primary-100: #DBEAFE;
@@ -34,33 +34,33 @@
   --primary-800: #1E40AF;
   --primary-900: #1E3A8A;
 
-  /* Secondary - Sky Blue */
-  --secondary: #0EA5E9;
+  /* Secondary - Soft Sky Blue */
+  --secondary: #38BDF8;
   --secondary-foreground: #FFFFFF;
 
-  /* Division Accents */
-  /* Health - Vibrant Teal */
-  --health: #14B8A6;
+  /* Division Accents - Softer */
+  /* Health - Soft Teal */
+  --health: #2DD4BF;
   --health-foreground: #FFFFFF;
-  --health-light: #F0FDFA;
-  --health-dark: #0D9488;
+  --health-light: #F5FFFD;
+  --health-dark: #14B8A6;
 
-  /* Government - Vibrant Violet */
-  --government: #8B5CF6;
+  /* Government - Soft Violet */
+  --government: #A78BFA;
   --government-foreground: #FFFFFF;
-  --government-light: #FAF5FF;
-  --government-dark: #7C3AED;
+  --government-light: #FAFAFF;
+  --government-dark: #8B5CF6;
 
-  /* UI Colors - Almost pure white */
-  --accent: #FFFFFF;
-  --accent-foreground: #1E293B;
-  --muted: #FAFAFA;
+  /* UI Colors - Soft tones */
+  --accent: #F9FAFB;
+  --accent-foreground: #374151;
+  --muted: #F3F4F6;
   --muted-foreground: #6B7280;
   --card: #FFFFFF;
-  --card-foreground: #1E293B;
-  --border: #F3F4F6;
-  --input: #F3F4F6;
-  --ring: #2563EB;
+  --card-foreground: #374151;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #3B82F6;
 
   /* Status */
   --destructive: #DC2626;
