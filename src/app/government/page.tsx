@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
@@ -91,34 +92,61 @@ export default function GovernmentPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative py-20 lg:py-32 bg-gradient-government overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-government text-white text-sm font-medium mb-6">
+      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=1920&q=85"
+            alt="United States Capitol building representing federal government contracting"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-government/95 via-government/85 to-government/30" />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl text-white">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
               <Building2 className="w-4 h-4" />
               Government Contracting
             </span>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Capable Partner for Government Agencies
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Capable Partner
+              <br />
+              for Government
+              <br />
+              <span className="text-white/80">Agencies</span>
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-              Professional contracting services for federal, state, and local agencies. 
-              We bring operational excellence, compliance focus, and proven management 
-              to a wide range of contracting needs.
+            <p className="text-lg sm:text-xl text-white/90 max-w-xl mb-10 leading-relaxed">
+              Professional contracting for federal, state, and local agencies. 
+              Operational excellence, compliance focus, and proven management.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/government/capabilities">
-                <Button size="lg" variant="government">
+                <Button size="lg" className="bg-white text-government hover:bg-white/90 h-14 px-8 text-lg shadow-xl">
                   View Capabilities
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <Link href="/government/partners">
-                <Button size="lg" variant="government-outline">
+                <Button size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/40 hover:bg-white/30 h-14 px-8 text-lg">
                   <Mail className="w-5 h-5 mr-2" />
                   Partner With Us
                 </Button>
               </Link>
+            </div>
+            <div className="flex gap-8 mt-10 pt-8 border-t border-white/20">
+              <div>
+                <div className="text-3xl font-bold">Federal</div>
+                <div className="text-sm text-white/70">& State Agencies</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold">FAR</div>
+                <div className="text-sm text-white/70">Compliant</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold">SB</div>
+                <div className="text-sm text-white/70">Certified</div>
+              </div>
             </div>
           </div>
         </div>
@@ -127,14 +155,52 @@ export default function GovernmentPage() {
       {/* Capabilities Overview */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
-              Capabilities Overview
-            </h2>
-            <p className="text-muted-foreground">
-              We offer a wide range of contracting capabilities to support government 
-              agencies in achieving their mission objectives.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+            <div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+                Capabilities Overview
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                We offer a wide range of contracting capabilities to support government 
+                agencies in achieving their mission objectives.
+              </p>
+              <div className="flex gap-4">
+                <div className="text-center p-4 rounded-xl bg-government/5">
+                  <div className="text-2xl font-bold text-government">Prime</div>
+                  <div className="text-xs text-muted-foreground">Contractor</div>
+                </div>
+                <div className="text-center p-4 rounded-xl bg-government/5">
+                  <div className="text-2xl font-bold text-government">Sub</div>
+                  <div className="text-xs text-muted-foreground">Contractor</div>
+                </div>
+                <div className="text-center p-4 rounded-xl bg-government/5">
+                  <div className="text-2xl font-bold text-government">BPA</div>
+                  <div className="text-xs text-muted-foreground">Support</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-[4/3] relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=85"
+                  alt="Professional government contractors reviewing documents in formal office"
+                  fill
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-government/60 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-government/10 flex items-center justify-center">
+                      <Shield className="w-5 h-5 text-government" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sm">Compliance-first approach</p>
+                      <p className="text-xs text-muted-foreground">FAR-aware • Fully documented • Quality assured</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -165,23 +231,39 @@ export default function GovernmentPage() {
       </section>
 
       {/* Differentiators */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?w=1920&q=85"
+            alt="Professional business handshake representing government partnership"
+            fill
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-government/92" />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
               Our Differentiators
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-white/80">
               What sets us apart in the government contracting landscape.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {differentiators.map((diff) => (
-              <Card key={diff.title} className="text-center">
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold text-lg mb-3">{diff.title}</h3>
-                  <p className="text-muted-foreground text-sm">{diff.description}</p>
+            {[
+              { title: "Speed & Responsiveness", description: "We understand the importance of timely delivery in government contracting. Our streamlined processes enable rapid response to requirements.", icon: Zap },
+              { title: "Compliance Mindset", description: "Compliance isn't an afterthought — it's built into every process. Rigorous adherence to regulations and reporting requirements.", icon: Shield },
+              { title: "Quality Focus", description: "We deliver outcomes that meet or exceed expectations, with quality assurance processes that ensure consistent performance.", icon: Award }
+            ].map((diff) => (
+              <Card key={diff.title} className="bg-white/10 backdrop-blur-sm border-white/20 text-center">
+                <CardContent className="p-8">
+                  <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-6">
+                    <diff.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-heading font-semibold text-lg mb-3 text-white">{diff.title}</h3>
+                  <p className="text-white/80 text-sm leading-relaxed">{diff.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -192,26 +274,64 @@ export default function GovernmentPage() {
       {/* Engagement Models */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
-              Engagement Models
-            </h2>
-            <p className="text-muted-foreground">
-              Flexible approaches to meet diverse contracting needs.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            {engagementModels.map((model) => (
-              <Card key={model.title}>
-                <CardHeader>
-                  <CardTitle className="font-heading text-lg">{model.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm">{model.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+                Engagement Models
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                Flexible approaches to meet diverse contracting needs.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {engagementModels.map((model) => (
+                  <Card key={model.title} className="hover:shadow-md transition-shadow">
+                    <CardHeader className="pb-2">
+                      <CardTitle className="font-heading text-base">{model.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground text-sm">{model.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <div className="aspect-[16/9] relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=85"
+                    alt="Government agency professionals collaborating on contracts"
+                    fill
+                    className="object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-government/50 to-transparent" />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                  <div className="aspect-[4/3] relative">
+                    <Image
+                      src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&q=85"
+                      alt="Business professional in formal attire"
+                      fill
+                      className="object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-government/30" />
+                  </div>
+                </div>
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                  <div className="aspect-[4/3] relative">
+                    <Image
+                      src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&q=85"
+                      alt="Team reviewing government compliance documents"
+                      fill
+                      className="object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-government/30" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

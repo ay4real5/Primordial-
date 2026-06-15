@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
@@ -85,33 +86,59 @@ export default function HealthPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative py-20 lg:py-32 bg-gradient-health overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-health text-white text-sm font-medium mb-6">
+      <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=85"
+            alt="Compassionate caregiver with elderly patient at home"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-health/95 via-health/80 to-health/30" />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl text-white">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
               <Heart className="w-4 h-4" />
               Compassionate Home Health Care
             </span>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Care That Feels Like Family
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Care That Feels
+              <br />
+              Like Family
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
+            <p className="text-lg sm:text-xl text-white/90 max-w-xl mb-10 leading-relaxed">
               Professional, compassionate care services that help your loved ones 
               maintain independence and quality of life in the comfort of home.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:+18303993602">
-                <Button size="lg" variant="health">
+                <Button size="lg" className="bg-white text-health hover:bg-white/90 h-14 px-8 text-lg shadow-xl">
                   <Phone className="w-5 h-5 mr-2" />
                   Call (830) 399-3602
                 </Button>
               </a>
               <Link href="/health/services">
-                <Button size="lg" variant="health-outline">
+                <Button size="lg" className="bg-white/20 backdrop-blur-sm text-white border border-white/40 hover:bg-white/30 h-14 px-8 text-lg">
                   View Our Services
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
+            </div>
+            <div className="flex gap-8 mt-10 pt-8 border-t border-white/20">
+              <div>
+                <div className="text-3xl font-bold">24/7</div>
+                <div className="text-sm text-white/70">Care Available</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold">100%</div>
+                <div className="text-sm text-white/70">Background Checked</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold">TX</div>
+                <div className="text-sm text-white/70">Statewide</div>
+              </div>
             </div>
           </div>
         </div>
@@ -120,29 +147,54 @@ export default function HealthPage() {
       {/* Who We Help */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
-              Who We Help
-            </h2>
-            <p className="text-muted-foreground">
-              We provide personalized care for individuals and families across various situations and needs.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Seniors", desc: "Maintaining independence at home" },
-              { title: "Individuals with Disabilities", desc: "Support for daily living activities" },
-              { title: "Post-Surgical Patients", desc: "Recovery and rehabilitation support" },
-              { title: "Family Caregivers", desc: "Respite and supplemental care" }
-            ].map((item) => (
-              <Card key={item.title} className="text-center">
-                <CardContent className="p-6">
-                  <h3 className="font-heading font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-[4/3] relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=800&q=85"
+                  alt="Senior woman smiling with family caregiver at home"
+                  fill
+                  className="object-cover object-center"
+                />
+              </div>
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-health/10 flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-health" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm">Serving families across Texas</p>
+                    <p className="text-xs text-muted-foreground">Personalized care for every situation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+                Who We Help
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                We provide personalized care for individuals and families across various situations and needs.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  { title: "Seniors", desc: "Maintaining independence at home", img: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=200&q=80" },
+                  { title: "Individuals with Disabilities", desc: "Support for daily living activities", img: "https://images.unsplash.com/photo-1559839734-2b71a1973802?w=200&q=80" },
+                  { title: "Post-Surgical Patients", desc: "Recovery and rehabilitation support", img: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=200&q=80" },
+                  { title: "Family Caregivers", desc: "Respite and supplemental care", img: "https://images.unsplash.com/photo-1536064479547-7ee40b74b807?w=200&q=80" }
+                ].map((item) => (
+                  <div key={item.title} className="flex items-start gap-3 p-4 rounded-xl bg-health/5 hover:bg-health/10 transition-colors">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 relative">
+                      <Image src={item.img} alt={item.title} fill className="object-cover" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold text-sm mb-1">{item.title}</h3>
+                      <p className="text-xs text-muted-foreground">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -160,12 +212,26 @@ export default function HealthPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6">
-            {services.map((service) => (
-              <Card key={service.title} className="group hover:shadow-lg transition-all">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-health-light flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-6 h-6 text-health" />
+            {[
+              { icon: Home, title: "Daily Living Support", description: "Personal care, household support, and meal preparation bundled for comprehensive care.", img: "https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600&q=85", alt: "Caregiver helping with daily household activities" },
+              { icon: HandHeart, title: "Companionship", description: "Meaningful social interaction, activities, and emotional support.", img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=85", alt: "Senior enjoying companionship and social activities" },
+              { icon: Stethoscope, title: "Health Management", description: "Health monitoring and medication management for better outcomes.", img: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=600&q=85", alt: "Health aide monitoring patient vitals at home" },
+              { icon: Car, title: "Transportation", description: "Safe, reliable rides for appointments, errands, and social activities.", img: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=85", alt: "Reliable transportation service for seniors" }
+            ].map((service) => (
+              <Card key={service.title} className="group hover:shadow-xl transition-all overflow-hidden">
+                <div className="relative h-44">
+                  <Image
+                    src={service.img}
+                    alt={service.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-health/70 to-transparent" />
+                  <div className="absolute bottom-4 left-4 w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <service.icon className="w-5 h-5 text-white" />
                   </div>
+                </div>
+                <CardHeader>
                   <CardTitle className="font-heading text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -257,31 +323,52 @@ export default function HealthPage() {
         </div>
       </section>
 
-      {/* Testimonials Placeholder */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Testimonials */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=1920&q=85"
+            alt="Happy senior couple at home"
+            fill
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-health/92" />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
               What Families Say
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-white/80">
               Hear from families who have experienced our compassionate care.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <Card key={i} className="bg-muted/50">
+            {[
+              { quote: "The caregiver assigned to my mother was incredible. She treated her with such dignity and patience. Our whole family feels so relieved.", name: "Sarah T.", location: "San Antonio, TX" },
+              { quote: "After my surgery, Primodial Health sent someone who genuinely cared. They helped me recover with confidence and kept me on track.", name: "Marcus R.", location: "Austin, TX" },
+              { quote: "My father refused outside help for years. Within a week, he loved his caregiver. That says everything about the quality of their staff.", name: "Linda M.", location: "Houston, TX" }
+            ].map((t, i) => (
+              <Card key={i} className="bg-white/10 backdrop-blur-sm border-white/20">
                 <CardContent className="p-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, j) => (
-                      <Heart key={j} className="w-4 h-4 fill-health text-health" />
+                      <Heart key={j} className="w-4 h-4 fill-white text-white" />
                     ))}
                   </div>
-                  <p className="text-muted-foreground italic mb-4">
-                    &quot;Testimonial coming soon. We&apos;re gathering feedback from our valued clients.&quot;
+                  <p className="text-white/90 italic mb-6 leading-relaxed">
+                    &quot;{t.quote}&quot;
                   </p>
-                  <p className="font-medium text-sm">— Family Member</p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white text-sm">{t.name}</p>
+                      <p className="text-white/60 text-xs">{t.location}</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}

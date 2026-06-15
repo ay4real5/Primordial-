@@ -39,10 +39,10 @@ export default function HomePage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80"
-            alt="Caring healthcare professional with patient"
+            src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1920&q=85"
+            alt="Diverse team of professionals united in service"
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent" />
@@ -123,10 +123,10 @@ export default function HomePage() {
             <div className="group relative overflow-hidden rounded-3xl shadow-xl">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1559839734-2b71a1973802?w=800&q=80"
-                  alt="Nurse helping senior patient"
+                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=85"
+                  alt="Compassionate caregiver supporting elderly patient at home"
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-health/90 via-health/40 to-transparent" />
               </div>
@@ -156,10 +156,10 @@ export default function HomePage() {
             <div className="group relative overflow-hidden rounded-3xl shadow-xl">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
-                  alt="Professional business team meeting"
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=85"
+                  alt="Professional government contractors in a formal meeting"
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-government/90 via-government/40 to-transparent" />
               </div>
@@ -206,10 +206,10 @@ export default function HomePage() {
             <Card className="overflow-hidden border-health/20">
               <div className="relative h-48">
                 <Image
-                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80"
-                  alt="Doctor consultation"
+                  src="https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=600&q=85"
+                  alt="Caregiver holding hands with elderly patient in warm home setting"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-health/20" />
                 <div className="absolute top-4 left-4">
@@ -248,10 +248,10 @@ export default function HomePage() {
             <Card className="overflow-hidden border-government/20">
               <div className="relative h-48">
                 <Image
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
-                  alt="Modern office workspace"
+                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=85"
+                  alt="Government building with American flag symbolizing federal contracting"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-government/20" />
                 <div className="absolute top-4 left-4">
@@ -355,10 +355,10 @@ export default function HomePage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=1920&q=80"
-            alt="Happy elderly couple"
+            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1920&q=85"
+            alt="Warm family moment representing compassionate care"
             fill
-            className="object-cover"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-primary/90" />
         </div>
@@ -421,9 +421,16 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Health CTA */}
             <Card className="overflow-hidden border-health/20 hover:shadow-xl transition-shadow">
-              <div className="relative h-32 bg-gradient-to-r from-health to-teal-400">
+              <div className="relative h-48">
+                <Image
+                  src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=600&q=85"
+                  alt="Friendly home health aide assisting senior client"
+                  fill
+                  className="object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-health/60" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Phone className="w-12 h-12 text-white/30" />
+                  <Phone className="w-12 h-12 text-white/60" />
                 </div>
               </div>
               <CardContent className="p-8">
@@ -443,9 +450,16 @@ export default function HomePage() {
 
             {/* Government CTA */}
             <Card className="overflow-hidden border-government/20 hover:shadow-xl transition-shadow">
-              <div className="relative h-32 bg-gradient-to-r from-government to-purple-400">
+              <div className="relative h-48">
+                <Image
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=85"
+                  alt="Professional government team reviewing contract documents"
+                  fill
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-government/60" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Briefcase className="w-12 h-12 text-white/30" />
+                  <Briefcase className="w-12 h-12 text-white/60" />
                 </div>
               </div>
               <CardContent className="p-8">
