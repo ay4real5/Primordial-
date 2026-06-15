@@ -72,7 +72,7 @@ export default function HealthPage() {
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-health/95 via-health/80 to-health/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-health/98 via-health/90 to-health/60" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl text-white">
@@ -309,7 +309,7 @@ export default function HealthPage() {
             fill
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-health/92" />
+          <div className="absolute inset-0 bg-health/95" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">

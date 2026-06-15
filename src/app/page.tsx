@@ -45,7 +45,7 @@ export default function HomePage() {
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/98 via-primary/90 to-primary/60" />
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -128,7 +128,7 @@ export default function HomePage() {
                   fill
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-health/90 via-health/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-health/95 via-health/60 to-health/20" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4">
@@ -161,7 +161,7 @@ export default function HomePage() {
                   fill
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-government/90 via-government/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-government/95 via-government/60 to-government/20" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-4">
@@ -360,7 +360,7 @@ export default function HomePage() {
             fill
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-primary/90" />
+          <div className="absolute inset-0 bg-primary/93" />
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

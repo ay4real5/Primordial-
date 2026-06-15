@@ -86,7 +86,7 @@ export default function GovernmentPage() {
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-government/95 via-government/85 to-government/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-government/98 via-government/90 to-government/60" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl text-white">
@@ -224,7 +224,7 @@ export default function GovernmentPage() {
             fill
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-government/92" />
+          <div className="absolute inset-0 bg-government/95" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
