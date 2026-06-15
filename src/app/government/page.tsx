@@ -199,13 +199,13 @@ export default function GovernmentPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((cap) => (
               <Card key={cap.title} className="group hover:shadow-lg transition-all">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-government-light flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <cap.icon className="w-6 h-6 text-government" />
+                <CardHeader className="p-4 sm:p-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-government-light flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                    <cap.icon className="w-5 h-5 sm:w-6 sm:h-6 text-government" />
                   </div>
-                  <CardTitle className="font-heading text-lg">{cap.title}</CardTitle>
+                  <CardTitle className="font-heading text-base sm:text-lg">{cap.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
                   <p className="text-muted-foreground text-sm">{cap.description}</p>
                 </CardContent>
               </Card>
@@ -341,22 +341,22 @@ export default function GovernmentPage() {
               adherence to regulations, standards, and contractual requirements 
               is fundamental to successful government contracting.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-white rounded-lg p-4 shadow-sm">
-                <CheckCircle className="w-6 h-6 text-government mx-auto mb-2" />
-                <p className="text-sm font-medium">FAR Awareness</p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
+                <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-government mx-auto mb-1 sm:mb-2" />
+                <p className="text-xs sm:text-sm font-medium">FAR Awareness</p>
               </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm">
-                <CheckCircle className="w-6 h-6 text-government mx-auto mb-2" />
-                <p className="text-sm font-medium">Quality Systems</p>
+              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
+                <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-government mx-auto mb-1 sm:mb-2" />
+                <p className="text-xs sm:text-sm font-medium">Quality Systems</p>
               </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm">
-                <CheckCircle className="w-6 h-6 text-government mx-auto mb-2" />
-                <p className="text-sm font-medium">Data Security</p>
+              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
+                <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-government mx-auto mb-1 sm:mb-2" />
+                <p className="text-xs sm:text-sm font-medium">Data Security</p>
               </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm">
-                <CheckCircle className="w-6 h-6 text-government mx-auto mb-2" />
-                <p className="text-sm font-medium">Subcontractor Oversight</p>
+              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-sm">
+                <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-government mx-auto mb-1 sm:mb-2" />
+                <p className="text-xs sm:text-sm font-medium">Subcontractor Oversight</p>
               </div>
             </div>
             <div className="mt-8">

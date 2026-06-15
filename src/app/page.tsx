@@ -366,7 +366,7 @@ export default function HomePage() {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <Quote className="w-16 h-16 mx-auto mb-8 text-white/30" />
+            <Quote className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-6 sm:mb-8 text-white/30" />
             <blockquote className="text-lg sm:text-2xl md:text-3xl font-heading font-medium mb-8 leading-relaxed">
               &ldquo;Primodial Health gave our family peace of mind. Their caregivers treated 
               my mother with such dignity and compassion. We couldn&apos;t ask for better care.&rdquo;

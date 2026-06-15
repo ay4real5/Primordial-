@@ -210,7 +210,7 @@ export default function HealthPage() {
                   </div>
                 </div>
                 <CardHeader>
-                  <CardTitle className="font-heading text-xl">{service.title}</CardTitle>
+                  <CardTitle className="font-heading text-lg sm:text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-4">{service.description}</p>
@@ -401,14 +401,14 @@ export default function HealthPage() {
             We&apos;re here to help you find the right care solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+18303993602">
-              <Button size="lg" className="btn-health">
+            <a href="tel:+18303993602" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto btn-health">
                 <Phone className="w-5 h-5 mr-2" />
                 Call (830) 399-3602
               </Button>
             </a>
-            <Link href="/contact">
-              <Button size="lg" variant="outline">
+            <Link href="/contact" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto">
                 Send a Message
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
