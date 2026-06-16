@@ -12,7 +12,6 @@ import {
   Award,
   CheckCircle,
   Phone,
-  Mail,
   Star,
   Clock,
   Briefcase,
