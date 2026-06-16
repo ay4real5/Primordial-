@@ -7,7 +7,6 @@ import {
   ArrowRight,
   Download,
   Target,
-  Users,
   Shield,
   Clock,
   CheckCircle,
