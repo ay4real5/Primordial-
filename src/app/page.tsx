@@ -15,14 +15,15 @@ import {
   Mail,
   Star,
   Clock,
-  TrendingUp,
   Briefcase,
   HandHeart,
   Stethoscope,
   Home,
   Car,
   ChevronRight,
-  Quote
+  Quote,
+  Leaf,
+  ShoppingCart
 } from "lucide-react";
 import Image from "next/image";
 
@@ -34,6 +35,19 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="flex flex-col">
+      {/* SMART ROUTING BANNER */}
+      <section className="bg-primary text-white py-3 px-4 text-center text-sm">
+        <span className="text-white/80 mr-3">What are you looking for?</span>
+        <Link href="/health" className="inline-flex items-center gap-1.5 bg-health/80 hover:bg-health text-white font-medium px-4 py-1.5 rounded-full mx-1 transition-colors text-xs">
+          <Heart className="w-3.5 h-3.5" />
+          Home Care Services
+        </Link>
+        <Link href="/government" className="inline-flex items-center gap-1.5 bg-government/80 hover:bg-government text-white font-medium px-4 py-1.5 rounded-full mx-1 transition-colors text-xs">
+          <Building2 className="w-3.5 h-3.5" />
+          Government Contracting
+        </Link>
+      </section>
+
       {/* HERO - Full width with image background */}
       <section className="relative min-h-[100svh] sm:min-h-[90vh] flex items-center">
         {/* Background Image */}
@@ -174,8 +188,8 @@ export default function HomePage() {
                   Compliance-focused solutions.
                 </p>
                 <div className="flex items-center gap-2 text-sm mb-4">
-                  <Mail className="w-4 h-4" />
-                  <span className="font-medium">gov@primodial.org</span>
+                  <Phone className="w-4 h-4" />
+                  <span className="font-medium">(571) 575-7174</span>
                 </div>
                 <Link href="/government">
                   <Button variant="secondary" className="bg-white text-government hover:bg-white/90">
@@ -262,20 +276,20 @@ export default function HomePage() {
               <CardContent className="p-6">
                 <div className="grid grid-cols-2 gap-3">
                   <div className="flex items-center gap-3 p-3 rounded-lg bg-government/5 hover:bg-government/10 transition-colors">
-                    <TrendingUp className="w-5 h-5 text-government" />
-                    <span className="text-sm font-medium">Program Mgmt</span>
+                    <Stethoscope className="w-5 h-5 text-government" />
+                    <span className="text-sm font-medium">Healthcare Support</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 rounded-lg bg-government/5 hover:bg-government/10 transition-colors">
-                    <Shield className="w-5 h-5 text-government" />
-                    <span className="text-sm font-medium">Compliance</span>
+                    <Building2 className="w-5 h-5 text-government" />
+                    <span className="text-sm font-medium">Facilities</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 rounded-lg bg-government/5 hover:bg-government/10 transition-colors">
-                    <Users className="w-5 h-5 text-government" />
-                    <span className="text-sm font-medium">Teaming</span>
+                    <Leaf className="w-5 h-5 text-government" />
+                    <span className="text-sm font-medium">Landscaping</span>
                   </div>
                   <div className="flex items-center gap-3 p-3 rounded-lg bg-government/5 hover:bg-government/10 transition-colors">
-                    <Award className="w-5 h-5 text-government" />
-                    <span className="text-sm font-medium">Capabilities</span>
+                    <ShoppingCart className="w-5 h-5 text-government" />
+                    <span className="text-sm font-medium">Procurement</span>
                   </div>
                 </div>
                 <Link href="/government/capabilities" className="mt-6 block">
@@ -368,15 +382,14 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto text-center text-white">
             <Quote className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-6 sm:mb-8 text-white/30" />
             <blockquote className="text-lg sm:text-2xl md:text-3xl font-heading font-medium mb-8 leading-relaxed">
-              &ldquo;Primodial Health gave our family peace of mind. Their caregivers treated 
-              my mother with such dignity and compassion. We couldn&apos;t ask for better care.&rdquo;
+              &ldquo;The caregiver was so patient and kind. My mother was treated with real dignity. Our whole family feels at peace knowing she&apos;s in such good hands.&rdquo;
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
                 <Users className="w-7 h-7" />
               </div>
               <div className="text-left">
-                <div className="font-semibold">The Martinez Family</div>
+                <div className="font-semibold">A Family Client</div>
                 <div className="text-sm text-white/70">San Antonio, TX</div>
               </div>
             </div>

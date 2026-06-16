@@ -1,49 +1,38 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Building2, Target, Eye, Compass } from "lucide-react";
+import { Heart, Building2, Target, Eye, Compass, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Velune Holdings LLC | Our Mission & Values",
   description: "Learn about Velune Holdings LLC's mission, values, and commitment to excellence in healthcare and government contracting.",
 };
 
 export default function AboutPage() {
-  const values = [
-    {
-      icon: Target,
-      title: "Excellence",
-      description: "We pursue the highest standards in every service we deliver, whether caring for a loved one or fulfilling a government contract."
-    },
-    {
-      icon: Heart,
-      title: "Compassion",
-      description: "We approach every interaction with empathy and understanding, recognizing the human impact of our work."
-    },
-    {
-      icon: Compass,
-      title: "Integrity",
-      description: "We operate with transparency, honesty, and unwavering ethical standards in all our business practices."
-    },
-    {
-      icon: Building2,
-      title: "Compliance",
-      description: "We maintain rigorous adherence to regulations, standards, and best practices across all divisions."
-    }
-  ];
-
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary mb-6">
+      <section className="relative min-h-[55vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=85"
+            alt="Diverse professional team in a collaborative meeting"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]">
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">
               About Velune Holdings LLC
             </h1>
-            <p className="text-lg text-muted-foreground">
-              We are a US-registered company committed to delivering excellence 
-              across two distinct but equally important domains: compassionate 
-              home health care and professional government contracting.
+            <p className="text-lg text-white/90 max-w-xl leading-relaxed">
+              A US-registered company committed to delivering excellence across two distinct 
+              but equally important domains: compassionate home health care and professional 
+              government contracting.
             </p>
           </div>
         </div>
@@ -103,11 +92,16 @@ export default function AboutPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6">
-            {values.map((value) => (
-              <Card key={value.title} className="text-center">
-                <CardHeader>
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-7 h-7 text-primary" />
+            {[
+              { icon: Target, title: "Excellence", color: "bg-primary/10 text-primary", border: "border-l-primary", description: "We pursue the highest standards in every service we deliver, whether caring for a loved one or fulfilling a government contract." },
+              { icon: Heart, title: "Compassion", color: "bg-health/10 text-health", border: "border-l-health", description: "We approach every interaction with empathy and understanding, recognizing the human impact of our work." },
+              { icon: Compass, title: "Integrity", color: "bg-secondary/10 text-secondary", border: "border-l-secondary", description: "We operate with transparency, honesty, and unwavering ethical standards in all our business practices." },
+              { icon: Building2, title: "Compliance", color: "bg-government/10 text-government", border: "border-l-government", description: "We maintain rigorous adherence to regulations, standards, and best practices across all divisions." }
+            ].map((value) => (
+              <Card key={value.title} className={`border-l-4 ${value.border} hover:shadow-md transition-shadow`}>
+                <CardHeader className="flex flex-row items-center gap-4 pb-2">
+                  <div className={`w-12 h-12 rounded-xl ${value.color} flex items-center justify-center flex-shrink-0`}>
+                    <value.icon className="w-6 h-6" />
                   </div>
                   <CardTitle className="font-heading">{value.title}</CardTitle>
                 </CardHeader>
@@ -182,23 +176,57 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Placeholder */}
+      {/* Why Work With Us */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
-              Leadership
-            </h2>
-            <p className="text-muted-foreground">
-              Our leadership team brings decades of combined experience in healthcare 
-              operations and government contracting.
-            </p>
-          </div>
-
-          <div className="bg-card border border-border rounded-xl p-8 text-center">
-            <p className="text-muted-foreground">
-              Leadership profiles and team information coming soon.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+                Why Choose Velune Holdings LLC?
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                We bring operational expertise, genuine care, and a compliance-first mindset 
+                to every engagement. Whether you are a family seeking care or an agency 
+                seeking a contractor, we show up with professionalism and dedication.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Nationwide coverage across both divisions",
+                  "Background-checked and trained professionals",
+                  "FAR-aware processes for all government work",
+                  "SAM.gov registered · UEI: EUDTX5ULD6B1",
+                  "24/7 care coordination for health clients",
+                  "Single trusted partner for diverse service needs"
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=400&q=85"
+                    alt="Caregiver with patient"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div className="space-y-4 pt-8">
+                <div className="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=400&q=85"
+                    alt="Government professional"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
