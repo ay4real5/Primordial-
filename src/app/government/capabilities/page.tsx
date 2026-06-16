@@ -10,64 +10,97 @@ import {
   Users,
   Shield,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Building2,
+  Zap,
+  FileText,
+  Award,
+  Leaf,
+  ShoppingCart,
+  Phone
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Capabilities Statement | Velune",
-  description: "Comprehensive capabilities statement for Velune Government Contracting. Core competencies, qualifications, and company information.",
+  title: "Capabilities Statement | Velune Holdings LLC",
+  description: "Velune Holdings LLC capabilities statement — healthcare support, facilities management, landscaping, procurement, and operational support for federal agencies.",
 };
 
 export default function CapabilitiesPage() {
-  const coreCompetencies = [
-    "Operational support services",
-    "Administrative and clerical support",
-    "Program management assistance",
-    "Quality assurance and compliance",
-    "Documentation and records management",
-    "Staffing and personnel services",
-    "Logistics and coordination support",
-    "Training and development support"
+  const serviceAreas = [
+    {
+      icon: Target as React.ComponentType<{ className?: string }>,
+      naics: "621610",
+      title: "Healthcare Support Services",
+      description: "Professional support solutions for healthcare environments including operational coordination, administrative assistance, compliance support, and service delivery optimization to help facilities maintain high standards of care and efficiency."
+    },
+    {
+      icon: Building2 as React.ComponentType<{ className?: string }>,
+      naics: "561720",
+      title: "Facilities Management & Janitorial Services",
+      description: "Comprehensive janitorial and facilities support ensuring clean, safe, and well-maintained environments that meet government standards for appearance, hygiene, and operational readiness."
+    },
+    {
+      icon: Leaf as React.ComponentType<{ className?: string }>,
+      naics: "561730",
+      title: "Landscaping & Grounds Maintenance",
+      description: "Landscaping and grounds management services that help federal properties maintain professional, safe, and aesthetically pleasing outdoor environments while adhering to environmental and safety regulations."
+    },
+    {
+      icon: ShoppingCart as React.ComponentType<{ className?: string }>,
+      naics: "561499",
+      title: "Procurement & Supply Chain Support",
+      description: "End-to-end procurement assistance, supply chain coordination, vendor management, and logistics support with expertise in enterprise systems, process optimization, and compliant acquisition and delivery."
+    },
+    {
+      icon: FileText as React.ComponentType<{ className?: string }>,
+      naics: "623210",
+      title: "Integrated Operational & Administrative Support",
+      description: "Flexible support across administrative management, process improvement, data and performance analytics, stakeholder coordination, and general business operations — helping agencies streamline functions and focus on mission-critical priorities."
+    }
   ];
 
   const companyData = {
     legalName: "Velune Holdings LLC",
     dba: "Velune",
-    status: "US-registered company",
+    status: "SAM.gov Registered · Small Business",
     uei: "EUDTX5ULD6B1",
-    cage: "TBD - Pending Assignment",
-    website: "www.primodial.org"
+    cage: "Pending Assignment",
+    phone: "571-575-7174"
   };
 
-  const socioeconomicStatus = [
-    { label: "Small Business", status: "TBD", badge: "outline" },
-    { label: "8(a) Program", status: "TBD", badge: "outline" },
-    { label: "SDVOSB", status: "TBD", badge: "outline" },
-    { label: "WOSB", status: "TBD", badge: "outline" },
-    { label: "HUBZone", status: "TBD", badge: "outline" },
-    { label: "Veteran-Owned", status: "TBD", badge: "outline" }
+  const naicsCodes = [
+    { code: "621610", description: "Home Health Care Services" },
+    { code: "561720", description: "Janitorial Services" },
+    { code: "561730", description: "Landscaping Services" },
+    { code: "623210", description: "Residential Intellectual & Developmental Disability Facilities" },
+    { code: "561499", description: "All Other Business Support Services" }
   ];
 
   const differentiators = [
     {
-      icon: Target as React.ComponentType<{ className?: string }>,
-      title: "Mission-Focused",
-      description: "We align our approach with agency objectives, ensuring our support advances mission outcomes."
+      icon: Award as React.ComponentType<{ className?: string }>,
+      title: "Broad Capability, Single Partner",
+      description: "Diverse services under one roof — a single, reliable partner capable of supporting multiple requirements with consistency and quality."
     },
     {
-      icon: Clock as React.ComponentType<{ className?: string }>,
-      title: "Responsive Delivery",
-      description: "We understand government timelines and respond with urgency to requirements and deadlines."
+      icon: Zap as React.ComponentType<{ className?: string }>,
+      title: "Agile Small Business Advantage",
+      description: "We respond quickly, adapt to changing needs, and deliver personalized attention with the professionalism and scale of larger contractors."
     },
     {
       icon: Shield as React.ComponentType<{ className?: string }>,
-      title: "Compliance Built-In",
-      description: "Compliance isn't an add-on—it's fundamental to how we operate and deliver."
+      title: "Operational Excellence & Compliance",
+      description: "Proven expertise in process optimization, quality assurance, and regulatory compliance — services delivered efficiently and to the highest standards."
     },
     {
-      icon: Users as React.ComponentType<{ className?: string }>,
-      title: "Relationship-Driven",
-      description: "We build lasting partnerships based on trust, communication, and consistent performance."
+      icon: Target as React.ComponentType<{ className?: string }>,
+      title: "Results-Driven Approach",
+      description: "We emphasize measurable outcomes, continuous improvement, and data-informed decision-making to maximize value and performance."
+    },
+    {
+      icon: Clock as React.ComponentType<{ className?: string }>,
+      title: "Mission-Aligned Partnership",
+      description: "Committed to supporting federal missions with integrity, reliability, and genuine dedication to service excellence."
     }
   ];
 
@@ -77,17 +110,28 @@ export default function CapabilitiesPage() {
       <section className="py-20 bg-gradient-government">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary mb-6">
-              Capabilities Statement
+            <Badge variant="government" className="mb-4">Capabilities Statement</Badge>
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary mb-4">
+              Velune Holdings LLC
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              A comprehensive overview of our qualifications, core competencies, 
-              and company information for government agencies and prime contractors.
+            <p className="text-xl font-semibold text-foreground mb-4">
+              Your Trusted Partner for Comprehensive Government Support Services
             </p>
-            <Button variant="government" size="lg">
-              <Download className="w-5 h-5 mr-2" />
-              Download PDF (Coming Soon)
-            </Button>
+            <p className="text-base text-muted-foreground max-w-3xl mx-auto mb-8">
+              A versatile, service-driven small business committed to delivering high-quality, reliable solutions across healthcare support, facilities management, landscaping, procurement, and full-spectrum operational support. We combine operational excellence with a client-first mindset to provide tailored, compliant, and cost-effective services.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button variant="government" size="lg">
+                <Download className="w-5 h-5 mr-2" />
+                Download PDF (Coming Soon)
+              </Button>
+              <a href="tel:+15715757174">
+                <Button size="lg" variant="outline">
+                  <Phone className="w-5 h-5 mr-2" />
+                  571-575-7174
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -102,7 +146,7 @@ export default function CapabilitiesPage() {
             
             <Card className="mb-8">
               <CardContent className="p-6">
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div>
                     <h3 className="font-semibold text-muted-foreground mb-1">Legal Name</h3>
                     <p className="font-medium">{companyData.legalName}</p>
@@ -112,36 +156,34 @@ export default function CapabilitiesPage() {
                     <p className="font-medium">{companyData.dba}</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-muted-foreground mb-1">Status</h3>
+                    <h3 className="font-semibold text-muted-foreground mb-1">Business Type</h3>
                     <p className="font-medium">{companyData.status}</p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-muted-foreground mb-1">Website</h3>
-                    <p className="font-medium">{companyData.website}</p>
-                  </div>
-                  <div>
                     <h3 className="font-semibold text-muted-foreground mb-1">UEI</h3>
-                    <Badge variant="outline">{companyData.uei}</Badge>
+                    <Badge variant="government" className="text-sm font-mono tracking-wider">{companyData.uei}</Badge>
                   </div>
                   <div>
                     <h3 className="font-semibold text-muted-foreground mb-1">CAGE Code</h3>
                     <Badge variant="outline">{companyData.cage}</Badge>
                   </div>
+                  <div>
+                    <h3 className="font-semibold text-muted-foreground mb-1">Phone</h3>
+                    <a href="tel:+15715757174" className="font-medium text-government hover:underline">{companyData.phone}</a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
 
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-white text-xs font-bold">!</span>
-                </div>
+                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-amber-900 mb-2">Registration In Progress</h3>
-                  <p className="text-amber-800 text-sm">
-                    UEI obtained (EUDTX5ULD6B1). SAM.gov registration and CAGE code assignment in progress. 
-                    This page will be updated once all registration steps are complete. Contact us for current 
-                    status and preliminary discussions.
+                  <h3 className="font-semibold text-green-900 mb-2">SAM.gov Registered · UEI Active</h3>
+                  <p className="text-green-800 text-sm">
+                    Velune Holdings LLC is SAM.gov registered with an active UEI (EUDTX5ULD6B1). 
+                    CAGE code assignment is in progress. We are actively seeking federal contracting opportunities 
+                    and available for teaming, subcontracting, and prime contract discussions.
                   </p>
                 </div>
               </div>
@@ -150,92 +192,103 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
-      {/* Core Competencies */}
+      {/* Core Service Areas */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-heading text-3xl font-bold text-primary mb-8">
-              Core Competencies
+            <h2 className="font-heading text-3xl font-bold text-primary mb-4">
+              Core Service Areas
             </h2>
+            <p className="text-muted-foreground mb-10">
+              We bring the expertise, agility, and dedication required to help federal agencies and prime contractors achieve their missions across five key service lines.
+            </p>
             
-            <div className="grid sm:grid-cols-2 gap-4">
-              {coreCompetencies.map((comp, i) => (
-                <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm">
-                  <CheckCircle className="w-5 h-5 text-government flex-shrink-0 mt-0.5" />
-                  <span className="font-medium">{comp}</span>
-                </div>
+            <div className="grid gap-6">
+              {serviceAreas.map((area) => (
+                <Card key={area.title} className="border-l-4 border-l-government">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-government-light flex items-center justify-center flex-shrink-0">
+                        <area.icon className="w-6 h-6 text-government" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex flex-wrap items-center gap-3 mb-2">
+                          <h3 className="font-heading font-semibold text-lg">{area.title}</h3>
+                          <Badge variant="outline" className="font-mono text-xs">NAICS {area.naics}</Badge>
+                        </div>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{area.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* NAICS & PSC Codes */}
+      {/* NAICS Codes */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="font-heading text-xl">NAICS Codes</CardTitle>
-                  <CardDescription>North American Industry Classification</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between p-3 bg-muted rounded-lg">
-                      <span className="font-medium">TBD</span>
-                      <Badge variant="outline">Pending</Badge>
+            <Card>
+              <CardHeader>
+                <CardTitle className="font-heading text-2xl">Primary NAICS Codes</CardTitle>
+                <CardDescription>North American Industry Classification System — our primary business activity codes</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {naicsCodes.map((n) => (
+                    <div key={n.code} className="flex items-center justify-between p-4 bg-muted rounded-lg">
+                      <span className="font-medium">{n.description}</span>
+                      <Badge variant="government" className="font-mono ml-4 shrink-0">{n.code}</Badge>
                     </div>
-                    <p className="text-sm text-muted-foreground">
-                      NAICS codes will be listed here upon completion of business classification review.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="font-heading text-xl">PSC Codes</CardTitle>
-                  <CardDescription>Product and Service Codes</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between p-3 bg-muted rounded-lg">
-                      <span className="font-medium">TBD</span>
-                      <Badge variant="outline">Pending</Badge>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      PSC codes will be listed here upon completion of service classification.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Socioeconomic Status */}
+      {/* Certifications & Registrations */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-heading text-3xl font-bold text-primary mb-8">
-              Socioeconomic Status
+              Certifications &amp; Registrations
             </h2>
             
+            <div className="grid sm:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white rounded-xl p-6 shadow-sm text-center border-t-4 border-government">
+                <CheckCircle className="w-8 h-8 text-government mx-auto mb-3" />
+                <h3 className="font-heading font-bold text-base mb-1">SAM.gov Registered</h3>
+                <p className="text-xs text-muted-foreground">Active registration for federal contracting</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-sm text-center border-t-4 border-government">
+                <CheckCircle className="w-8 h-8 text-government mx-auto mb-3" />
+                <h3 className="font-heading font-bold text-base mb-1">Small Business</h3>
+                <p className="text-xs text-muted-foreground">Registered small business entity</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-sm text-center border-t-4 border-government">
+                <CheckCircle className="w-8 h-8 text-government mx-auto mb-3" />
+                <h3 className="font-heading font-bold text-base mb-1">UEI: EUDTX5ULD6B1</h3>
+                <p className="text-xs text-muted-foreground">Unique Entity ID — active</p>
+              </div>
+            </div>
+
             <Card>
               <CardContent className="p-6">
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {socioeconomicStatus.map((item) => (
-                    <div key={item.label} className="flex items-center justify-between p-3 bg-muted rounded-lg">
-                      <span className="font-medium">{item.label}</span>
-                      <Badge variant="outline">{item.status}</Badge>
+                  {["8(a) Program", "SDVOSB", "WOSB", "HUBZone", "Veteran-Owned"].map((item) => (
+                    <div key={item} className="flex items-center justify-between p-3 bg-muted rounded-lg">
+                      <span className="font-medium">{item}</span>
+                      <Badge variant="outline">Pending</Badge>
                     </div>
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground mt-6">
-                  Socioeconomic certifications will be updated as they are obtained. 
-                  Please contact us for current status on any specific designation.
+                  Additional socioeconomic certifications will be updated as they are obtained.
                 </p>
               </CardContent>
             </Card>
@@ -243,17 +296,20 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
-      {/* Differentiators */}
+      {/* Why Velune */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-heading text-3xl font-bold text-primary mb-8">
-              Why Partner With Us
+            <h2 className="font-heading text-3xl font-bold text-primary mb-4">
+              Why Velune Holdings LLC?
             </h2>
+            <p className="text-muted-foreground mb-10">
+              We combine operational excellence with a client-first mindset to provide tailored, compliant, and cost-effective services that meet the rigorous standards of government work.
+            </p>
             
             <div className="grid sm:grid-cols-2 gap-6">
               {differentiators.map((diff) => (
-                <Card key={diff.title}>
+                <Card key={diff.title} className="hover:shadow-md transition-shadow">
                   <CardHeader>
                     <div className="w-12 h-12 rounded-lg bg-government-light flex items-center justify-center mb-4">
                       <diff.icon className="w-6 h-6 text-government" />
@@ -270,19 +326,43 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
+      {/* Commitment */}
+      <section className="py-20 bg-gradient-government">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-heading text-3xl font-bold text-primary mb-6">Our Commitment</h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              At Velune Holdings LLC, we understand that government work demands precision, accountability, and unwavering reliability. Whether supporting healthcare operations, maintaining facilities, managing grounds, streamlining procurement, or providing comprehensive operational support, we approach every contract with the same level of professionalism and dedication.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              We are prepared to meet federal requirements for safety, compliance, quality, and performance while delivering cost-effective solutions that support your agency&apos;s goals. We are committed to building long-term partnerships based on trust, performance, and shared success.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-white border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading text-3xl font-bold text-foreground mb-4">
-              Request More Information
+              Ready to Partner
             </h2>
+            <p className="text-muted-foreground mb-2 text-lg">
+              Velune Holdings LLC is actively seeking opportunities to support federal agencies and prime contractors with dependable, high-quality services.
+            </p>
             <p className="text-muted-foreground mb-8">
-              Contact us to discuss how we can support your agency or teaming needs.
+              Let&apos;s discuss how Velune Holdings LLC can support your mission.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/government/partners">
+              <a href="tel:+15715757174">
                 <Button size="lg" className="btn-government">
+                  <Phone className="w-5 h-5 mr-2" />
+                  571-575-7174
+                </Button>
+              </a>
+              <Link href="/government/partners">
+                <Button size="lg" variant="government">
                   Schedule a Discussion
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>

@@ -18,41 +18,41 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Velune | Professional Contracting Solutions",
-  description: "Professional contracting services for federal, state, and local agencies. Prime and subcontractor capabilities with compliance focus.",
+  title: "Velune | Comprehensive Government Support Services",
+  description: "Your trusted partner for healthcare support, facilities management, landscaping, procurement, and full-spectrum operational support for federal agencies.",
 };
 
 export default function GovernmentPage() {
   const capabilities = [
     {
       icon: Target,
-      title: "Operational Support",
-      description: "Comprehensive operational support services for government agencies."
+      title: "Healthcare Support Services",
+      description: "Operational coordination, administrative assistance, compliance support, and service delivery optimization for healthcare environments."
+    },
+    {
+      icon: Building2,
+      title: "Facilities Management & Janitorial",
+      description: "Comprehensive janitorial and facilities support ensuring clean, safe, and well-maintained environments that meet government standards."
     },
     {
       icon: Users,
-      title: "Staffing Solutions",
-      description: "Qualified personnel placement for temporary and long-term needs."
-    },
-    {
-      icon: Shield,
-      title: "Compliance Management",
-      description: "Regulatory compliance support and quality assurance processes."
+      title: "Landscaping & Grounds Maintenance",
+      description: "Professional grounds management for federal properties — safe, aesthetically maintained outdoor environments adhering to regulations."
     },
     {
       icon: Zap,
-      title: "Program Support",
-      description: "Administrative and logistical support for government programs."
+      title: "Procurement & Supply Chain",
+      description: "End-to-end procurement assistance, vendor management, and logistics support with enterprise-level process optimization."
     },
     {
       icon: FileText,
-      title: "Documentation Services",
-      description: "Records management, reporting, and documentation support."
+      title: "Administrative & Operational Support",
+      description: "Flexible support across administrative management, data analytics, stakeholder coordination, and process improvement."
     },
     {
       icon: Award,
-      title: "Quality Assurance",
-      description: "Process improvement and quality control implementation."
+      title: "Quality Assurance & Compliance",
+      description: "FAR-aware processes, quality control systems, and regulatory compliance built into every service we deliver."
     }
   ];
 
@@ -104,8 +104,7 @@ export default function GovernmentPage() {
               <span className="text-white/80">Agencies</span>
             </h1>
             <p className="text-sm sm:text-xl text-white/90 max-w-xl mb-6 sm:mb-10 leading-relaxed">
-              Professional contracting for federal, state, and local agencies. 
-              Operational excellence, compliance focus, and proven management.
+              Your trusted partner for healthcare support, facilities management, landscaping, procurement, and full-spectrum operational support — delivering excellence with agility and compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link href="/government/capabilities" className="w-full sm:w-auto">
@@ -250,9 +249,9 @@ export default function GovernmentPage() {
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
             {[
-              { title: "Speed & Responsiveness", description: "We understand the importance of timely delivery in government contracting. Our streamlined processes enable rapid response to requirements.", icon: Zap },
-              { title: "Compliance Mindset", description: "Compliance isn't an afterthought — it's built into every process. Rigorous adherence to regulations and reporting requirements.", icon: Shield },
-              { title: "Quality Focus", description: "We deliver outcomes that meet or exceed expectations, with quality assurance processes that ensure consistent performance.", icon: Award }
+              { title: "Broad Capability, Single Partner", description: "Diverse services under one roof — a single, reliable partner capable of supporting multiple requirements with consistency and quality.", icon: Building2 },
+              { title: "Agile Small Business", description: "We respond quickly, adapt to changing needs, and deliver personalized attention with the professionalism and scale of larger contractors.", icon: Zap },
+              { title: "Compliance & Excellence", description: "Proven expertise in process optimization, quality assurance, and regulatory compliance — services delivered efficiently and to the highest standards.", icon: Shield }
             ].map((diff) => (
               <Card key={diff.title} className="bg-black/40 backdrop-blur-md border-white/20 text-center shadow-xl">
                 <CardContent className="p-5 sm:p-8">
