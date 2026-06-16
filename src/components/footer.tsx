@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Logo } from "@/components/logo";
 
 export function Footer() {
   const pathname = usePathname();
@@ -52,14 +53,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className={cn(
-                "w-10 h-10 rounded-md flex items-center justify-center font-bold text-white text-lg",
-                accentColor === "health" && "bg-health",
-                accentColor === "government" && "bg-government",
-                accentColor === "primary" && "bg-primary"
-              )}>
-                P
-              </div>
+              <Logo division={division} size="sm" showWordmark={false} />
               <span className="font-heading font-bold text-xl">
                 {division === "health" ? "Primodial Health" : division === "government" ? "Velune" : "Velune Holdings LLC"}
               </span>
