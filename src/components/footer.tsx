@@ -96,11 +96,11 @@ export function Footer() {
             <h3 className="font-heading font-semibold mb-4">Contact Us</h3>
             <div className="space-y-3">
               <a 
-                href="mailto:contact@primodial.org" 
+                href="mailto:contact@veluneholdings.com" 
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="h-4 w-4" />
-                contact@primodial.org
+                contact@veluneholdings.com
               </a>
               <div className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5" />

@@ -35,16 +35,18 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* SMART ROUTING BANNER */}
-      <section className="bg-primary text-white py-3 px-4 text-center text-sm">
-        <span className="text-white/80 mr-3">What are you looking for?</span>
-        <Link href="/health" className="inline-flex items-center gap-1.5 bg-health/80 hover:bg-health text-white font-medium px-4 py-1.5 rounded-full mx-1 transition-colors text-xs">
-          <Heart className="w-3.5 h-3.5" />
-          Home Care Services
-        </Link>
-        <Link href="/government" className="inline-flex items-center gap-1.5 bg-government/80 hover:bg-government text-white font-medium px-4 py-1.5 rounded-full mx-1 transition-colors text-xs">
-          <Building2 className="w-3.5 h-3.5" />
-          Government Contracting
-        </Link>
+      <section className="bg-primary text-white py-2.5 px-4 text-center text-sm">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <span className="text-white/80 text-xs">What are you looking for?</span>
+          <Link href="/health" className="inline-flex items-center gap-1.5 bg-health/80 hover:bg-health text-white font-medium px-3 py-1 rounded-full transition-colors text-xs">
+            <Heart className="w-3 h-3" />
+            Home Care
+          </Link>
+          <Link href="/government" className="inline-flex items-center gap-1.5 bg-government/80 hover:bg-government text-white font-medium px-3 py-1 rounded-full transition-colors text-xs">
+            <Building2 className="w-3 h-3" />
+            Government
+          </Link>
+        </div>
       </section>
 
       {/* HERO - Full width with image background */}
@@ -96,18 +98,18 @@ export default function HomePage() {
             </div>
             
             {/* Quick stats row */}
-            <div className="flex gap-6 sm:gap-8 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/20">
+            <div className="flex flex-wrap gap-4 sm:gap-8 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/20">
               <div>
-                <div className="text-2xl sm:text-3xl font-bold">24/7</div>
-                <div className="text-sm text-white/70">Care Available</div>
+                <div className="text-xl sm:text-3xl font-bold">24/7</div>
+                <div className="text-xs sm:text-sm text-white/70">Care Available</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-bold">US</div>
-                <div className="text-sm text-white/70">Nationwide</div>
+                <div className="text-xl sm:text-3xl font-bold">US</div>
+                <div className="text-xs sm:text-sm text-white/70">Nationwide</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-bold">100%</div>
-                <div className="text-sm text-white/70">Licensed</div>
+                <div className="text-xl sm:text-3xl font-bold">100%</div>
+                <div className="text-xs sm:text-sm text-white/70">Licensed</div>
               </div>
             </div>
           </div>
@@ -135,7 +137,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Health Card with Image */}
             <div className="group relative overflow-hidden rounded-3xl shadow-xl">
-              <div className="aspect-[4/3] relative">
+              <div className="aspect-[3/2] sm:aspect-[4/3] relative">
                 <Image
                   src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=85"
                   alt="Compassionate caregiver supporting elderly patient at home"
@@ -168,7 +170,7 @@ export default function HomePage() {
 
             {/* Government Card with Image */}
             <div className="group relative overflow-hidden rounded-3xl shadow-xl">
-              <div className="aspect-[4/3] relative">
+              <div className="aspect-[3/2] sm:aspect-[4/3] relative">
                 <Image
                   src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=85"
                   alt="Professional government contractors in a formal meeting"

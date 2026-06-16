@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="relative min-h-[55vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[50vh] sm:min-h-[55vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=85"
@@ -179,7 +179,7 @@ export default function AboutPage() {
       {/* Why Work With Us */}
       <section className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
                 Why Choose Velune Holdings LLC?
@@ -205,7 +205,7 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 mt-4 lg:mt-0">
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] relative">
                   <Image
