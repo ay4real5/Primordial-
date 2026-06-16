@@ -16,8 +16,6 @@ export function Footer() {
     return "parent" as const;
   }, [pathname]);
 
-  const accentColor = division === "health" ? "health" : division === "government" ? "government" : "primary";
-
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
