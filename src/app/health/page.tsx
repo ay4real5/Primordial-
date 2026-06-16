@@ -310,14 +310,15 @@ export default function HealthPage() {
             fill
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-health/95" />
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-health/80" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-white mb-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.6)]">
               What Families Say
             </h2>
-            <p className="text-white/80">
+            <p className="text-white font-medium [text-shadow:0_1px_6px_rgba(0,0,0,0.5)]">
               Hear from families who have experienced our compassionate care.
             </p>
           </div>
@@ -328,14 +329,14 @@ export default function HealthPage() {
               { quote: "After my surgery, Primodial Health sent someone who genuinely cared. They helped me recover with confidence and kept me on track.", name: "Marcus R.", location: "Austin, TX" },
               { quote: "My father refused outside help for years. Within a week, he loved his caregiver. That says everything about the quality of their staff.", name: "Linda M.", location: "Houston, TX" }
             ].map((t, i) => (
-              <Card key={i} className="bg-white/10 backdrop-blur-sm border-white/20">
+              <Card key={i} className="bg-black/40 backdrop-blur-md border-white/20 shadow-xl">
                 <CardContent className="p-6">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, j) => (
                       <Heart key={j} className="w-4 h-4 fill-white text-white" />
                     ))}
                   </div>
-                  <p className="text-white/90 italic mb-6 leading-relaxed">
+                  <p className="text-white font-medium italic mb-6 leading-relaxed [text-shadow:0_1px_4px_rgba(0,0,0,0.4)]">
                     &quot;{t.quote}&quot;
                   </p>
                   <div className="flex items-center gap-3">
@@ -343,8 +344,8 @@ export default function HealthPage() {
                       <Users className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="font-semibold text-white text-sm">{t.name}</p>
-                      <p className="text-white/60 text-xs">{t.location}</p>
+                      <p className="font-semibold text-white text-sm [text-shadow:0_1px_4px_rgba(0,0,0,0.4)]">{t.name}</p>
+                      <p className="text-white/80 text-xs">{t.location}</p>
                     </div>
                   </div>
                 </CardContent>
