@@ -240,10 +240,10 @@ export default function GovernmentPage() {
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-white mb-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.6)]">
               Our Differentiators
             </h2>
-            <p className="text-white/80">
+            <p className="text-white font-medium [text-shadow:0_2px_6px_rgba(0,0,0,0.5)]">
               What sets us apart in the government contracting landscape.
             </p>
           </div>
