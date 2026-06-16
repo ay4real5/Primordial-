@@ -254,13 +254,13 @@ export default function GovernmentPage() {
               { title: "Compliance Mindset", description: "Compliance isn't an afterthought — it's built into every process. Rigorous adherence to regulations and reporting requirements.", icon: Shield },
               { title: "Quality Focus", description: "We deliver outcomes that meet or exceed expectations, with quality assurance processes that ensure consistent performance.", icon: Award }
             ].map((diff) => (
-              <Card key={diff.title} className="bg-white/10 backdrop-blur-sm border-white/20 text-center">
+              <Card key={diff.title} className="bg-black/40 backdrop-blur-md border-white/20 text-center shadow-xl">
                 <CardContent className="p-5 sm:p-8">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-4 sm:mb-6">
                     <diff.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
-                  <h3 className="font-heading font-semibold text-base sm:text-lg mb-2 sm:mb-3 text-white">{diff.title}</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">{diff.description}</p>
+                  <h3 className="font-heading font-bold text-base sm:text-lg mb-2 sm:mb-3 text-white [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">{diff.title}</h3>
+                  <p className="text-white text-sm font-medium leading-relaxed [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">{diff.description}</p>
                 </CardContent>
               </Card>
             ))}
