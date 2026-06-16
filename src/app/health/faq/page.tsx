@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "FAQ | Primodial Health",
+  title: "FAQ | Primodial Health by Velune Holdings LLC",
   description: "Frequently asked questions about our home health care services, care plans, caregiver qualifications, and more.",
 };
 
@@ -138,13 +139,22 @@ export default function HealthFAQPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="py-20 bg-gradient-health">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-lg text-muted-foreground">
+      <section className="relative min-h-[40vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=85"
+            alt="Healthcare professional representing FAQ support"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-health/90 via-health/70 to-health/20" />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]">
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
+            <p className="text-lg text-white/90">
               Find answers to common questions about our home health care services.
             </p>
           </div>

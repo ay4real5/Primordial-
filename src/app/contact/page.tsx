@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,13 +18,22 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary mb-6">
-              Contact Us
-            </h1>
-            <p className="text-lg text-muted-foreground">
+      <section className="relative min-h-[45vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=85"
+            alt="Person on phone representing customer support"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]">
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">Contact Us</h1>
+            <p className="text-lg text-white/90">
               We&apos;re here to help. Reach out to the appropriate division for your needs.
             </p>
           </div>
@@ -51,9 +61,9 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5" />
                     <span className="font-medium">(830) 399-3602</span>
                   </a>
-                  <a href="mailto:health@primodial.org" className="flex items-center gap-3 text-muted-foreground hover:text-health">
+                  <a href="mailto:health@veluneholdings.com" className="flex items-center gap-3 text-muted-foreground hover:text-health">
                     <Mail className="w-5 h-5" />
-                    <span>health@primodial.org</span>
+                    <span>health@veluneholdings.com</span>
                   </a>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Clock className="w-5 h-5" />
@@ -82,13 +92,13 @@ export default function ContactPage() {
                   For contracting inquiries, partnership opportunities, and vendor introductions.
                 </p>
                 <div className="space-y-3">
-                  <a href="mailto:gov@primodial.org" className="flex items-center gap-3 text-government hover:text-government-dark">
-                    <Mail className="w-5 h-5" />
-                    <span className="font-medium">gov@primodial.org</span>
+                  <a href="tel:+15715757174" className="flex items-center gap-3 text-government hover:text-government-dark">
+                    <Phone className="w-5 h-5" />
+                    <span className="font-medium">(571) 575-7174</span>
                   </a>
-                  <a href="mailto:partners@primodial.org" className="flex items-center gap-3 text-muted-foreground hover:text-government">
+                  <a href="mailto:gov@veluneholdings.com" className="flex items-center gap-3 text-muted-foreground hover:text-government">
                     <Mail className="w-5 h-5" />
-                    <span>partners@primodial.org</span>
+                    <span>gov@veluneholdings.com</span>
                   </a>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Clock className="w-5 h-5" />
@@ -192,8 +202,8 @@ export default function ContactPage() {
               </div>
               <h3 className="font-heading font-semibold mb-2">Email</h3>
               <p className="text-muted-foreground text-sm">
-                <a href="mailto:contact@primodial.org" className="hover:text-primary">
-                  contact@primodial.org
+                <a href="mailto:contact@veluneholdings.com" className="hover:text-primary">
+                  contact@veluneholdings.com
                 </a>
               </p>
             </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -27,16 +28,24 @@ export default function PartnersPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="py-20 bg-gradient-government">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-heading text-4xl sm:text-5xl font-bold text-primary mb-6">
-              Partner With Us
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <section className="relative min-h-[45vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=85"
+            alt="Government partnership team in professional meeting"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-government/90 via-government/70 to-government/30" />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]">
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">Partner With Us</h1>
+            <p className="text-lg text-white/90 max-w-xl">
               We&apos;re actively seeking teaming opportunities with prime contractors 
-              and agencies. Let&apos;s explore how we can work together to deliver 
-              outstanding results.
+              and agencies. Let&apos;s explore how we can work together to deliver outstanding results.
             </p>
           </div>
         </div>
@@ -330,13 +339,13 @@ export default function PartnersPage() {
               Reach out to us directly to discuss partnership opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:partners@primodial.org" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-government text-white rounded-lg hover:bg-government-dark transition-colors">
+              <a href="tel:+15715757174" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-government text-white rounded-lg hover:bg-government-dark transition-colors">
                 <Mail className="w-5 h-5" />
-                partners@primodial.org
+                (571) 575-7174
               </a>
-              <a href="mailto:gov@primodial.org" className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-government text-government rounded-lg hover:bg-government-light transition-colors">
+              <a href="mailto:gov@veluneholdings.com" className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-government text-government rounded-lg hover:bg-government-light transition-colors">
                 <Mail className="w-5 h-5" />
-                gov@primodial.org
+                gov@veluneholdings.com
               </a>
             </div>
           </div>
