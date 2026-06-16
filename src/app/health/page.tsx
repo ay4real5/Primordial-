@@ -305,13 +305,13 @@ export default function HealthPage() {
       <section className="relative py-14 sm:py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=1920&q=85"
-            alt="Happy senior couple at home"
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1920&q=85"
+            alt="Healthcare background"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center object-top"
           />
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute inset-0 bg-health/80" />
+          <div className="absolute inset-0 bg-black/75" />
+          <div className="absolute inset-0 bg-health/70" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
@@ -325,9 +325,9 @@ export default function HealthPage() {
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {[
-              { quote: "The caregiver assigned to my mother was incredible. She treated her with such dignity and patience. Our whole family feels so relieved.", name: "Sarah T.", location: "San Antonio, TX" },
-              { quote: "After my surgery, Primodial Health sent someone who genuinely cared. They helped me recover with confidence and kept me on track.", name: "Marcus R.", location: "Austin, TX" },
-              { quote: "My father refused outside help for years. Within a week, he loved his caregiver. That says everything about the quality of their staff.", name: "Linda M.", location: "Houston, TX" }
+              { quote: "The caregiver was incredible — so patient and kind. My mother was treated with such dignity. Our whole family feels so relieved to have found this level of care.", name: "A Family Client", location: "San Antonio, TX" },
+              { quote: "After my surgery, our caregiver genuinely cared about my recovery. They helped me rebuild confidence and stayed on top of everything. Truly outstanding.", name: "A Recovery Client", location: "Austin, TX" },
+              { quote: "My father refused outside help for years. Within a week, he loved his caregiver. That says everything about the quality and warmth of the staff.", name: "A Family Client", location: "Houston, TX" }
             ].map((t, i) => (
               <Card key={i} className="bg-black/40 backdrop-blur-md border-white/20 shadow-xl">
                 <CardContent className="p-6">
