@@ -157,7 +157,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center gap-2 text-sm mb-4">
                   <Phone className="w-4 h-4" />
-                  <span className="font-medium">(830) 399-3602</span>
+                  <span className="font-medium">(571) 575-7174</span>
                 </div>
                 <Link href="/health">
                   <Button variant="secondary" className="bg-white text-health hover:bg-white/90">
@@ -454,10 +454,10 @@ export default function HomePage() {
                   Speak with our care coordinators today. We&apos;re available 24/7 to
                   discuss your family&apos;s needs.
                 </p>
-                <a href="tel:+18303993602" className="block">
+                <a href="tel:+15715757174" className="block">
                   <Button className="w-full btn-health h-12 text-lg">
                     <Phone className="w-5 h-5 mr-2" />
-                    Call (830) 399-3602
+                    Call (571) 575-7174
                   </Button>
                 </a>
               </CardContent>

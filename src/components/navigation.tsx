@@ -100,14 +100,14 @@ export function Navigation() {
             {/* Health Phone CTA */}
             {division === "health" && (
               <a
-                href="tel:+18303993602"
+                href="tel:+15715757174"
                 className={cn(
                   "hidden sm:flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors",
                   "bg-health text-white hover:bg-health-dark"
                 )}
               >
                 <Phone className="h-4 w-4" />
-                (830) 399-3602
+                (571) 575-7174
               </a>
             )}
 
@@ -182,11 +182,11 @@ export function Navigation() {
             {/* Mobile CTAs */}
             {division === "health" && (
               <a
-                href="tel:+18303993602"
+                href="tel:+15715757174"
                 className="flex items-center justify-center gap-2 px-4 py-2 mt-2 rounded-md text-sm font-medium bg-health text-white"
               >
                 <Phone className="h-4 w-4" />
-                Call (830) 399-3602
+                Call (571) 575-7174
               </a>
             )}
             {division === "government" && (

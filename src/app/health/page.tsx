@@ -27,7 +27,7 @@ export default function HealthPage() {
     {
       step: "1",
       title: "Free Consultation",
-      description: "Call us at (830) 399-3602 for a no-obligation discussion about your needs."
+      description: "Call us at (571) 575-7174 for a no-obligation discussion about your needs."
     },
     {
       step: "2",
@@ -56,7 +56,7 @@ export default function HealthPage() {
     },
     {
       question: "What are your hours of operation?",
-      answer: "We offer flexible scheduling including 24/7 care options. Our office is available by phone at (830) 399-3602."
+      answer: "We offer flexible scheduling including 24/7 care options. Our office is available by phone at (571) 575-7174."
     }
   ];
 
@@ -91,10 +91,10 @@ export default function HealthPage() {
               maintain independence and quality of life in the comfort of home.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:+18303993602" className="w-full sm:w-auto">
+              <a href="tel:+15715757174" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full sm:w-auto bg-white text-health hover:bg-white/90 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg shadow-xl">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (830) 399-3602
+                  Call (571) 575-7174
                 </Button>
               </a>
               <Link href="/health/services" className="w-full sm:w-auto">
@@ -157,7 +157,7 @@ export default function HealthPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   { title: "Seniors", desc: "Maintaining independence at home", img: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=200&q=80" },
-                  { title: "Individuals with Disabilities", desc: "Support for daily living activities", img: "https://images.unsplash.com/photo-1559839734-2b71a1973802?w=200&q=80" },
+                  { title: "Individuals with Disabilities", desc: "Support for daily living activities", img: "https://images.unsplash.com/photo-1570793005299-c091be91bbad?w=200&q=80" },
                   { title: "Post-Surgical Patients", desc: "Recovery and rehabilitation support", img: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=200&q=80" },
                   { title: "Family Caregivers", desc: "Respite and supplemental care", img: "https://images.unsplash.com/photo-1536064479547-7ee40b74b807?w=200&q=80" }
                 ].map((item) => (
@@ -402,10 +402,10 @@ export default function HealthPage() {
             We&apos;re here to help you find the right care solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+18303993602" className="w-full sm:w-auto">
+            <a href="tel:+15715757174" className="w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto btn-health">
                 <Phone className="w-5 h-5 mr-2" />
-                Call (830) 399-3602
+                Call (571) 575-7174
               </Button>
             </a>
             <Link href="/contact" className="w-full sm:w-auto">

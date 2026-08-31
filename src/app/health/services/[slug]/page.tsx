@@ -465,10 +465,10 @@ export default function ServiceDetailPage({ params }: ServiceDetailProps) {
                   <p className="text-health-foreground/90">
                     Contact us to learn more about {service.title} and how we can help.
                   </p>
-                  <a href="tel:+18303993602">
+                  <a href="tel:+15715757174">
                     <Button variant="secondary" className="w-full">
                       <Phone className="w-5 h-5 mr-2" />
-                      Call (830) 399-3602
+                      Call (571) 575-7174
                     </Button>
                   </a>
                   <Link href="/contact">
@@ -519,7 +519,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailProps) {
             determine if it&apos;s the right fit for your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+18303993602">
+            <a href="tel:+15715757174">
               <Button size="lg" variant="health">
                 <Phone className="w-5 h-5 mr-2" />
                 Call for Free Consultation

@@ -17,11 +17,11 @@ export default function HealthFAQPage() {
       questions: [
         {
           q: "What areas do you serve?",
-          a: "We provide home health care services across the United States. Contact us at (830) 399-3602 to confirm coverage in your specific area."
+          a: "We provide home health care services across the United States. Contact us at (571) 575-7174 to confirm coverage in your specific area."
         },
         {
           q: "What are your hours of operation?",
-          a: "Our office is available by phone during business hours, and we offer 24/7 care services for clients. For urgent needs, you can always reach us at (830) 399-3602."
+          a: "Our office is available by phone during business hours, and we offer 24/7 care services for clients. For urgent needs, you can always reach us at (571) 575-7174."
         },
         {
           q: "Do you provide services on weekends and holidays?",
@@ -76,7 +76,7 @@ export default function HealthFAQPage() {
       questions: [
         {
           q: "How much do your services cost?",
-          a: "Costs vary based on the type and frequency of services needed. We provide detailed pricing during your free consultation. Contact us at (830) 399-3602 for specific pricing information."
+          a: "Costs vary based on the type and frequency of services needed. We provide detailed pricing during your free consultation. Contact us at (571) 575-7174 for specific pricing information."
         },
         {
           q: "Do you accept insurance?",
@@ -118,7 +118,7 @@ export default function HealthFAQPage() {
       questions: [
         {
           q: "How do I get started?",
-          a: "Getting started is easy: 1) Call us at (830) 399-3602 for a free consultation, 2) We'll discuss your needs and create a custom care plan, 3) Care begins with a matched caregiver."
+          a: "Getting started is easy: 1) Call us at (571) 575-7174 for a free consultation, 2) We'll discuss your needs and create a custom care plan, 3) Care begins with a matched caregiver."
         },
         {
           q: "What happens during the initial consultation?",
@@ -130,7 +130,7 @@ export default function HealthFAQPage() {
         },
         {
           q: "What if I'm not satisfied with the care?",
-          a: "Your satisfaction is important to us. If you have concerns, please contact us immediately at (830) 399-3602. We'll work to address issues promptly, which may include adjusting the care plan or changing caregivers."
+          a: "Your satisfaction is important to us. If you have concerns, please contact us immediately at (571) 575-7174. We'll work to address issues promptly, which may include adjusting the care plan or changing caregivers."
         }
       ]
     }
@@ -198,10 +198,10 @@ export default function HealthFAQPage() {
                   to your specific situation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="tel:+18303993602">
+                  <a href="tel:+15715757174">
                     <Button size="lg" className="btn-health">
                       <Phone className="w-5 h-5 mr-2" />
-                      Call (830) 399-3602
+                      Call (571) 575-7174
                     </Button>
                   </a>
                   <Link href="/contact">

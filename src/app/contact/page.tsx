@@ -57,9 +57,9 @@ export default function ContactPage() {
                   For home health care inquiries, care planning, and service questions.
                 </p>
                 <div className="space-y-3">
-                  <a href="tel:+18303993602" className="flex items-center gap-3 text-health hover:text-health-dark">
+                  <a href="tel:+15715757174" className="flex items-center gap-3 text-health hover:text-health-dark">
                     <Phone className="w-5 h-5" />
-                    <span className="font-medium">(830) 399-3602</span>
+                    <span className="font-medium">(571) 575-7174</span>
                   </a>
                   <a href="mailto:health@veluneholdings.com" className="flex items-center gap-3 text-muted-foreground hover:text-health">
                     <Mail className="w-5 h-5" />

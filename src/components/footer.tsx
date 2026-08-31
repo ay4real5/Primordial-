@@ -67,9 +67,9 @@ export function Footer() {
             {/* Contact Info */}
             {division === "health" && (
               <div className="space-y-2">
-                <a href="tel:+18303993602" className="flex items-center gap-2 text-sm hover:text-health transition-colors">
+                <a href="tel:+15715757174" className="flex items-center gap-2 text-sm hover:text-health transition-colors">
                   <Phone className="h-4 w-4" />
-                  (830) 399-3602
+                  (571) 575-7174
                 </a>
               </div>
             )}

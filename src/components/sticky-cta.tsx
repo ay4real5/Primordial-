@@ -22,8 +22,8 @@ export function StickyCTA() {
 
   if (dismissed || (!isHealth && !isGovernment)) return null;
 
-  const phone = isHealth ? "tel:+18303993602" : "tel:+15715757174";
-  const label = isHealth ? "(830) 399-3602" : "(571) 575-7174";
+  const phone = isHealth ? "tel:+15715757174" : "tel:+15715757174";
+  const label = isHealth ? "(571) 575-7174" : "(571) 575-7174";
   const color = isHealth
     ? "bg-health hover:bg-health-dark shadow-health/40"
     : "bg-government hover:bg-government-dark shadow-government/40";
