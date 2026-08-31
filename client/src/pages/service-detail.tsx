@@ -409,10 +409,10 @@ export default function ServiceDetail() {
                     <p className="text-sm text-muted-foreground mb-4">
                       Call us directly for immediate assistance.
                     </p>
-                    <a href="tel:+18303993602">
+                    <a href="tel:+15715757174">
                       <Button variant="outline" className="w-full">
                         <Phone className="mr-2 h-4 w-4" />
-                        (830) 399-3602
+                        (571) 575-7174
                       </Button>
                     </a>
                   </CardContent>

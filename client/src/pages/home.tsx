@@ -539,7 +539,7 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <a href="tel:+1234567890" className="w-full sm:w-auto">
+              <a href="tel:+15715757174" className="w-full sm:w-auto">
                 <Button size="lg" variant="secondary" className="w-full sm:w-auto" data-testid="button-cta-call">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now

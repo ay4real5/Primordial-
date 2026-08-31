@@ -56,12 +56,12 @@ export function Navigation() {
           {/* Right Side */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:+18303993602"
+              href="tel:+15715757174"
               className="hidden lg:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               data-testid="link-phone-header"
             >
               <Phone className="w-4 h-4" />
-              <span>(830) 399-3602</span>
+              <span>(571) 575-7174</span>
             </a>
             <ThemeToggle />
             <Link href="/contact">
@@ -103,12 +103,12 @@ export function Navigation() {
                 </Link>
               ))}
               <a
-                href="tel:+18303993602"
+                href="tel:+15715757174"
                 className="flex items-center gap-2 py-2 px-3 text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-phone-mobile"
               >
                 <Phone className="w-4 h-4" />
-                <span>(830) 399-3602</span>
+                <span>(571) 575-7174</span>
               </a>
               <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="w-full mt-2" data-testid="button-get-care-mobile">

@@ -158,11 +158,11 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-muted-foreground">Call Us</p>
                     <a
-                      href="tel:+18303993602"
+                      href="tel:+15715757174"
                       className="text-lg font-semibold text-foreground hover:text-primary transition-colors"
                       data-testid="link-phone-contact"
                     >
-                      (830) 399-3602
+                      (571) 575-7174
                     </a>
                   </div>
                 </div>
