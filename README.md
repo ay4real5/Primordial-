@@ -1,6 +1,6 @@
-# Primodial Health
+# Primodial Health Services
 
-Website for Primodial Health — compassionate home health care services for seniors and individuals who need assistance with daily living.
+Website for Primodial Health Services — compassionate home health care services for seniors and individuals who need assistance with daily living.
 
 Built with Next.js 14 as a static export (output directory: `dist`).
 

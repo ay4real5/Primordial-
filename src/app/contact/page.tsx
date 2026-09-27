@@ -11,7 +11,7 @@ import { Phone, Mail, MapPin, Clock, Heart, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Get in touch with Primodial Health for home care inquiries, care planning, and service questions.",
+  description: "Get in touch with Primodial Health Services for home care inquiries, care planning, and service questions.",
 };
 
 export default function ContactPage() {
@@ -50,7 +50,7 @@ export default function ContactPage() {
                 <div className="w-14 h-14 rounded-xl bg-health-light flex items-center justify-center mb-4">
                   <Heart className="w-7 h-7 text-health" />
                 </div>
-                <CardTitle className="font-heading text-xl">Primodial Health</CardTitle>
+                <CardTitle className="font-heading text-xl">Primodial Health Services</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
@@ -137,7 +137,7 @@ export default function ContactPage() {
                     required
                   />
                   <Label htmlFor="consent" className="text-sm font-normal">
-                    I consent to Primodial Health contacting me regarding my inquiry. *
+                    I consent to Primodial Health Services contacting me regarding my inquiry. *
                   </Label>
                 </div>
 

@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Services | Primodial Health",
+  title: "Our Services | Primodial Health Services",
   description: "Comprehensive home health care services including bundled packages for daily living support, health management, companionship, and specialized care.",
 };
 

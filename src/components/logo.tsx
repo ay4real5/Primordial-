@@ -23,7 +23,7 @@ export function Logo({
     <div className={cn("flex items-center gap-2.5", className)}>
       <Image
         src="/site-logo.png"
-        alt={showWordmark ? "" : "Primodial Health logo"}
+        alt={showWordmark ? "" : "Primodial Health Services logo"}
         width={294}
         height={504}
         style={{ width: iconWidth, height: iconHeight }}
@@ -47,7 +47,7 @@ export function Logo({
               subtextSize
             )}
           >
-            Health
+            Health Services
           </span>
         </div>
       )}

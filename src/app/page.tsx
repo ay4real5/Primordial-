@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Primodial Health | Compassionate Home Health Care",
+  title: "Primodial Health Services | Compassionate Home Health Care",
   description: "Professional, compassionate home health care services for your loved ones. Personal care, companionship, and household support.",
 };
 

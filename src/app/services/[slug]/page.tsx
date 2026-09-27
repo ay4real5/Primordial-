@@ -345,7 +345,7 @@ export async function generateMetadata({ params }: ServiceDetailProps): Promise<
     };
   }
   return {
-    title: `${service.title} | Primodial Health`,
+    title: `${service.title} | Primodial Health Services`,
     description: service.shortDesc,
   };
 }
