@@ -61,9 +61,9 @@ export default function ContactPage() {
                     <Phone className="w-5 h-5" />
                     <span className="font-medium">(571) 575-7174</span>
                   </a>
-                  <a href="mailto:health@veluneholdings.com" className="flex items-center gap-3 text-muted-foreground hover:text-health">
+                  <a href="mailto:info@primordialhealthservices.health" className="flex items-center gap-3 text-muted-foreground hover:text-health">
                     <Mail className="w-5 h-5" />
-                    <span>health@veluneholdings.com</span>
+                    <span>info@primordialhealthservices.health</span>
                   </a>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Clock className="w-5 h-5" />
@@ -167,8 +167,8 @@ export default function ContactPage() {
               </div>
               <h3 className="font-heading font-semibold mb-2">Email</h3>
               <p className="text-muted-foreground text-sm">
-                <a href="mailto:health@veluneholdings.com" className="hover:text-primary">
-                  health@veluneholdings.com
+                <a href="mailto:info@primordialhealthservices.health" className="hover:text-primary">
+                  info@primordialhealthservices.health
                 </a>
               </p>
             </div>
