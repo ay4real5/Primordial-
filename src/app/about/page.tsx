@@ -5,7 +5,7 @@ import { Heart, Target, Eye, Compass, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us | Our Mission & Values",
-  description: "Learn about Primodial Health Services's mission, values, and commitment to excellence in home health care.",
+  description: "Learn about Primordial Health Services's mission, values, and commitment to excellence in home health care.",
 };
 
 export default function AboutPage() {
@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]">
             <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">
-              About Primodial Health Services
+              About Primordial Health Services
             </h1>
             <p className="text-lg text-white/90 max-w-xl leading-relaxed">
               A US-registered company committed to delivering compassionate, 
@@ -134,7 +134,7 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Primodial Health Services provides compassionate, personalized in-home care 
+                  Primordial Health Services provides compassionate, personalized in-home care 
                   services for seniors and individuals who need assistance with daily 
                   living. We help families keep their loved ones safe, comfortable, and 
                   independent in their own homes.
@@ -157,7 +157,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
-                Why Choose Primodial Health Services?
+                Why Choose Primordial Health Services?
               </h2>
               <p className="text-muted-foreground mb-8">
                 We bring genuine care, trained professionals, and a family-first mindset 
@@ -213,23 +213,34 @@ export default function AboutPage() {
               Coverage & Operations
             </h2>
             <p className="text-muted-foreground">
-              We operate across the United States, serving families nationwide.
+              Based in Virginia, United States, we proudly serve families across Northern Virginia.
             </p>
           </div>
 
           <div className="bg-card border border-border rounded-xl p-8">
             <div className="grid sm:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">United States</div>
-                <p className="text-sm text-muted-foreground">Nationwide operations and coverage</p>
+                <div className="text-3xl font-bold text-primary mb-2">Virginia</div>
+                <p className="text-sm text-muted-foreground">United States</p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">24/7</div>
                 <p className="text-sm text-muted-foreground">Care availability</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">Multi-State</div>
-                <p className="text-sm text-muted-foreground">Regional care coverage</p>
+                <div className="text-3xl font-bold text-primary mb-2">4 Counties</div>
+                <p className="text-sm text-muted-foreground">Northern Virginia coverage</p>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-8 border-t border-border text-center">
+              <h3 className="font-heading font-semibold mb-4">Counties We Serve</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {["Fairfax County", "Prince William County", "Loudoun County", "Arlington County"].map((county) => (
+                  <span key={county} className="px-4 py-2 rounded-full bg-health/10 text-health text-sm font-medium">
+                    {county}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

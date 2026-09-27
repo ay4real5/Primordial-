@@ -7,32 +7,32 @@ import { StickyCTA } from "@/components/sticky-cta";
 
 export const metadata: Metadata = {
   title: {
-    default: "Primodial Health Services | Compassionate Home Health Care",
-    template: "%s | Primodial Health Services",
+    default: "Primordial Health Services | Compassionate Home Health Care",
+    template: "%s | Primordial Health Services",
   },
-  description: "Primodial Health Services provides compassionate, personalized home health care services. Personal care, companionship, household support, and 24/7 care coordination for your loved ones.",
+  description: "Primordial Health Services provides compassionate, personalized home health care services. Personal care, companionship, household support, and 24/7 care coordination for your loved ones.",
   keywords: ["home health care", "caregiver services", "personal care", "companionship", "elderly care", "in-home care"],
-  authors: [{ name: "Primodial Health Services" }],
+  authors: [{ name: "Primordial Health Services" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.primordialhealthservices.health",
-    siteName: "Primodial Health Services",
-    title: "Primodial Health Services | Compassionate Home Health Care",
-    description: "Primodial Health Services provides compassionate, personalized home health care services for your loved ones.",
+    siteName: "Primordial Health Services",
+    title: "Primordial Health Services | Compassionate Home Health Care",
+    description: "Primordial Health Services provides compassionate, personalized home health care services for your loved ones.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop&q=85",
         width: 1200,
         height: 630,
-        alt: "Primodial Health Services — Compassionate Home Health Care",
+        alt: "Primordial Health Services — Compassionate Home Health Care",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Primodial Health Services | Compassionate Home Health Care",
-    description: "Primodial Health Services provides compassionate, personalized home health care services for your loved ones.",
+    title: "Primordial Health Services | Compassionate Home Health Care",
+    description: "Primordial Health Services provides compassionate, personalized home health care services for your loved ones.",
     images: ["https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop&q=85"],
   },
   robots: {

@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: { absolute: "Primodial Health Services | Compassionate Home Health Care" },
+  title: { absolute: "Primordial Health Services | Compassionate Home Health Care" },
   description: "Professional, compassionate home health care services for your loved ones. Personal care, companionship, and household support.",
 };
 
@@ -44,7 +44,7 @@ export default function HealthPage() {
   const faqs = [
     {
       question: "What areas do you serve?",
-      answer: "We provide home health care services across the United States. Contact us to confirm coverage in your specific area."
+      answer: "We provide home health care services across Northern Virginia, including Fairfax, Prince William, Loudoun, and Arlington counties. Contact us to confirm coverage in your specific area."
     },
     {
       question: "Are your caregivers background checked?",
@@ -114,8 +114,8 @@ export default function HealthPage() {
                 <div className="text-xs sm:text-sm text-white/70">Background Checked</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-bold">US</div>
-                <div className="text-xs sm:text-sm text-white/70">Nationwide</div>
+                <div className="text-2xl sm:text-3xl font-bold">VA</div>
+                <div className="text-xs sm:text-sm text-white/70">Northern Virginia</div>
               </div>
             </div>
           </div>
@@ -325,8 +325,8 @@ export default function HealthPage() {
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {[
-              { quote: "The caregiver was incredible — so patient and kind. My mother was treated with such dignity. Our whole family feels so relieved to have found this level of care.", name: "A Family Client", location: "San Antonio, TX" },
-              { quote: "After my surgery, our caregiver genuinely cared about my recovery. They helped me rebuild confidence and stayed on top of everything. Truly outstanding.", name: "A Recovery Client", location: "Austin, TX" },
+              { quote: "The caregiver was incredible — so patient and kind. My mother was treated with such dignity. Our whole family feels so relieved to have found this level of care.", name: "A Family Client", location: "Fairfax County, VA" },
+              { quote: "After my surgery, our caregiver genuinely cared about my recovery. They helped me rebuild confidence and stayed on top of everything. Truly outstanding.", name: "A Recovery Client", location: "Prince William County, VA" },
               { quote: "My father refused outside help for years. Within a week, he loved his caregiver. That says everything about the quality and warmth of the staff.", name: "A Family Client", location: "Houston, TX" }
             ].map((t, i) => (
               <Card key={i} className="bg-black/40 backdrop-blur-md border-white/20 shadow-xl">

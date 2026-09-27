@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Primodial Health Services's privacy policy explains how we collect, use, and protect your information.",
+  description: "Primordial Health Services's privacy policy explains how we collect, use, and protect your information.",
 };
 
 export default function PrivacyPage() {
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Primodial Health Services (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. 
+                  Primordial Health Services (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. 
                   This Privacy Policy explains how we collect, use, disclose, and safeguard your 
                   information when you visit our website or use our services.
                 </p>

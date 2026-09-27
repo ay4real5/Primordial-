@@ -17,7 +17,7 @@ export default function HealthFAQPage() {
       questions: [
         {
           q: "What areas do you serve?",
-          a: "We provide home health care services across the United States. Contact us at (571) 575-7174 to confirm coverage in your specific area."
+          a: "We provide home health care services across Northern Virginia, including Fairfax, Prince William, Loudoun, and Arlington counties. Contact us at (571) 575-7174 to confirm coverage in your specific area."
         },
         {
           q: "What are your hours of operation?",

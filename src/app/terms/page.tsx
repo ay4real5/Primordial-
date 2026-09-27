@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms and conditions governing the use of Primodial Health Services's website and services.",
+  description: "Terms and conditions governing the use of Primordial Health Services's website and services.",
 };
 
 export default function TermsPage() {
@@ -31,7 +31,7 @@ export default function TermsPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  By accessing or using Primodial Health Services&apos;s website and services, you agree to be bound 
+                  By accessing or using Primordial Health Services&apos;s website and services, you agree to be bound 
                   by these Terms of Service. If you do not agree to these terms, please do not 
                   use our website or services.
                 </p>
@@ -64,7 +64,7 @@ export default function TermsPage() {
               <CardContent>
                 <p className="text-muted-foreground">
                   The content on this website, including text, graphics, logos, images, and 
-                  software, is the property of Primodial Health Services and is protected by copyright and 
+                  software, is the property of Primordial Health Services and is protected by copyright and 
                   other intellectual property laws. You may not reproduce, distribute, modify, 
                   or create derivative works without our prior written consent.
                 </p>
@@ -91,7 +91,7 @@ export default function TermsPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  To the fullest extent permitted by law, Primodial Health Services shall not be liable for any 
+                  To the fullest extent permitted by law, Primordial Health Services shall not be liable for any 
                   indirect, incidental, special, consequential, or punitive damages arising from 
                   or related to your use of the website or services.
                 </p>
@@ -104,7 +104,7 @@ export default function TermsPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  You agree to indemnify and hold harmless Primodial Health Services and its affiliates, officers, 
+                  You agree to indemnify and hold harmless Primordial Health Services and its affiliates, officers, 
                   directors, employees, and agents from any claims, liabilities, damages, losses, 
                   or expenses arising from your use of the website or violation of these Terms.
                 </p>
