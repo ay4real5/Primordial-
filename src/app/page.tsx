@@ -1,496 +1,419 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Heart, 
-  Building2, 
   ArrowRight, 
-  Shield, 
-  Users, 
-  Award,
+  Phone, 
   CheckCircle,
-  Phone,
-  Star,
   Clock,
-  Briefcase,
-  HandHeart,
+  Shield,
+  Users,
   Stethoscope,
   Home,
   Car,
-  ChevronRight,
-  Quote,
-  Leaf,
-  ShoppingCart
+  HandHeart
 } from "lucide-react";
-import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Velune Holdings LLC | Healthcare & Government Contracting Excellence",
-  description: "Velune Holdings LLC delivers excellence across healthcare services and government contracting solutions. Two divisions, one commitment to quality.",
+  title: "Primodial Health | Compassionate Home Health Care",
+  description: "Professional, compassionate home health care services for your loved ones. Personal care, companionship, and household support.",
 };
 
-export default function HomePage() {
+export default function HealthPage() {
+  const howItWorks = [
+    {
+      step: "1",
+      title: "Free Consultation",
+      description: "Call us at (571) 575-7174 for a no-obligation discussion about your needs."
+    },
+    {
+      step: "2",
+      title: "Customized Care Plan",
+      description: "We create a personalized care plan tailored to your specific situation."
+    },
+    {
+      step: "3",
+      title: "Begin Care",
+      description: "A matched caregiver begins providing compassionate support in your home."
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "What areas do you serve?",
+      answer: "We provide home health care services across the United States. Contact us to confirm coverage in your specific area."
+    },
+    {
+      question: "Are your caregivers background checked?",
+      answer: "Yes, all caregivers undergo comprehensive background checks, reference verification, and ongoing training."
+    },
+    {
+      question: "Can I customize my care plan?",
+      answer: "Absolutely. Every care plan is customized to meet the unique needs and preferences of each client."
+    },
+    {
+      question: "What are your hours of operation?",
+      answer: "We offer flexible scheduling including 24/7 care options. Our office is available by phone at (571) 575-7174."
+    }
+  ];
+
   return (
     <div className="flex flex-col">
-      {/* SMART ROUTING BANNER */}
-      <section className="bg-primary text-white py-2.5 px-4 text-center text-sm">
-        <div className="flex flex-wrap items-center justify-center gap-2">
-          <span className="text-white/80 text-xs">What are you looking for?</span>
-          <Link href="/health" className="inline-flex items-center gap-1.5 bg-health/80 hover:bg-health text-white font-medium px-3 py-1 rounded-full transition-colors text-xs">
-            <Heart className="w-3 h-3" />
-            Home Care
-          </Link>
-          <Link href="/government" className="inline-flex items-center gap-1.5 bg-government/80 hover:bg-government text-white font-medium px-3 py-1 rounded-full transition-colors text-xs">
-            <Building2 className="w-3 h-3" />
-            Government
-          </Link>
-        </div>
-      </section>
-
-      {/* HERO - Full width with image background */}
-      <section className="relative min-h-[100svh] sm:min-h-[90vh] flex items-center">
-        {/* Background Image */}
+      {/* Hero */}
+      <section className="relative min-h-[100svh] sm:min-h-[75vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=90"
-            alt="Diverse professional team collaborating with confidence"
+            src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1920&q=85"
+            alt="Caring nurse holding hands with elderly patient in home setting"
             fill
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30" />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-health/90 via-health/70 to-health/20" />
         </div>
-        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]">
-            <Badge className="mb-6 bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm">
-              Trusted Nationwide
-            </Badge>
-            <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
-              Caring for
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
+              <Heart className="w-4 h-4" />
+              Compassionate Home Health Care
+            </span>
+            <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+              Care That Feels
               <br />
-              <span className="text-health-light">People.</span>
-              <br />
-              Serving
-              <br />
-              <span className="text-government-light">Government.</span>
+              Like Family
             </h1>
-            <p className="text-base sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-lg leading-relaxed">
-              Two divisions united by one mission: delivering exceptional service 
-              with compassion, precision, and unwavering commitment.
+            <p className="text-sm sm:text-xl text-white/90 max-w-xl mb-6 sm:mb-10 leading-relaxed">
+              Professional, compassionate care services that help your loved ones 
+              maintain independence and quality of life in the comfort of home.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/health" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-health hover:bg-health-dark text-white shadow-lg shadow-health/30 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg">
-                  <Heart className="w-5 h-5 mr-2" />
-                  Healthcare Services
+              <a href="tel:+15715757174" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-white text-health hover:bg-white/90 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg shadow-xl">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (571) 575-7174
                 </Button>
-              </Link>
-              <Link href="/government" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-government hover:bg-government-dark text-white shadow-lg shadow-government/30 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg">
-                  <Building2 className="w-5 h-5 mr-2" />
-                  Government Solutions
+              </a>
+              <Link href="/services" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-white/20 backdrop-blur-sm text-white border border-white/40 hover:bg-white/30 h-12 sm:h-14 px-6 sm:px-8 text-base sm:text-lg">
+                  View Our Services
+                  <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
             </div>
-            
-            {/* Quick stats row */}
-            <div className="flex flex-wrap gap-4 sm:gap-8 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/20">
+            <div className="flex gap-6 sm:gap-8 mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-white/20">
               <div>
-                <div className="text-xl sm:text-3xl font-bold">24/7</div>
+                <div className="text-2xl sm:text-3xl font-bold">24/7</div>
                 <div className="text-xs sm:text-sm text-white/70">Care Available</div>
               </div>
               <div>
-                <div className="text-xl sm:text-3xl font-bold">US</div>
-                <div className="text-xs sm:text-sm text-white/70">Nationwide</div>
+                <div className="text-2xl sm:text-3xl font-bold">100%</div>
+                <div className="text-xs sm:text-sm text-white/70">Background Checked</div>
               </div>
               <div>
-                <div className="text-xl sm:text-3xl font-bold">100%</div>
-                <div className="text-xs sm:text-sm text-white/70">Licensed</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
-          <ChevronRight className="w-8 h-8 rotate-90" />
-        </div>
-      </section>
-
-      {/* DIVISIONS - Image cards with overlay */}
-      <section className="py-14 sm:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
-            <Badge className="mb-4">Our Divisions</Badge>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-              Two Ways We Serve
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Excellence delivered through specialized expertise
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Health Card with Image */}
-            <div className="group relative overflow-hidden rounded-3xl shadow-xl">
-              <div className="aspect-[3/2] sm:aspect-[4/3] relative">
-                <Image
-                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=85"
-                  alt="Compassionate caregiver supporting elderly patient at home"
-                  fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-health/95 via-health/60 to-health/20" />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 text-white">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-3">
-                  <Heart className="w-6 h-6 sm:w-7 sm:h-7" />
-                </div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-2">Primodial Health</h3>
-                <p className="text-white/90 mb-4">
-                  Compassionate home health care for your loved ones. Personal care, 
-                  companionship, and household support.
-                </p>
-                <div className="flex items-center gap-2 text-sm mb-4">
-                  <Phone className="w-4 h-4" />
-                  <span className="font-medium">(571) 575-7174</span>
-                </div>
-                <Link href="/health">
-                  <Button variant="secondary" className="bg-white text-health hover:bg-white/90">
-                    Explore Services
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Government Card with Image */}
-            <div className="group relative overflow-hidden rounded-3xl shadow-xl">
-              <div className="aspect-[3/2] sm:aspect-[4/3] relative">
-                <Image
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=85"
-                  alt="Professional government contractors in a formal meeting"
-                  fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-government/95 via-government/60 to-government/20" />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8 text-white">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-3">
-                  <Building2 className="w-6 h-6 sm:w-7 sm:h-7" />
-                </div>
-                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-2">Velune</h3>
-                <p className="text-white/90 mb-4">
-                  Professional contracting for federal, state, and local agencies. 
-                  Compliance-focused solutions.
-                </p>
-                <div className="flex items-center gap-2 text-sm mb-4">
-                  <Phone className="w-4 h-4" />
-                  <span className="font-medium">(571) 575-7174</span>
-                </div>
-                <Link href="/government">
-                  <Button variant="secondary" className="bg-white text-government hover:bg-white/90">
-                    View Capabilities
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
+                <div className="text-2xl sm:text-3xl font-bold">US</div>
+                <div className="text-xs sm:text-sm text-white/70">Nationwide</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES PREVIEW - Icon grid with images */}
-      <section className="py-14 sm:py-24 bg-muted/30">
+      {/* Who We Help */}
+      <section className="py-12 sm:py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
-            <Badge className="mb-4" variant="secondary">What We Offer</Badge>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-              Comprehensive Solutions
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              From home care to government contracting
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Health Services */}
-            <Card className="overflow-hidden border-health/20">
-              <div className="relative h-48">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-[4/3] relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=600&q=85"
-                  alt="Caregiver holding hands with elderly patient in warm home setting"
+                  src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=800&q=85"
+                  alt="Senior woman smiling with family caregiver at home"
                   fill
                   className="object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-health/20" />
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-health text-white">Health</Badge>
+              </div>
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-health/10 flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-health" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sm">Serving families nationwide</p>
+                    <p className="text-xs text-muted-foreground">Personalized care for every situation</p>
+                  </div>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-health/5 hover:bg-health/10 transition-colors">
-                    <Stethoscope className="w-5 h-5 text-health" />
-                    <span className="text-sm font-medium">Personal Care</span>
+            </div>
+            <div>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
+                Who We Help
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                We provide personalized care for individuals and families across various situations and needs.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  { title: "Seniors", desc: "Maintaining independence at home", img: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=200&q=80" },
+                  { title: "Individuals with Disabilities", desc: "Support for daily living activities", img: "https://images.unsplash.com/photo-1570793005299-c091be91bbad?w=200&q=80" },
+                  { title: "Post-Surgical Patients", desc: "Recovery and rehabilitation support", img: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=200&q=80" },
+                  { title: "Family Caregivers", desc: "Respite and supplemental care", img: "https://images.unsplash.com/photo-1536064479547-7ee40b74b807?w=200&q=80" }
+                ].map((item) => (
+                  <div key={item.title} className="flex items-start gap-3 p-4 rounded-xl bg-health/5 hover:bg-health/10 transition-colors">
+                    <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 relative">
+                      <Image src={item.img} alt={item.title} fill className="object-cover" />
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-semibold text-sm mb-1">{item.title}</h3>
+                      <p className="text-xs text-muted-foreground">{item.desc}</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-health/5 hover:bg-health/10 transition-colors">
-                    <Home className="w-5 h-5 text-health" />
-                    <span className="text-sm font-medium">Household Help</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-health/5 hover:bg-health/10 transition-colors">
-                    <HandHeart className="w-5 h-5 text-health" />
-                    <span className="text-sm font-medium">Companionship</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-health/5 hover:bg-health/10 transition-colors">
-                    <Car className="w-5 h-5 text-health" />
-                    <span className="text-sm font-medium">Transportation</span>
-                  </div>
-                </div>
-                <Link href="/health/services" className="mt-6 block">
-                  <Button className="w-full btn-health">
-                    View All Services
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            {/* Government Services */}
-            <Card className="overflow-hidden border-government/20">
-              <div className="relative h-48">
-                <Image
-                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=85"
-                  alt="Government building with American flag symbolizing federal contracting"
-                  fill
-                  className="object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-government/20" />
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-government text-white">Government</Badge>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-government/5 hover:bg-government/10 transition-colors">
-                    <Stethoscope className="w-5 h-5 text-government" />
-                    <span className="text-sm font-medium">Healthcare Support</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-government/5 hover:bg-government/10 transition-colors">
-                    <Building2 className="w-5 h-5 text-government" />
-                    <span className="text-sm font-medium">Facilities</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-government/5 hover:bg-government/10 transition-colors">
-                    <Leaf className="w-5 h-5 text-government" />
-                    <span className="text-sm font-medium">Landscaping</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 rounded-lg bg-government/5 hover:bg-government/10 transition-colors">
-                    <ShoppingCart className="w-5 h-5 text-government" />
-                    <span className="text-sm font-medium">Procurement</span>
-                  </div>
-                </div>
-                <Link href="/government/capabilities" className="mt-6 block">
-                  <Button className="w-full btn-government">
-                    View Capabilities
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US - Features with icons */}
-      <section className="py-14 sm:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
-            <Badge className="mb-4">Why Velune</Badge>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-              Excellence in Everything
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-5 sm:p-8">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-health/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-health" />
-                </div>
-                <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Compassionate</h3>
-                <p className="text-muted-foreground">
-                  Treating every client like family with genuine care and empathy.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-5 sm:p-8">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-                </div>
-                <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Trusted</h3>
-                <p className="text-muted-foreground">
-                  Fully licensed, bonded, and insured for your complete peace of mind.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-5 sm:p-8">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-government/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <Award className="w-6 h-6 sm:w-8 sm:h-8 text-government" />
-                </div>
-                <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Quality Focused</h3>
-                <p className="text-muted-foreground">
-                  Rigorous standards and continuous improvement in all we do.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-5 sm:p-8">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-secondary" />
-                </div>
-                <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3">Always Available</h3>
-                <p className="text-muted-foreground">
-                  24/7 support for healthcare needs and responsive contracting.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIAL - Quote section with background */}
-      <section className="relative py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=1920&q=85"
-            alt="Warm family moment representing compassionate care"
-            fill
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-primary/93" />
-        </div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <Quote className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-6 sm:mb-8 text-white/30" />
-            <blockquote className="text-lg sm:text-2xl md:text-3xl font-heading font-medium mb-8 leading-relaxed">
-              &ldquo;The caregiver was so patient and kind. My mother was treated with real dignity. Our whole family feels at peace knowing she&apos;s in such good hands.&rdquo;
-            </blockquote>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
-                <Users className="w-7 h-7" />
-              </div>
-              <div className="text-left">
-                <div className="font-semibold">A Family Client</div>
-                <div className="text-sm text-white/70">San Antonio, TX</div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* TRUST BADGES */}
-      <section className="py-16 bg-muted/30 border-y border-border">
+      {/* Services Preview */}
+      <section className="py-12 sm:py-20 bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-6 sm:gap-12 items-center">
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-12 h-12 rounded-full bg-health/10 flex items-center justify-center">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-primary mb-4">
+              Our Services
+            </h2>
+            <p className="text-muted-foreground">
+              Comprehensive care solutions designed to support independence and well-being.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-6">
+            {[
+              { icon: Home, title: "Daily Living Support", description: "Personal care, household support, and meal preparation bundled for comprehensive care.", img: "https://images.unsplash.com/photo-1584744982491-665216d95f8b?w=600&q=85", alt: "Caregiver helping with daily household activities" },
+              { icon: HandHeart, title: "Companionship", description: "Meaningful social interaction, activities, and emotional support.", img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=85", alt: "Senior enjoying companionship and social activities" },
+              { icon: Stethoscope, title: "Health Management", description: "Health monitoring and medication management for better outcomes.", img: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=600&q=85", alt: "Health aide monitoring patient vitals at home" },
+              { icon: Car, title: "Transportation", description: "Safe, reliable rides for appointments, errands, and social activities.", img: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=85", alt: "Reliable transportation service for seniors" }
+            ].map((service) => (
+              <Card key={service.title} className="group hover:shadow-xl transition-all overflow-hidden">
+                <div className="relative h-44">
+                  <Image
+                    src={service.img}
+                    alt={service.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-health/70 to-transparent" />
+                  <div className="absolute bottom-4 left-4 w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <service.icon className="w-5 h-5 text-white" />
+                  </div>
+                </div>
+                <CardHeader>
+                  <CardTitle className="font-heading text-lg sm:text-xl">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">{service.description}</p>
+                  <Link 
+                    href="/services" 
+                    className="text-health hover:text-health-dark font-medium inline-flex items-center gap-1"
+                  >
+                    Learn more
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/services">
+              <Button variant="health" size="lg">
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-12 sm:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-primary mb-4">
+              How It Works
+            </h2>
+            <p className="text-muted-foreground">
+              Getting started with care is simple and straightforward.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
+            {howItWorks.map((step) => (
+              <Card key={step.step} className="text-center">
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 rounded-full bg-health text-white flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                    {step.step}
+                  </div>
+                  <h3 className="font-heading font-semibold text-lg mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground text-sm">{step.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Indicators */}
+      <section className="py-12 sm:py-20 bg-gradient-health">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto mb-4 shadow-sm">
                 <Shield className="w-6 h-6 text-health" />
               </div>
-              <span className="font-medium">Licensed & Insured</span>
+              <h3 className="font-heading font-semibold mb-1">Fully Insured</h3>
+              <p className="text-sm text-muted-foreground">Comprehensive liability coverage</p>
             </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                <CheckCircle className="w-6 h-6 text-primary" />
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <Users className="w-6 h-6 text-health" />
               </div>
-              <span className="font-medium">Background Checked</span>
+              <h3 className="font-heading font-semibold mb-1">Screened Caregivers</h3>
+              <p className="text-sm text-muted-foreground">Background checked & trained</p>
             </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-12 h-12 rounded-full bg-government/10 flex items-center justify-center">
-                <Star className="w-6 h-6 text-government" />
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <Clock className="w-6 h-6 text-health" />
               </div>
-              <span className="font-medium">5-Star Service</span>
+              <h3 className="font-heading font-semibold mb-1">24/7 Availability</h3>
+              <p className="text-sm text-muted-foreground">Care when you need it</p>
             </div>
-            <div className="flex items-center gap-3 text-muted-foreground">
-              <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                <Clock className="w-6 h-6 text-secondary" />
+            <div className="text-center">
+              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <CheckCircle className="w-6 h-6 text-health" />
               </div>
-              <span className="font-medium">24/7 Support</span>
+              <h3 className="font-heading font-semibold mb-1">Quality Assured</h3>
+              <p className="text-sm text-muted-foreground">Ongoing supervision & support</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA CARDS */}
-      <section className="py-14 sm:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Health CTA */}
-            <Card className="overflow-hidden border-health/20 hover:shadow-xl transition-shadow">
-              <div className="relative h-48">
-                <Image
-                  src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=600&q=85"
-                  alt="Friendly home health aide assisting senior client"
-                  fill
-                  className="object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-health/60" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Phone className="w-12 h-12 text-white/60" />
-                </div>
-              </div>
-              <CardContent className="p-5 sm:p-8">
-                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-3">Need Care Now?</h3>
-                <p className="text-muted-foreground mb-5 sm:mb-6">
-                  Speak with our care coordinators today. We&apos;re available 24/7 to
-                  discuss your family&apos;s needs.
-                </p>
-                <a href="tel:+15715757174" className="block">
-                  <Button className="w-full btn-health h-12 text-lg">
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call (571) 575-7174
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
+      {/* Testimonials */}
+      <section className="relative py-14 sm:py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1920&q=85"
+            alt="Healthcare background"
+            fill
+            className="object-cover object-center object-top"
+          />
+          <div className="absolute inset-0 bg-black/75" />
+          <div className="absolute inset-0 bg-health/70" />
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-white mb-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.6)]">
+              What Families Say
+            </h2>
+            <p className="text-white font-medium [text-shadow:0_1px_6px_rgba(0,0,0,0.5)]">
+              Hear from families who have experienced our compassionate care.
+            </p>
+          </div>
 
-            {/* Government CTA */}
-            <Card className="overflow-hidden border-government/20 hover:shadow-xl transition-shadow">
-              <div className="relative h-48">
-                <Image
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=85"
-                  alt="Professional government team reviewing contract documents"
-                  fill
-                  className="object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-government/60" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Briefcase className="w-12 h-12 text-white/60" />
-                </div>
-              </div>
-              <CardContent className="p-5 sm:p-8">
-                <h3 className="font-heading text-xl sm:text-2xl font-bold mb-3">Explore Partnership?</h3>
-                <p className="text-muted-foreground mb-5 sm:mb-6">
-                  Discuss capabilities, teaming opportunities, or agency requirements 
-                  with our government team.
-                </p>
-                <Link href="/government/partners" className="block">
-                  <Button className="w-full btn-government h-12 text-lg">
-                    <ArrowRight className="w-5 h-5 mr-2" />
-                    Start the Conversation
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            {[
+              { quote: "The caregiver was incredible — so patient and kind. My mother was treated with such dignity. Our whole family feels so relieved to have found this level of care.", name: "A Family Client", location: "San Antonio, TX" },
+              { quote: "After my surgery, our caregiver genuinely cared about my recovery. They helped me rebuild confidence and stayed on top of everything. Truly outstanding.", name: "A Recovery Client", location: "Austin, TX" },
+              { quote: "My father refused outside help for years. Within a week, he loved his caregiver. That says everything about the quality and warmth of the staff.", name: "A Family Client", location: "Houston, TX" }
+            ].map((t, i) => (
+              <Card key={i} className="bg-black/40 backdrop-blur-md border-white/20 shadow-xl">
+                <CardContent className="p-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, j) => (
+                      <Heart key={j} className="w-4 h-4 fill-white text-white" />
+                    ))}
+                  </div>
+                  <p className="text-white font-medium italic mb-6 leading-relaxed [text-shadow:0_1px_4px_rgba(0,0,0,0.4)]">
+                    &quot;{t.quote}&quot;
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white text-sm [text-shadow:0_1px_4px_rgba(0,0,0,0.4)]">{t.name}</p>
+                      <p className="text-white/80 text-xs">{t.location}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 sm:py-20 bg-gradient-hero">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-heading text-2xl sm:text-4xl font-bold text-primary mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-muted-foreground">
+              Common questions about our home health care services.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqs.map((faq, i) => (
+              <Card key={i}>
+                <CardHeader className="pb-3">
+                  <CardTitle className="font-heading text-lg">{faq.question}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{faq.answer}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/faq">
+              <Button variant="health-outline">
+                View All FAQs
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 sm:py-20 bg-white border-t border-border">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
+            Contact us today for a free, no-obligation consultation.
+            We&apos;re here to help you find the right care solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+15715757174" className="w-full sm:w-auto">
+              <Button size="lg" className="w-full sm:w-auto btn-health">
+                <Phone className="w-5 h-5 mr-2" />
+                Call (571) 575-7174
+              </Button>
+            </a>
+            <Link href="/contact" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                Send a Message
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

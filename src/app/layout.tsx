@@ -7,33 +7,33 @@ import { StickyCTA } from "@/components/sticky-cta";
 
 export const metadata: Metadata = {
   title: {
-    default: "Velune Holdings LLC | Healthcare & Government Contracting",
-    template: "%s | Velune Holdings LLC",
+    default: "Primodial Health | Compassionate Home Health Care",
+    template: "%s | Primodial Health",
   },
-  description: "Velune Holdings LLC delivers excellence across healthcare services and government contracting solutions. Trusted partner for families and agencies.",
-  keywords: ["healthcare", "home health", "government contracting", "federal contracts", "caregiver services"],
-  authors: [{ name: "Velune Holdings LLC" }],
+  description: "Primodial Health provides compassionate, personalized home health care services. Personal care, companionship, household support, and 24/7 care coordination for your loved ones.",
+  keywords: ["home health care", "caregiver services", "personal care", "companionship", "elderly care", "in-home care"],
+  authors: [{ name: "Primodial Health" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.primodial.org",
-    siteName: "Velune Holdings LLC",
-    title: "Velune Holdings LLC | Healthcare & Government Contracting",
-    description: "Velune Holdings LLC delivers excellence across healthcare services and government contracting solutions.",
+    url: "https://www.primordialhealthservices.health",
+    siteName: "Primodial Health",
+    title: "Primodial Health | Compassionate Home Health Care",
+    description: "Primodial Health provides compassionate, personalized home health care services for your loved ones.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=630&fit=crop&q=85",
+        url: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop&q=85",
         width: 1200,
         height: 630,
-        alt: "Velune Holdings LLC — Healthcare & Government Contracting",
+        alt: "Primodial Health — Compassionate Home Health Care",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Velune Holdings LLC | Healthcare & Government Contracting",
-    description: "Velune Holdings LLC delivers excellence across healthcare services and government contracting solutions.",
-    images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=630&fit=crop&q=85"],
+    title: "Primodial Health | Compassionate Home Health Care",
+    description: "Primodial Health provides compassionate, personalized home health care services for your loved ones.",
+    images: ["https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop&q=85"],
   },
   robots: {
     index: true,

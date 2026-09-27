@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Building2, Target, Eye, Compass, CheckCircle } from "lucide-react";
+import { Heart, Target, Eye, Compass, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Velune Holdings LLC | Our Mission & Values",
-  description: "Learn about Velune Holdings LLC's mission, values, and commitment to excellence in healthcare and government contracting.",
+  title: "About Primodial Health | Our Mission & Values",
+  description: "Learn about Primodial Health's mission, values, and commitment to excellence in home health care.",
 };
 
 export default function AboutPage() {
@@ -27,12 +27,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]">
             <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">
-              About Velune Holdings LLC
+              About Primodial Health
             </h1>
             <p className="text-lg text-white/90 max-w-xl leading-relaxed">
-              A US-registered company committed to delivering excellence across two distinct 
-              but equally important domains: compassionate home health care and professional 
-              government contracting.
+              A US-registered company committed to delivering compassionate, 
+              personalized home health care that helps your loved ones stay safe, 
+              comfortable, and independent at home.
             </p>
           </div>
         </div>
@@ -51,10 +51,9 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  To deliver exceptional service that improves lives and strengthens 
-                  communities. Whether providing care to families in need or supporting 
-                  government agencies in their critical missions, we bring dedication, 
-                  expertise, and integrity to every engagement.
+                  To deliver exceptional care that improves lives and strengthens 
+                  families. We bring dedication, expertise, and integrity to every 
+                  home we serve.
                 </p>
               </CardContent>
             </Card>
@@ -68,10 +67,9 @@ export default function AboutPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  To be recognized as a trusted partner of choice—known for 
-                  compassionate care that families rely on and professional 
-                  contracting that agencies depend on. We aim to set the standard 
-                  for quality in both healthcare and government services.
+                  To be recognized as the home care provider of choice—known for 
+                  compassionate care that families rely on. We aim to set the 
+                  standard for quality in home health services.
                 </p>
               </CardContent>
             </Card>
@@ -93,10 +91,10 @@ export default function AboutPage() {
 
           <div className="grid sm:grid-cols-2 gap-6">
             {[
-              { icon: Target, title: "Excellence", color: "bg-primary/10 text-primary", border: "border-l-primary", description: "We pursue the highest standards in every service we deliver, whether caring for a loved one or fulfilling a government contract." },
+              { icon: Target, title: "Excellence", color: "bg-primary/10 text-primary", border: "border-l-primary", description: "We pursue the highest standards in every service we deliver and every family we serve." },
               { icon: Heart, title: "Compassion", color: "bg-health/10 text-health", border: "border-l-health", description: "We approach every interaction with empathy and understanding, recognizing the human impact of our work." },
               { icon: Compass, title: "Integrity", color: "bg-secondary/10 text-secondary", border: "border-l-secondary", description: "We operate with transparency, honesty, and unwavering ethical standards in all our business practices." },
-              { icon: Building2, title: "Compliance", color: "bg-government/10 text-government", border: "border-l-government", description: "We maintain rigorous adherence to regulations, standards, and best practices across all divisions." }
+              { icon: CheckCircle, title: "Reliability", color: "bg-health/10 text-health", border: "border-l-health", description: "We show up consistently and dependably, giving families peace of mind day after day." }
             ].map((value) => (
               <Card key={value.title} className={`border-l-4 ${value.border} hover:shadow-md transition-shadow`}>
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
@@ -114,29 +112,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Divisions Overview */}
+      {/* What We Do */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
-              Our Divisions
+              What We Do
             </h2>
             <p className="text-muted-foreground">
-              Two specialized divisions, united by a common commitment to excellence.
+              Compassionate in-home care, delivered with a common commitment to excellence.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="max-w-2xl mx-auto">
             <Card className="border-health/20">
               <CardHeader>
                 <div className="w-14 h-14 rounded-xl bg-health-light flex items-center justify-center mb-4">
                   <Heart className="w-7 h-7 text-health" />
                 </div>
-                <CardTitle className="font-heading text-xl">Primodial Health</CardTitle>
+                <CardTitle className="font-heading text-xl">Home Health Care</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Our Health division provides compassionate, personalized in-home care 
+                  Primodial Health provides compassionate, personalized in-home care 
                   services for seniors and individuals who need assistance with daily 
                   living. We help families keep their loved ones safe, comfortable, and 
                   independent in their own homes.
@@ -146,29 +144,6 @@ export default function AboutPage() {
                   <li>• Health monitoring and medication management</li>
                   <li>• Transportation and specialized care services</li>
                   <li>• 24/7 care coordination and support</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-government/20">
-              <CardHeader>
-                <div className="w-14 h-14 rounded-xl bg-government-light flex items-center justify-center mb-4">
-                  <Building2 className="w-7 h-7 text-government" />
-                </div>
-                <CardTitle className="font-heading text-xl">Velune</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Velune delivers professional contracting services 
-                  for federal, state, and local agencies. We serve as a capable 
-                  partner for a wide range of contracting needs, with a focus on 
-                  quality, compliance, and timely delivery.
-                </p>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Prime and subcontractor capabilities</li>
-                  <li>• FAR-compliant processes and procedures</li>
-                  <li>• Quality assurance and compliance focus</li>
-                  <li>• Teaming and partnership opportunities</li>
                 </ul>
               </CardContent>
             </Card>
@@ -182,21 +157,20 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-primary mb-4">
-                Why Choose Velune Holdings LLC?
+                Why Choose Primodial Health?
               </h2>
               <p className="text-muted-foreground mb-8">
-                We bring operational expertise, genuine care, and a compliance-first mindset 
-                to every engagement. Whether you are a family seeking care or an agency 
-                seeking a contractor, we show up with professionalism and dedication.
+                We bring genuine care, trained professionals, and a family-first mindset 
+                to every home we serve. When you are seeking care for a loved one, 
+                we show up with compassion and dedication.
               </p>
               <div className="space-y-4">
                 {[
-                  "Nationwide coverage across both divisions",
-                  "Background-checked and trained professionals",
-                  "FAR-aware processes for all government work",
-                  "SAM.gov registered · UEI: EUDTX5ULD6B1",
-                  "24/7 care coordination for health clients",
-                  "Single trusted partner for diverse service needs"
+                  "Background-checked and trained caregivers",
+                  "Licensed, bonded, and insured",
+                  "24/7 care coordination and support",
+                  "Personalized care plans for every client",
+                  "Single trusted partner for your family's care needs"
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -219,8 +193,8 @@ export default function AboutPage() {
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=400&q=85"
-                    alt="Government professional"
+                    src="https://images.unsplash.com/photo-1607748851687-ba9a10438621?w=400&q=85"
+                    alt="Caregiver holding hands with a client"
                     fill
                     className="object-cover"
                   />
@@ -239,7 +213,7 @@ export default function AboutPage() {
               Coverage & Operations
             </h2>
             <p className="text-muted-foreground">
-              We operate across the United States, serving families and agencies nationwide.
+              We operate across the United States, serving families nationwide.
             </p>
           </div>
 
@@ -251,11 +225,11 @@ export default function AboutPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                <p className="text-sm text-muted-foreground">Health division availability</p>
+                <p className="text-sm text-muted-foreground">Care availability</p>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary mb-2">Multi-State</div>
-                <p className="text-sm text-muted-foreground">Government contracting capabilities</p>
+                <p className="text-sm text-muted-foreground">Regional care coverage</p>
               </div>
             </div>
           </div>

@@ -1,3 +1,10 @@
 {
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/health", "destination": "/", "permanent": true },
+    { "source": "/health/:path*", "destination": "/:path*", "permanent": true },
+    { "source": "/government", "destination": "https://veluneholdings.com/", "permanent": true },
+    { "source": "/government/:path*", "destination": "https://veluneholdings.com/:path*", "permanent": true }
+  ]
 }

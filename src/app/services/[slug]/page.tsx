@@ -364,7 +364,7 @@ export default function ServiceDetailPage({ params }: ServiceDetailProps) {
       {/* Hero */}
       <section className="py-20 bg-gradient-health">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/health/services" className="inline-flex items-center gap-2 text-health hover:text-health-dark mb-6">
+          <Link href="/services" className="inline-flex items-center gap-2 text-health hover:text-health-dark mb-6">
             <ArrowLeft className="w-4 h-4" />
             Back to Services
           </Link>
@@ -491,14 +491,14 @@ export default function ServiceDetailPage({ params }: ServiceDetailProps) {
                       .map(([key, svc]) => (
                         <Link
                           key={key}
-                          href={`/health/services/${key}`}
+                          href={`/services/${key}`}
                           className="text-sm text-muted-foreground hover:text-health transition-colors"
                         >
                           {svc.title}
                         </Link>
                       ))}
                   </nav>
-                  <Link href="/health/services" className="text-health hover:text-health-dark text-sm font-medium mt-4 inline-block">
+                  <Link href="/services" className="text-health hover:text-health-dark text-sm font-medium mt-4 inline-block">
                     View all services →
                   </Link>
                 </CardContent>

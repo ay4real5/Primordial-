@@ -2,14 +2,12 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
-  division?: "health" | "government" | "parent";
   size?: "sm" | "md" | "lg";
   className?: string;
   showWordmark?: boolean;
 }
 
 export function Logo({
-  division = "parent",
   size = "md",
   className,
   showWordmark = true,
@@ -21,18 +19,11 @@ export function Logo({
   const subtextSize =
     size === "sm" ? "text-[9px]" : size === "lg" ? "text-sm" : "text-[11px]";
 
-  const divisionLabel =
-    division === "health"
-      ? "HEALTH"
-      : division === "government"
-      ? "GOVERNMENT"
-      : null;
-
   return (
     <div className={cn("flex items-center gap-2.5", className)}>
       <Image
         src="/site-logo.png"
-        alt={showWordmark ? "" : "Company logo"}
+        alt={showWordmark ? "" : "Primodial Health logo"}
         width={294}
         height={504}
         style={{ width: iconWidth, height: iconHeight }}
@@ -44,27 +35,20 @@ export function Logo({
         <div className="flex flex-col leading-none">
           <span
             className={cn(
-              "font-heading font-bold tracking-tight",
-              textSize,
-              division === "health" && "text-health-dark",
-              division === "government" && "text-government-dark",
-              division === "parent" && "text-primary-800"
+              "font-heading font-bold tracking-tight text-health-dark",
+              textSize
             )}
           >
-            {division === "health" ? "Primodial" : "Velune"}
+            Primodial
           </span>
-          {divisionLabel && (
-            <span
-              className={cn(
-                "font-sans font-semibold tracking-[0.12em] uppercase mt-0.5",
-                subtextSize,
-                division === "health" && "text-health",
-                division === "government" && "text-government"
-              )}
-            >
-              {divisionLabel}
-            </span>
-          )}
+          <span
+            className={cn(
+              "font-sans font-semibold tracking-[0.12em] uppercase mt-0.5 text-health",
+              subtextSize
+            )}
+          >
+            Health
+          </span>
         </div>
       )}
     </div>

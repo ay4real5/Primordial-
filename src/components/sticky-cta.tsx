@@ -1,17 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { usePathname } from "next/navigation";
 import { Phone, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function StickyCTA() {
-  const pathname = usePathname();
   const [visible, setVisible] = React.useState(false);
   const [dismissed, setDismissed] = React.useState(false);
-
-  const isHealth = pathname.startsWith("/health");
-  const isGovernment = pathname.startsWith("/government");
 
   React.useEffect(() => {
     if (dismissed) return;
@@ -20,13 +15,7 @@ export function StickyCTA() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [dismissed]);
 
-  if (dismissed || (!isHealth && !isGovernment)) return null;
-
-  const phone = isHealth ? "tel:+15715757174" : "tel:+15715757174";
-  const label = isHealth ? "(571) 575-7174" : "(571) 575-7174";
-  const color = isHealth
-    ? "bg-health hover:bg-health-dark shadow-health/40"
-    : "bg-government hover:bg-government-dark shadow-government/40";
+  if (dismissed) return null;
 
   return (
     <div
@@ -35,15 +24,15 @@ export function StickyCTA() {
         visible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0 pointer-events-none"
       )}
     >
-      <a href={phone}>
+      <a href="tel:+15715757174">
         <button
           className={cn(
             "flex items-center gap-2 px-5 py-3 rounded-full text-white font-semibold shadow-lg text-sm",
-            color
+            "bg-health hover:bg-health-dark shadow-health/40"
           )}
         >
           <Phone className="w-4 h-4" />
-          {label}
+          (571) 575-7174
         </button>
       </a>
       <button

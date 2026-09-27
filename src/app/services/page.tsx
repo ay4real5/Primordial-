@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Services | Primodial Health by Velune Holdings LLC",
+  title: "Our Services | Primodial Health",
   description: "Comprehensive home health care services including bundled packages for daily living support, health management, companionship, and specialized care.",
 };
 
@@ -160,7 +160,7 @@ export default function HealthServicesPage() {
                   <AccordionContent className="px-6 pb-6">
                     <div className="grid md:grid-cols-3 gap-4 pt-4">
                       {inHomeServices.map((service) => (
-                        <Link key={service.id} href={`/health/services/${service.id}`}>
+                        <Link key={service.id} href={`/services/${service.id}`}>
                           <Card className="h-full hover:border-health transition-colors cursor-pointer group">
                             <CardContent className="p-4">
                               <div className="w-10 h-10 rounded-md bg-health-light flex items-center justify-center mb-3 group-hover:bg-health/20">
@@ -192,7 +192,7 @@ export default function HealthServicesPage() {
                 <span className="text-sm font-medium text-health uppercase tracking-wide">Standalone Service</span>
               </div>
               
-              <Link href={`/health/services/${companionshipService.id}`}>
+              <Link href={`/services/${companionshipService.id}`}>
                 <Card className="overflow-hidden hover:border-health transition-colors cursor-pointer group">
                   <CardContent className="p-0">
                     <div className="p-6">
@@ -249,7 +249,7 @@ export default function HealthServicesPage() {
                   <AccordionContent className="px-6 pb-6">
                     <div className="grid md:grid-cols-2 gap-4 pt-4">
                       {healthServices.map((service) => (
-                        <Link key={service.id} href={`/health/services/${service.id}`}>
+                        <Link key={service.id} href={`/services/${service.id}`}>
                           <Card className="h-full hover:border-health transition-colors cursor-pointer group">
                             <CardContent className="p-4">
                               <div className="w-10 h-10 rounded-md bg-health-light flex items-center justify-center mb-3 group-hover:bg-health/20">
@@ -282,7 +282,7 @@ export default function HealthServicesPage() {
               
               <div className="grid md:grid-cols-2 gap-4">
                 {standaloneServices.map((service) => (
-                  <Link key={service.id} href={`/health/services/${service.id}`}>
+                  <Link key={service.id} href={`/services/${service.id}`}>
                     <Card className="h-full hover:border-health transition-colors cursor-pointer group">
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
