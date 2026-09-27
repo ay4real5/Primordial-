@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "FAQ | Primodial Health Services",
+  title: "FAQ",
   description: "Frequently asked questions about our home health care services, care plans, caregiver qualifications, and more.",
 };
 

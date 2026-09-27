@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Primodial Health Services",
+  title: "Privacy Policy",
   description: "Primodial Health Services's privacy policy explains how we collect, use, and protect your information.",
 };
 

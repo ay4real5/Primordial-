@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Target, Eye, Compass, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Primodial Health Services | Our Mission & Values",
+  title: "About Us | Our Mission & Values",
   description: "Learn about Primodial Health Services's mission, values, and commitment to excellence in home health care.",
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Primodial Health Services",
+  title: "Terms of Service",
   description: "Terms and conditions governing the use of Primodial Health Services's website and services.",
 };
 
