@@ -44,7 +44,7 @@ export default function HealthPage() {
   const faqs = [
     {
       question: "What areas do you serve?",
-      answer: "We provide home health care services across Northern Virginia, including Fairfax, Prince William, Loudoun, and Arlington counties. Contact us to confirm coverage in your specific area."
+      answer: "We provide home health care services across Northern and Central Virginia, including Fairfax, Loudoun, Prince William, Arlington, Stafford, Culpeper, Spotsylvania, Chesterfield, Henrico, Powhatan, Amelia, Dinwiddie, and Goochland counties. Contact us to confirm coverage in your specific area."
     },
     {
       question: "Are your caregivers background checked?",

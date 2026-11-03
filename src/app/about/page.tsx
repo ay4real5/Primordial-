@@ -213,7 +213,7 @@ export default function AboutPage() {
               Coverage & Operations
             </h2>
             <p className="text-muted-foreground">
-              Based in Virginia, United States, we proudly serve families across Northern Virginia.
+              Based in Virginia, United States, we proudly serve families across Northern and Central Virginia.
             </p>
           </div>
 
@@ -228,15 +228,29 @@ export default function AboutPage() {
                 <p className="text-sm text-muted-foreground">Care availability</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary mb-2">4 Counties</div>
-                <p className="text-sm text-muted-foreground">Northern Virginia coverage</p>
+                <div className="text-3xl font-bold text-primary mb-2">13 Counties</div>
+                <p className="text-sm text-muted-foreground">Northern & Central Virginia coverage</p>
               </div>
             </div>
 
             <div className="mt-8 pt-8 border-t border-border text-center">
               <h3 className="font-heading font-semibold mb-4">Counties We Serve</h3>
               <div className="flex flex-wrap justify-center gap-3">
-                {["Fairfax County", "Prince William County", "Loudoun County", "Arlington County"].map((county) => (
+                {[
+                  "Fairfax County",
+                  "Loudoun County",
+                  "Prince William County",
+                  "Arlington County",
+                  "Stafford County",
+                  "Culpeper County",
+                  "Spotsylvania County",
+                  "Chesterfield County",
+                  "Henrico County",
+                  "Powhatan County",
+                  "Amelia County",
+                  "Dinwiddie County",
+                  "Goochland County",
+                ].map((county) => (
                   <span key={county} className="px-4 py-2 rounded-full bg-health/10 text-health text-sm font-medium">
                     {county}
                   </span>

@@ -160,7 +160,7 @@ export default function ContactPage() {
               </div>
               <h3 className="font-heading font-semibold mb-2">Location</h3>
               <p className="text-muted-foreground text-sm">Virginia, United States</p>
-              <p className="text-muted-foreground text-xs mt-1">Serving Fairfax, Prince William, Loudoun & Arlington counties</p>
+              <p className="text-muted-foreground text-xs mt-1">Serving 13 counties across Northern & Central Virginia</p>
             </div>
             <div>
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
